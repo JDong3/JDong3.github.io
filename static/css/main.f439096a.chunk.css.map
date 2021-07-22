@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/index.css"],"names":[],"mappings":"AAAA,KACE,QACF,CAEA,KACE,qBACF","file":"main.f439096a.chunk.css","sourcesContent":["body {\r\n  margin: 0;\r\n}\r\n\r\ncode {\r\n  font-family: monospace;\r\n}\r\n"]}
