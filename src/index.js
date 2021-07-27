@@ -8,10 +8,10 @@ import {Provider} from 'react-redux'
 import * as Articles from './articles'
 import AppFooter from './AppFooter.js'
 import {
-    BrowserRouter as Router,
+    HashRouter as Router,
     Switch,
     Route,
-    Link
+    Link,
 } from 'react-router-dom'
 import {Idea} from './colorful-text'
 
