@@ -36,7 +36,9 @@ let Introductions = (props) => {
             <Hr type={1}/>
             <Text>
                 <Img type="right" src={ss} width={'30%'} rounded/>
-                Hi, I'm Joseph, I'm a programmer that specializes in front-end web development, design, and quality control (user experience, automation testing, et cetera). On this website, you'll find a selection of articles that explain the way in which I approach life, design, and programming. You will also find some descriptions of my past work experience, and the technologies that I'm most familiar with. And just so you know, if you plan on reading the articles, they can get a bit esoteric at times, (which is expected when discussing philosophy). But anyways, whatever you're looking for on this website, I hope you find it, and enjoy the reading.
+                Hi, I'm Joseph, I'm a programmer that specializes in front-end web development, design, and QA (user experience, automation testing, et cetera). On this website, you'll find a selection of articles that explain the way in which I approach life, design, and programming. You will also find some descriptions of my past work experience, and the technologies that I'm most familiar with. And just so you know, if you plan on reading the articles, they can get a bit esoteric at times, (which is expected when discussing philosophy). But anyways, whatever you're looking for on this website, I hope you find it, and enjoy the reading.
+
+                Hi, I'm Joseph, I'm a computer programmer that specializes in front-end developement (React + Redux + Material-UI), and QA (automated testing, API testing). On this website
             </Text>
             <Text variant="h2" serif>Contents</Text>
             <Hr type={2}/>
@@ -50,7 +52,7 @@ let Introductions = (props) => {
 
             <Text variant="h2" id="industry-experience" serif>Industry Experience</Text>
             <Hr type={2}/>
-            <Text variant="h4"><b>Customer Experience Analysis (Internship) at IBM</b></Text>
+            <Text variant="h4"><b>CI/CD Pipeline Developer at IBM</b></Text>
             <Text>
                 <b>May 2019 - August 2020</b>
 
@@ -63,7 +65,7 @@ let Introductions = (props) => {
             <br/>
             <br/>
 
-            <Text variant="h4"><b>Automation Testing (Internship) at Caseware Intl.</b></Text>
+            <Text variant="h4"><b>Automated Test Developer at Caseware</b></Text>
             <Text>
                 <b>January 2018 - August 2018</b>
 
