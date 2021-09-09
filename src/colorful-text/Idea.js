@@ -1,17 +1,17 @@
 import {
-	makeStyles,
-	Typography,
+  makeStyles,
+  Typography,
 } from '@material-ui/core';
 import {Link} from 'react-router-dom';
 
 const useStyles = makeStyles(() => (
-	{
-		ideaStuff: {
-			// Color: '#e88e8e',
-			color: 'black',
-			textDecoration: 'underline',
-		},
-	}
+  {
+    ideaStuff: {
+      // Color: '#e88e8e',
+      color: 'black',
+      textDecoration: 'underline',
+    },
+  }
 ));
 
 const Idea = props => {
@@ -21,19 +21,19 @@ const Idea = props => {
  *
  */
 
-	const classes = useStyles();
-	const {to} = props;
+  const classes = useStyles();
+  const {to} = props;
 
-	return (
-		<Link to={to}><Typography
-			variant={props.variant || 'body'}
-			className={classes.ideaStuff}>
+  return (
+    <Link to={to}><Typography
+      variant={props.variant || 'body'}
+      className={classes.ideaStuff}>
 
-			{props.children}
+      {props.children}
 
-		</Typography></Link>
-	);
-	// {hovered && hoveredStuff()}
+    </Typography></Link>
+  );
+  // {hovered && hoveredStuff()}
 };
 
 export default Idea;

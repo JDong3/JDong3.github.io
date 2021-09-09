@@ -5,8 +5,7 @@
         "node": true
     },
     "extends": [
-        "plugin:react/recommended",
-        "xo"
+        "plugin:react/recommended"
     ],
     "parserOptions": {
         "ecmaFeatures": {
@@ -22,6 +21,9 @@
       "react/react-in-jsx-scope": "off",
       "react/prop-types": "off",
       "react/no-unescaped-entities": "off",
-      "capitalized-comments": "off"
+      "capitalized-comments": "off",
+      "no-undef": "off",
+      "semi": ["error", "always"],
+      "indent": ["error", 2]
     }
 }

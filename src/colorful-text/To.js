@@ -1,17 +1,17 @@
 import {
-	makeStyles,
+  makeStyles,
 } from '@material-ui/core';
 import {
-	Link,
+  Link,
 } from 'react-router-dom';
 
 const useStyles = makeStyles(() => (
-	{
-		standard: {
-			color: 'inherit',
-			textDecoration: 'underline',
-		},
-	}
+  {
+    standard: {
+      color: 'inherit',
+      textDecoration: 'underline',
+    },
+  }
 ));
 
 const To = props => {
@@ -20,23 +20,23 @@ const To = props => {
  * :param link: bool, use Link element
  */
 
-	const {href, children, link, scroll} = props;
-	const classes = useStyles();
-	let scrollToTop;
+  const {href, children, link, scroll} = props;
+  const classes = useStyles();
+  let scrollToTop;
 
-	if (scroll) {
-		scrollToTop = () => window.scrollTo(0, 0);
-	}
+  if (scroll) {
+    scrollToTop = () => window.scrollTo(0, 0);
+  }
 
-	if (link) {
-		return (
-			<Link to={href} className={classes.standard} onClick={scrollToTop}>{children}</Link>
-		);
-	}
+  if (link) {
+    return (
+      <Link to={href} className={classes.standard} onClick={scrollToTop}>{children}</Link>
+    );
+  }
 
-	return (
-		<a href={href} className={classes.standard}>{children}</a>
-	);
+  return (
+    <a href={href} className={classes.standard}>{children}</a>
+  );
 };
 
 export default To;

@@ -5,17 +5,15 @@ import Hr from './Hr.js';
 import Img from './Img.js';
 import To from './To.js';
 import TechCard from './TechCard.js';
-import {
-	Title,
-} from './Typographyd.js';
+import ty from './Typographyd.js';
 
 export {
-	Portal,
-	Idea,
-	Text,
-	Hr,
-	Img,
-	To,
-	TechCard,
-	Title,
+  Portal,
+  Idea,
+  Text,
+  Hr,
+  Img,
+  To,
+  TechCard,
+  ty,
 };

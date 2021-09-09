@@ -4,97 +4,64 @@
 
 import Bass from '../Bass.js';
 import {
-	makeStyles,
-	Box,
-	Paper,
 } from '@material-ui/core';
 import {
-	Text,
-	Title,
+  ty
 } from '../../colorful-text';
-import clsx from 'clsx';
 import {
-	useState,
-	useEffect,
+  useState,
+  useEffect,
 } from 'react';
-
-const useStyles = makeStyles(() => (
-	{
-		commonText: {
-			marginTop: '20px',
-			marginBottom: '20px',
-			userSelect: 'none',
-		},
-
-		deselected: {
-			opacity: '40%',
-			'&:hover': {
-				cursor: 'pointer',
-				textDecoration: 'underline',
-			},
-		},
-
-		selected: {
-			'&:hover': {
-				cursor: 'pointer',
-			},
-		},
-	}
-));
+import TabSelector from './TabSelector.js';
+import Gallery from './Gallery.js';
+import ArticleSelector from './ArticleSelector.js';
 
 const Article = () => {
-	const tabs = {
-		funStuff: 'funStuff',
-		articles: 'articles',
-	};
-	const c = useStyles();
-	const [tab, setTab] = useState(tabs.funStuff);
-	const isFunStuff = tab === tabs.funStuff;
+  const [tab, setTab] = useState(0);
+  const [focus, setFocus] = useState(0);
 
-	const handleTabToggle = e => {
-		console.log(e);
-		console.log('key', e.key);
-		if (e.key === 'q') {
-			if (tab === tabs.funStuff) {
-				setTab(tabs.articles);
-			} else {
-				setTab(tabs.funStuff);
-			}
-		}
-	};
+  const handleKeys = e => {
+    if (e.key === 'q') {
+      console.log(tab);
+      if (tab === 0) {
+        handleArticleClick();
+      } else {
+        handleFunStuffClick();
+      }
+    }
+  };
 
-	const handleFunStuffClick = () => {
-		setTab(tabs.funStuff);
-	};
+  const handleFunStuffClick = () => {
+    setTab(0);
+  };
 
-	const handleArticleClick = () => {
-		setTab(tabs.articles);
-	};
+  const handleArticleClick = () => {
+    setTab(1);
+  };
 
-	useEffect(() => {
-		document.addEventListener('keyup', handleTabToggle);
-	}, []);
+  useEffect(() => {
+    document.addEventListener('keyup', handleKeys, true);
+    return () => {
+      document.removeEventListener('keyup', handleKeys, true);
+    };
+  });
 
-	return (
-		<Bass>
-			<Title serif>Placeholder</Title>
-			<Paper elevation={1}>
-				<Box component="div" display="flex" flexDirection="row" justifyContent="space-evenly">
-					<Box component="span">
-						<Text onClick={handleFunStuffClick} variant="h4" className={clsx(isFunStuff && c.selected, !isFunStuff && c.deselected, c.commonText)} serif>
-							Fun Stuff
-						</Text>
-					</Box>
+  return (
+    <Bass>
+      <ty.Title serif>Placeholder</ty.Title>
+      <TabSelector focus={focus === 0} tab={tab} clickHandlers={[handleFunStuffClick, handleArticleClick]}/>
+      <br/>
+      {
+        tab === 0 &&
+        <Gallery/>
+      }
 
-					<Box component="span">
-						<Text onClick={handleArticleClick} variant="h4" serif className={clsx(!isFunStuff && c.selected, isFunStuff && c.deselected, c.commonText)}>
-							Articles
-						</Text>
-					</Box>
-				</Box>
-			</Paper>
-		</Bass>
-	);
+      {
+        tab === 1 &&
+        <ArticleSelector/>
+      }
+    </Bass>
+  );
 };
 
 export default Article;

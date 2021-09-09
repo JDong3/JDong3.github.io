@@ -8,12 +8,12 @@ import TheTrueMotivationOfBusiness from './the-true-motivation-of-business/Artic
 import Landing from './landing/Article.js';
 
 export {
-	Introductions,
-	MostTreesAreBlue,
-	ScientificTheoriesAsTruth,
-	SpeculationOnPaulVanderklaysGodNumber2,
-	TheEvolutionaryOriginsOfTruth,
-	TheVirusOfProgress,
-	TheTrueMotivationOfBusiness,
-	Landing,
+  Introductions,
+  MostTreesAreBlue,
+  ScientificTheoriesAsTruth,
+  SpeculationOnPaulVanderklaysGodNumber2,
+  TheEvolutionaryOriginsOfTruth,
+  TheVirusOfProgress,
+  TheTrueMotivationOfBusiness,
+  Landing,
 };
