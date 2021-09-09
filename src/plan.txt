@@ -1,0 +1,15 @@
+make all information based pages into "articles", just formatted text and pictures
+make the landing page a "fun page" almost no text, fun keyboard controls
+
+linking structure
+* landing page has funstuff and index of articles tabs
+* articles link back to landing page
+
+make images more vertical for mobile design points
+
+DESIGN THEORY
+
+keep it stupid simple
+limit the scope
+80/20 principle
+does it work
