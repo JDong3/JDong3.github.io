@@ -49,7 +49,7 @@ const Article = () => {
   return (
     <Bass>
       <ty.Title serif>Placeholder</ty.Title>
-      <TabSelector focus={focus === 0} tab={tab} clickHandlers={[handleFunStuffClick, handleArticleClick]}/>
+      <TabSelector focused={focus === 0} tab={tab} clickHandlers={[handleFunStuffClick, handleArticleClick]}/>
       <br/>
       {
         tab === 0 &&

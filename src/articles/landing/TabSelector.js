@@ -8,6 +8,7 @@ import {
   ty,
 } from '../../colorful-text';
 import clsx from 'clsx';
+import WidgetBase from './WidgetBase.js';
 
 const useStyles = makeStyles(() => (
   {
@@ -25,6 +26,7 @@ const useStyles = makeStyles(() => (
       },
     },
 
+
     selected: {
       '&:hover': {
         cursor: 'pointer',
@@ -34,10 +36,10 @@ const useStyles = makeStyles(() => (
 ));
 
 const TabSelector = props => {
-  const {tab, clickHandlers, focus} = props;
+  const {tab, clickHandlers, focused} = props;
   const c = useStyles();
   return (
-    <Paper elevation={focus ? 5 : 1}>
+    <WidgetBase focused={focused}>
       <Box component="div" display="flex" flexDirection="row" justifyContent="space-evenly">
         <Box component="span">
           <Text onClick={clickHandlers[0]} variant="h4" className={clsx(tab === 0 && c.selected, tab === 1 && c.deselected, c.commonText)} serif>
@@ -51,7 +53,7 @@ const TabSelector = props => {
           </Text>
         </Box>
       </Box>
-    </Paper>
+    </WidgetBase>
   );
 };
 
