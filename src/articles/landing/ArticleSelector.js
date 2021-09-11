@@ -1,15 +1,16 @@
 import {
   Paper,
 } from '@material-ui/core';
+import WidgetBase from './WidgetBase.js';
 
 const ArticleSelector = props => {
 
-  const {focus} = props;
+  const {focused} = props;
 
   return (
-    <Paper elevation={focus ? 5 : 1}>
+    <WidgetBase focused={focused}>
       article selector here
-    </Paper>
+    </WidgetBase>
   );
 };
 

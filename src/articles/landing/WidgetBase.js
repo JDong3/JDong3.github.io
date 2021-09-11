@@ -19,7 +19,7 @@ const WidgetBase = (props) => {
     focused,
   } = props;
   return (
-    <Paper elevation={focused ? 3 : 1} className={clsx(!focused && c.unfocused)}>
+    <Paper elevation={focused ? 1 : 1} className={clsx(!focused && c.unfocused)}>
       {children}
     </Paper>
   );
