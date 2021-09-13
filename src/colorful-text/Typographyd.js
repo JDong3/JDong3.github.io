@@ -60,7 +60,18 @@ const WidgetTitle = props => {
   );
 };
 
+const WidgetText = props => {
+  const {children} = props;
+  const c = useStyles();
+  return (
+    <Typography {...props} variant="h5" className={c.serif}>
+      {children}
+    </Typography>
+  );
+};
+
 export default {
   Title,
   WidgetTitle,
+  WidgetText,
 };

@@ -1,4 +1,5 @@
 import WidgetBase from './WidgetBase.js';
+import {ty} from '../../colorful-text';
 import {
   Box,
   makeStyles,
@@ -8,8 +9,8 @@ import clsx from 'clsx';
 const useStyles = makeStyles(() => (
   {
     swatch: {
-      width: '25px',
-      height: '25px',
+      width: '20px',
+      height: '20px',
       // borderRadius: '50%',
       display: 'inline-block',
     },
@@ -21,24 +22,26 @@ const useStyles = makeStyles(() => (
 
     left: {
       width: '40%',
-      background: 'lightgrey',
+      // background: 'lightgrey',
     },
 
     right: {
       width: '60%',
-      background: 'pink',
+      // background: 'pink',
     },
 
     slider: {
+      marginRight: '13px',
+      width: '169px',
       '&:hover': {
 
       }
     },
 
     sliderContainer: {
-      marginTop: '29px',
+      marginTop: '44px',
       marginLeft: '54px',
-      marginBottom: '23px',
+      marginBottom: '44px',
     },
   }
 ));
@@ -55,15 +58,28 @@ const Swatch = props => {
 };
 
 const Slider = props => {
+  const {
+    value,
+  } = props;
   const c  = useStyles();
   return (
-    <input disabled="disabled" type="range" min="1" max="100" value="0" className={c.slider}/>
+    <input disabled="disabled" type="range" min="0" max="255" value={value} className={c.slider}/>
   );
 };
 
 const ColorPicker = props => {
-  const {focused} = props;
+  const {
+    focused,
+    r,
+    g,
+    b,
+  } = props;
+  // r, g, b are ints in range 0 to 255
+
   const c = useStyles();
+  const rHex = r.toString(16);
+  const gHex = g.toString(16);
+  const bHex = b.toString(16);
 
   return (
     <WidgetBase focused={focused} gap>
@@ -71,22 +87,27 @@ const ColorPicker = props => {
         <Box component="div" className={c.left}>
           <Box component="div" className={c.sliderContainer}>
             <div>
-              <Slider/>
-              <Swatch color="red"/>
+              <span>
+              </span>
+              <Slider value={r}/>
+              <Swatch color={`#${rHex}0000`}/>
             </div>
             <div>
-              <Slider/>
-              <Swatch color="green"/>
+              <Slider value={g}/>
+              <Swatch color={`#00${gHex}00`}/>
             </div>
             <div>
-              <Slider/>
-              <Swatch color="blue"/>
+              <Slider value={b}/>
+              <Swatch color={`#0000${bHex}`}/>
             </div>
           </Box>
         </Box>
         <Box component="div" display="flex" flexDirection="row" justifyContent="space-evenly" className={c.right}>
           <Box component="div" display="flex" flexDirection="column" justifyContent="space-evenly">
-            <Swatch big color="orange"/>
+            <Swatch big color={`#${rHex}${bHex}${gHex}`}/>
+            <ty.WidgetText>
+              {`#${rHex}${bHex}${gHex}`}
+            </ty.WidgetText>
           </Box>
         </Box>
       </Box>

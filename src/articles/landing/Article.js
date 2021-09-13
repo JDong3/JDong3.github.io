@@ -22,6 +22,9 @@ const Article = () => {
   const [tab, setTab] = useState(0);
   const [focus, setFocus] = useState(0);
   const [galleryIndex, setGalleryIndex] = useState(0);
+  const [r, setR] = useState(120);
+  const [g, setG] = useState(180);
+  const [b, setB] = useState(200);
 
   // focus is an integer that keeps track of which widget is in focus
   const maxWidgets = 3;
@@ -59,6 +62,24 @@ const Article = () => {
       }
     }
 
+    // color picker is in focus
+    const inc = 7;
+    if (focus === 2) {
+      if (e.key === 'q') {
+        setR(Math.max(0, r - inc));
+      } else if (e.key === 'e') {
+        setR(Math.min(255, r + inc));
+      } else if (e.key === 'a') {
+        setG(Math.max(0, g - inc));
+      } else if (e.key === 'd') {
+        setG(Math.min(255, g + inc));
+      } else if (e.key === 'z') {
+        setB(Math.max(0, b - inc));
+      } else if (e.key === 'c') {
+        setB(Math.min(255, b + inc));
+      }
+    }
+
   };
 
   const handleFunStuffClick = () => {
@@ -84,7 +105,7 @@ const Article = () => {
         tab === 0 &&
         <Box component="div">
           <Gallery focused={focus === 1} galleryIndex={galleryIndex}/>
-          <ColorPicker focused={focus === 2}/>
+          <ColorPicker r={r} g={g} b={b} focused={focus === 2}/>
         </Box>
       }
 
