@@ -80,7 +80,6 @@ const Article = () => {
     <Bass>
       <ty.Title serif>Placeholder</ty.Title>
       <TabSelector focused={focus === 0} tab={tab} clickHandlers={[handleFunStuffClick, handleArticleClick]}/>
-      <br/>
       {
         tab === 0 &&
         <Box component="div">

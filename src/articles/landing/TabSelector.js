@@ -39,7 +39,7 @@ const TabSelector = props => {
   const {tab, clickHandlers, focused} = props;
   const c = useStyles();
   return (
-    <WidgetBase focused={focused}>
+    <WidgetBase focused={focused} gap>
       <Box component="div" display="flex" flexDirection="row" justifyContent="space-evenly">
         <Box component="span">
           <Text onClick={clickHandlers[0]} variant="h4" className={clsx(tab === 0 && c.selected, tab === 1 && c.deselected, c.commonText)} serif>

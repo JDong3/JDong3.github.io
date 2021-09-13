@@ -70,7 +70,7 @@ const Gallery = props => {
   };
 
   return (
-    <WidgetBase focused={focused}>
+    <WidgetBase focused={focused} gap>
       <Box component="div" display="flex" flexDirection="row" justifyContent="space-evenly">
         <Box component="span" className={c.buttonRow}>
           {Array(10).fill(0).map(renderNumber)}

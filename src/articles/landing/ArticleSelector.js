@@ -8,7 +8,7 @@ const ArticleSelector = props => {
   const {focused} = props;
 
   return (
-    <WidgetBase focused={focused}>
+    <WidgetBase focused={focused} gap>
       article selector here
     </WidgetBase>
   );
