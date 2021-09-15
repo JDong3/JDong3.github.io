@@ -32,6 +32,7 @@ const useStyles = makeStyles(() => (
     },
   }
 ));
+
 const Title = props => {
   const {smaller, children, serif} = props;
   const variant = smaller ? 'h2' : 'h1';
@@ -55,16 +56,15 @@ const WidgetTitle = props => {
       <Box component={span} className={clsx(spacing && c.widgetSpacing)}>
         {children}
       </Box>
-
     </Typography>
   );
 };
 
 const WidgetText = props => {
-  const {children} = props;
+  const {children, className} = props;
   const c = useStyles();
   return (
-    <Typography {...props} variant="h5" className={c.serif}>
+    <Typography {...props} variant="h5" className={clsx(c.serif, className)}>
       {children}
     </Typography>
   );

@@ -12,6 +12,11 @@ const useStyles = makeStyles(() => (
 
     bottomGap: {
       marginBottom: '11px',
+    },
+
+    slightlySmaller: {
+      width: '98%',
+      marginLeft: '1%',
     }
   }
 ));
@@ -24,7 +29,7 @@ const WidgetBase = (props) => {
     gap,
   } = props;
   return (
-    <Paper elevation={focused ? 1 : 1} className={clsx(!focused && c.unfocused, gap && c.bottomGap)}>
+    <Paper elevation={focused ? 1 : 1} className={clsx(!focused && c.unfocused, gap && c.bottomGap, c.slightlySmaller)}>
       {children}
     </Paper>
   );

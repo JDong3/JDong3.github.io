@@ -1,7 +1,7 @@
 /**
  * this is the landing page, there will be fun stuff, and articles
  */
-
+import InvestmentEnums from '';
 import Bass from '../Bass.js';
 import {
   Box,
@@ -17,6 +17,7 @@ import TabSelector from './TabSelector.js';
 import Gallery from './Gallery.js';
 import ArticleSelector from './ArticleSelector.js';
 import ColorPicker from './ColorPicker.js';
+import InterestCalculator from './InterestCalculator';
 
 const Article = () => {
   const [tab, setTab] = useState(0);
@@ -27,7 +28,7 @@ const Article = () => {
   const [b, setB] = useState(200);
 
   // focus is an integer that keeps track of which widget is in focus
-  const maxWidgets = 3;
+  const maxWidgets = 4;
   const handleKeys = e => {
     // j and k to move up and down, overrides everything
     if (e.key === 'j') {
@@ -106,6 +107,7 @@ const Article = () => {
         <Box component="div">
           <Gallery focused={focus === 1} galleryIndex={galleryIndex}/>
           <ColorPicker r={r} g={g} b={b} focused={focus === 2}/>
+          <InterestCalculator investmentAmount={100} investmentFrequency={investmentEnums.ETERNITY} profitAmount={10} profitFrequency={investmentEnums.YEAR} investmentTime={20} investmentTimeUnits={investmentEnums.YEAR} focused={focus === 3} dollarCostAverage/>
         </Box>
       }
 

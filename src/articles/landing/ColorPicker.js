@@ -20,6 +20,10 @@ const useStyles = makeStyles(() => (
       height: '100px',
     },
 
+    bigSwatchMargin: {
+      marginBottom: '-15px',
+    },
+
     left: {
       width: '40%',
       // background: 'lightgrey',
@@ -53,7 +57,7 @@ const Swatch = props => {
   } = props;
 
   return (
-    <span className={clsx(c.swatch, big && c.bigSwatch)} style={{backgroundColor: `${color}`}}/>
+    <span className={clsx(c.swatch, big && c.bigSwatch, big && c.bigSwatchMargin)} style={{backgroundColor: `${color}`}}/>
   );
 };
 
@@ -77,9 +81,18 @@ const ColorPicker = props => {
   // r, g, b are ints in range 0 to 255
 
   const c = useStyles();
-  const rHex = r.toString(16);
-  const gHex = g.toString(16);
-  const bHex = b.toString(16);
+  const convert = (dec) => {
+    let res = '';
+    if (dec < 16) {
+      res += '0';
+    }
+    res += dec.toString(16);
+    return res;
+  };
+
+  const rHex = convert(r);
+  const gHex = convert(g);
+  const bHex = convert(b);
 
   return (
     <WidgetBase focused={focused} gap>
@@ -105,9 +118,10 @@ const ColorPicker = props => {
         <Box component="div" display="flex" flexDirection="row" justifyContent="space-evenly" className={c.right}>
           <Box component="div" display="flex" flexDirection="column" justifyContent="space-evenly">
             <Swatch big color={`#${rHex}${bHex}${gHex}`}/>
-            <ty.WidgetText>
+            <ty.WidgetText style={{marginLeft: '-4%',}} display="inline" align="center">
               {`#${rHex}${bHex}${gHex}`}
             </ty.WidgetText>
+
           </Box>
         </Box>
       </Box>
