@@ -4,7 +4,9 @@
  * PROFIT over time
  */
 
-import interestEnums from './interestEnums';
+import {
+  inDays,
+} from './InvestmentEnums.js';
 import WidgetBase from './WidgetBase.js';
 import {
   ty,
@@ -28,6 +30,9 @@ const useStyles = makeStyles(() => (
     quoteText: {
       fontFamily: 'serif',
       width: '80%',
+    },
+
+    quoteTopSectionMargin: {
       marginTop: '23px',
     },
 
@@ -63,15 +68,10 @@ const InterestCalculator = props => {
   const quote = "If your brother becomes poor and cannot maintain himself with you, you shall support him as though he were a stranger and a sojourner, and he shall live with you.";
   const {
     focused,
-    dollarCostAverage,
-    lumpSum,
-
     contributionAmount,
-    contributionFrequency,
-    profitAmount,
-    profitFrequency,
-    investmentTime,
-    investmentTimeUnits,
+    contributionFrequency,// every how many weeks
+    profitPerAn,// per year
+    years, // number of years
 
   } = props;
   const c = useStyles();
@@ -85,45 +85,56 @@ const InterestCalculator = props => {
      * datum at cash injection periods and at end, growth is pretty linear elsewhere?
      */
 
-    let generation = 0;
-    let generations = 365;
+    let generations = Math.floor(years * inDays.year);
 
     // the starting cash is one installment of the reoccuring payment
     // first calculate interest, then add new funds
     let total = contributionAmount;
-    let data = [];
+    let principal = contributionAmount;
+    let profit = 0;
+
+
+    console.log(total);
+    let totalData = [];
+    let principalData = [];
+    let profitData = [];
 
     for (let i = 0; i < generations; i++) {
       // calculate the interest
-      total *= 1.1;
-
+      total *= Math.E ** (profitPerAn * 0.01 * (1/365.25));
       // add funds
 
-      total += contributionAmount;
+      if ((i+1) % contributionFrequency === 0) {
+        total += contributionAmount;
+        principal += contributionAmount;
+      }
 
-      data.append({x: generation, y: total});
+      let year = i/365.25;
+
+      totalData.push({x: year, y: total});
+      principalData.push({x:year, y: principal});
+      profitData.push({x:year, y: total - principal});
     }
-
     // 365.25 datums per year
-
+    return {
+      totalData,
+      principalData,
+      profitData,
+    };
 
   };
 
-  const data = [
-    { x: 1, y: 2 },
-    { x: 2, y: 3 },
-    { x: 3, y: 5 },
-    { x: 4, y: 4 },
-    { x: 5, y: 7 }
-  ];
+  const {totalData, principalData, profitData} = generateData();
 
   return (
     <WidgetBase focused={focused}>
-      <Box component="div" display="flex" flexDirection="row" justifyContent="center">
-        <Typography className={c.quoteText} align="center">
-          <q>{quote}</q> <br/>
-          <Typography align="right" className={c.quoteText}></Typography>
-        </Typography>
+      <Box component="div" display="flex" flexDirection="column" justifyContent="center">
+        <Box component="div" display="flex" flexDirection="row" justifyContent="center">
+          <Typography className={c.quoteText} align="center">
+            <q>{quote}</q>
+          </Typography>
+        </Box>
+        <Typography align="right" className={c.quoteText}></Typography>
       </Box>
 
       <Box component="div" display="flex" flexDirection="row" justifyContent="center">
@@ -131,31 +142,41 @@ const InterestCalculator = props => {
           - Moses Probably
         </Typography>
       </Box>
-
-      {dollarCostAverage &&
-        <div className={clsx(c.slightlySmaller, c.investingText)}>
-          <ty.WidgetText align="left" display="block">
-              Using <b>dollar cost average</b> strategy, <br/>
-              investing <b>$100</b> weekly, <br/>
-              at an average <b>10%</b> return, <br/>
-              over a period of <b>20 years</b>.
-          </ty.WidgetText>
+      <div className={clsx(c.slightlySmaller, c.investingText)}>
+        <ty.WidgetText align="left" display="block">
+              Investing <b>${contributionAmount}</b>,
+              every <b>{contributionFrequency}</b> week, <br/>
+              at a <b>{profitPerAn}%</b> return per annum,<br/>
+              compounding, for <b>{years} years</b>.
+        </ty.WidgetText>
 
 
-          <VictoryChart
-            theme={VictoryTheme.material}
-          >
-            <VictoryLine
-              style={{
-                data: { stroke: "#c43a31" },
-                parent: { border: "1px solid #ccc"}
-              }}
-              data={data}
-            />
-          </VictoryChart>
-        </div>
+        <VictoryChart theme={VictoryTheme.material}>
+          <VictoryLine
+            style={{
+              data: { stroke: "black" },
+              parent: { border: "1px solid #ccc"}
+            }}
+            data={totalData}
+          />
+          <VictoryLine
+            style={{
+              data: { stroke: "grey" },
+              parent: { border: "1px solid #ccc"}
+            }}
+            data={principalData}
+          />
 
-      }
+          <VictoryLine
+            style={{
+              data: { stroke: "orange" },
+              parent: { border: "1px solid #ccc"}
+            }}
+            data={profitData}
+          />
+
+        </VictoryChart>
+      </div>
 
     </WidgetBase>
   );

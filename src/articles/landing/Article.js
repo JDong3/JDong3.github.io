@@ -1,7 +1,9 @@
 /**
  * this is the landing page, there will be fun stuff, and articles
  */
-import InvestmentEnums from '';
+import {
+  inDays,
+} from './InvestmentEnums.js';
 import Bass from '../Bass.js';
 import {
   Box,
@@ -17,7 +19,8 @@ import TabSelector from './TabSelector.js';
 import Gallery from './Gallery.js';
 import ArticleSelector from './ArticleSelector.js';
 import ColorPicker from './ColorPicker.js';
-import InterestCalculator from './InterestCalculator';
+import InterestCalculator from './InterestCalculator.js';
+import Tabs from './Tabs.js';
 
 const Article = () => {
   const [tab, setTab] = useState(0);
@@ -26,6 +29,10 @@ const Article = () => {
   const [r, setR] = useState(120);
   const [g, setG] = useState(180);
   const [b, setB] = useState(200);
+  const [contributionAmount, setContributionAmount] = useState(100);
+  const [contributionFrequency, setContributionFrequency] = useState(1);
+  const [profitPerAn, setProfitPerAn] = useState(10.0);
+  const [years, setYears] = useState(1);
 
   // focus is an integer that keeps track of which widget is in focus
   const maxWidgets = 4;
@@ -81,6 +88,27 @@ const Article = () => {
       }
     }
 
+    if (focus === 3) {
+      if (e.key === 'q') {
+        console.log('hi');
+        setContributionAmount(Math.max(contributionAmount - 100, 0));
+      } else if (e.key === 'e') {
+        setContributionAmount(contributionAmount + 100);
+      } else if (e.key === 'a') {
+        setProfitPerAn(Math.max(profitPerAn - 0.1, 0));
+      } else if (e.key === 'd') {
+        setProfitPerAn(profitPerAn + 0.1);
+      } else if (e.key === 'z') {
+        setYears(Math.max(years - 1, 1));
+      } else if (e.key === 'c') {
+        setYears(years + 1);
+      } else if (e.key === 'r') {
+        setContributionFrequency(Math.max(contributionFrequency - 1, 1));
+      } else if (e.key === 'y') {
+        setContributionFrequency(contributionFrequency + 1);
+      }
+    }
+
   };
 
   const handleFunStuffClick = () => {
@@ -101,13 +129,15 @@ const Article = () => {
   return (
     <Bass>
       <ty.Title serif>Placeholder</ty.Title>
+      <Tabs/>
+
       <TabSelector focused={focus === 0} tab={tab} clickHandlers={[handleFunStuffClick, handleArticleClick]}/>
       {
         tab === 0 &&
         <Box component="div">
           <Gallery focused={focus === 1} galleryIndex={galleryIndex}/>
           <ColorPicker r={r} g={g} b={b} focused={focus === 2}/>
-          <InterestCalculator investmentAmount={100} investmentFrequency={investmentEnums.ETERNITY} profitAmount={10} profitFrequency={investmentEnums.YEAR} investmentTime={20} investmentTimeUnits={investmentEnums.YEAR} focused={focus === 3} dollarCostAverage/>
+          <InterestCalculator contributionAmount={contributionAmount} contributionFrequency={contributionFrequency} profitPerAn={profitPerAn} years={years} focused={focus === 3}/>
         </Box>
       }
 
