@@ -20,7 +20,8 @@ import Gallery from './Gallery.js';
 import ArticleSelector from './ArticleSelector.js';
 import ColorPicker from './ColorPicker.js';
 import InterestCalculator from './InterestCalculator.js';
-import Tabs from './Tabs.js';
+import WidgetList from './WidgetList.js';
+import WidgetSelector from './WidgetSelector.js';
 
 const Article = () => {
   const [tab, setTab] = useState(0);
@@ -128,17 +129,20 @@ const Article = () => {
 
   return (
     <Bass>
-      <ty.Title serif>Placeholder</ty.Title>
-      <Tabs/>
+      <ty.Title serif noGutter>Placeholder</ty.Title>
+      <WidgetList/>
+      <WidgetSelector/>
 
       <TabSelector focused={focus === 0} tab={tab} clickHandlers={[handleFunStuffClick, handleArticleClick]}/>
+
+
       {
-        tab === 0 &&
-        <Box component="div">
-          <Gallery focused={focus === 1} galleryIndex={galleryIndex}/>
-          <ColorPicker r={r} g={g} b={b} focused={focus === 2}/>
-          <InterestCalculator contributionAmount={contributionAmount} contributionFrequency={contributionFrequency} profitPerAn={profitPerAn} years={years} focused={focus === 3}/>
-        </Box>
+        // tab === 0 &&
+        // <Box component="div">
+        //   <Gallery focused={focus === 1} galleryIndex={galleryIndex}/>
+        //   <ColorPicker r={r} g={g} b={b} focused={focus === 2}/>
+        //   <InterestCalculator contributionAmount={contributionAmount} contributionFrequency={contributionFrequency} profitPerAn={profitPerAn} years={years} focused={focus === 3}/>
+        // </Box>
       }
 
       {

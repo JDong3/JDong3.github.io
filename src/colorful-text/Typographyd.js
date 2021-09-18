@@ -15,6 +15,10 @@ const useStyles = makeStyles(() => (
   {
     titleDivider: {
       marginTop: '1px',
+      marginBottom: '0px',
+    },
+
+    titleGutter: {
       marginBottom: '27px',
     },
 
@@ -34,11 +38,11 @@ const useStyles = makeStyles(() => (
 ));
 
 const Title = props => {
-  const {smaller, children, serif} = props;
+  const {smaller, children, serif, noGutter} = props;
   const variant = smaller ? 'h2' : 'h1';
   const c = useStyles();
 
-  const theme = clsx(serif && c.serif, !serif && c.sansSerif);
+  const theme = clsx(serif && c.serif, !serif && c.sansSerif, !noGutter && c.titleGutter);
   return (
     <Typography variant={variant} className={theme}>
       {children}<hr className={c.titleDivider}/>
