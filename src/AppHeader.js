@@ -18,7 +18,7 @@ const useStyles = makeStyles(() => (
 
     pixelIcons: {
       borderRadius: '33%',
-      opacity: '1',
+      opacity: '0.7',
       margin: '5px',
       padding: '2px',
       cursor: 'pointer',
@@ -40,7 +40,7 @@ function AppHeader() {
       <Toolbar disableGutters={true}>
         <Typography variant="h5" color="primary" className={classes.title}>
         </Typography>
-        <Idea variant="h6" style={{margin: '7px'}} to="/">
+        <Idea variant="h5" style={{margin: '7px', opacity: '0.9'}} to="/">
                 &quot;most trees are blue&quot; - Jaden Smith</Idea>
 
         <a href="https://github.com/JDong3" target="_blank" rel="noreferrer"><img src={cat} className={classes.pixelIcons}></img></a>

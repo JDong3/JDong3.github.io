@@ -20,9 +20,9 @@ const reducer = (state=initialState, action) => {
 
     break;
 
-  case 'weidget/goRight':
+  case 'widget/goRight':
     res = produce(state, draft => {
-      if (draft.focusedWidget == draft.totalWidget - 1) {
+      if (draft.focusedWidget == draft.totalWidgets - 1) {
         draft.focusedWidget = 0;
       } else {
         draft.focusedWidget = draft.focusedWidget + 1;

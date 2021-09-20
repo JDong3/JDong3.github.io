@@ -10,6 +10,7 @@ const useStyles = makeStyles(() => (
       // Color: '#e88e8e',
       color: 'black',
       textDecoration: 'underline',
+      fontFamily: 'seif',
     },
   }
 ));

@@ -1,4 +1,4 @@
-const widgetGoLeft =() => (
+const widgetGoLeft = () => (
   {
     type: 'widget/goLeft',
   }

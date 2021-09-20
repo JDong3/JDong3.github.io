@@ -1,5 +1,10 @@
 body {
   margin: 0;
+  scrollbar-width: 'none';
+}
+
+html {
+  scrollbar-width: 'none';
 }
 
 code {

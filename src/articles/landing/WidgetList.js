@@ -19,6 +19,7 @@ const useStyles = makeStyles(() => (
 
     spacing: {
       marginLeft: '11px',
+      fontFamily: 'serif',
     },
 
     deSelected: {
@@ -32,7 +33,6 @@ const Tabs = props => {
 
   const {selected} = props;
   const c = useStyles();
-  console.log(selected);
 
   const eq = (n, i) => {
     const res = n%4 === i;
@@ -41,16 +41,16 @@ const Tabs = props => {
 
   return (
     <Box component="div" className={clsx(c.slightlySmaller, c.slightlyTransparent)} display="flex" flexDirection="row" justifyContent="right">
-      <Typography variant="body" className={clsx(!eq(selected, 0) && c.deSelected, c.spacing)}>
+      <Typography variant="body1" className={clsx(!eq(selected, 0) && c.deSelected, c.spacing)}>
         Articles
       </Typography>
-      <Typography variant="body" className={clsx(!eq(selected, 1) && c.deSelected, c.spacing)}>
+      <Typography variant="body1" className={clsx(!eq(selected, 1) && c.deSelected, c.spacing)}>
         Gallery
       </Typography>
-      <Typography variant="body" className={clsx(!eq(selected, 2) && c.deSelected, c.spacing)}>
+      <Typography variant="body1" className={clsx(!eq(selected, 2) && c.deSelected, c.spacing)}>
         Colors
       </Typography>
-      <Typography variant="body" className={clsx(!eq(selected, 3) && c.deSelected, c.spacing)}>
+      <Typography variant="body1" className={clsx(!eq(selected, 3) && c.deSelected, c.spacing)}>
         Investments
       </Typography>
     </Box>
@@ -58,7 +58,6 @@ const Tabs = props => {
 };
 
 const mapStateToProps = (state) => {
-  console.log(state);
   return {
     selected: state.focusedWidget,
   };

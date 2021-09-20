@@ -17,11 +17,12 @@ import {
 } from 'react';
 import TabSelector from './TabSelector.js';
 import Gallery from './Gallery.js';
-import ArticleSelector from './ArticleSelector.js';
 import ColorPicker from './ColorPicker.js';
 import InterestCalculator from './InterestCalculator.js';
 import WidgetList from './WidgetList.js';
 import WidgetSelector from './WidgetSelector.js';
+import ArticleIndex from './ArticleIndex.js';
+
 
 const Article = () => {
   const [tab, setTab] = useState(0);
@@ -38,22 +39,11 @@ const Article = () => {
   // focus is an integer that keeps track of which widget is in focus
   const maxWidgets = 4;
   const handleKeys = e => {
+    return;
     // j and k to move up and down, overrides everything
-    if (e.key === 'j') {
-      if (tab === 1) {
-        setFocus(Math.min(focus + 1, 1));
-      } else {
-        setFocus(Math.min(focus + 1, maxWidgets - 1));
-      }
-
-    } else if (e.key === 'k') {
-      setFocus(Math.max(focus - 1, 0));
-    }
-
     // active when tab selector is in focus
     if (focus === 0) {
       if (e.key === 'q') {
-        console.log(tab);
         if (tab === 0) {
           handleArticleClick();
         } else {
@@ -91,7 +81,6 @@ const Article = () => {
 
     if (focus === 3) {
       if (e.key === 'q') {
-        console.log('hi');
         setContributionAmount(Math.max(contributionAmount - 100, 0));
       } else if (e.key === 'e') {
         setContributionAmount(contributionAmount + 100);
@@ -132,9 +121,7 @@ const Article = () => {
       <ty.Title serif noGutter>Placeholder</ty.Title>
       <WidgetList/>
       <WidgetSelector/>
-
-      <TabSelector focused={focus === 0} tab={tab} clickHandlers={[handleFunStuffClick, handleArticleClick]}/>
-
+      <ArticleIndex/>
 
       {
         // tab === 0 &&
@@ -144,13 +131,14 @@ const Article = () => {
         //   <InterestCalculator contributionAmount={contributionAmount} contributionFrequency={contributionFrequency} profitPerAn={profitPerAn} years={years} focused={focus === 3}/>
         // </Box>
       }
-
-      {
-        tab === 1 &&
-        <ArticleSelector focused={focus === 1}/>
-      }
     </Bass>
   );
 };
+
+const mapStateToProps = (state) => (
+  {
+    focusedWidget: state.focusedWidget,
+  }
+);
 
 export default Article;

@@ -21,7 +21,6 @@ const Portal = props => {
 
   const classes = useStyles();
   const handleClick = () => {
-    console.log(`portal entered to: ${props.to}`);
     window.location.href = props.to;
   };
 
