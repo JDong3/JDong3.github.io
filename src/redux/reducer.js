@@ -3,6 +3,28 @@ import produce from 'immer';
 const initialState = {
   focusedWidget: 0,
   totalWidgets: 4,
+
+  articleNames: [
+    'The Evolutionary Origins of Truth',
+    'The Virus of Progress',
+    'Speculation on God no.2',
+    'The True Motivations of Business',
+    'Scientific Theories as Truth',
+  ],
+  articleLinks: [
+    '/the-evolutionary-origins-of-truth',
+    '/the-virus-of-progress',
+    '/speculation-on-god-no2',
+    '/the-true-motivations-of-business',
+    '/scientific-theories-as-truth',
+  ],
+
+  practicalArticleNames: [
+    'Introductions'
+  ],
+  practicalArticleLinks: [
+    '/introductions'
+  ],
 };
 
 const reducer = (state=initialState, action) => {

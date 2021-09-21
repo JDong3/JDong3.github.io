@@ -45,10 +45,10 @@ const Tabs = props => {
         Articles
       </Typography>
       <Typography variant="body1" className={clsx(!eq(selected, 1) && c.deSelected, c.spacing)}>
-        Gallery
+      Colors
       </Typography>
       <Typography variant="body1" className={clsx(!eq(selected, 2) && c.deSelected, c.spacing)}>
-        Colors
+        Gallery
       </Typography>
       <Typography variant="body1" className={clsx(!eq(selected, 3) && c.deSelected, c.spacing)}>
         Investments

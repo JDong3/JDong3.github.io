@@ -15,7 +15,6 @@ import {
   useState,
   useEffect,
 } from 'react';
-import TabSelector from './TabSelector.js';
 import Gallery from './Gallery.js';
 import ColorPicker from './ColorPicker.js';
 import InterestCalculator from './InterestCalculator.js';

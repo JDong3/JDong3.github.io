@@ -72,7 +72,10 @@ const WidgetSelector = props => {
 
   return (
     <Box component="div" display="flex" flexDirection="row" className={c.selectorSpacing}>
-      <Box component="div" className={c.thirty} display="flex" flexDirection="row" justifyContent="right">
+      <Box component="div" style={{width: '23.33%'}} display="flex" flexDirection="row" justifyContent="left">
+        <Typography variant="body2" style={{opacity: '0.4'}}>J Left, K Right</Typography>
+      </Box>
+      <Box component="div" style={{width: '10%'}} display="flex" flexDirection="row" justifyContent="right">
         <Typography variant="h3">
           <img src={angleFlip} className={c.textAngle}/>
         </Typography>

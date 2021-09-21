@@ -30,12 +30,12 @@ const To = props => {
 
   if (link) {
     return (
-      <Link to={href} className={classes.standard} onClick={scrollToTop}>{children}</Link>
+      <Link to={href} className={classes.standard} onClick={scrollToTop} {...props}>{children}</Link>
     );
   }
 
   return (
-    <a href={href} className={classes.standard}>{children}</a>
+    <Link to={href} target='_blank' className={classes.standard} rel="noreferrer noopener" {...props}>{children}</Link>
   );
 };
 

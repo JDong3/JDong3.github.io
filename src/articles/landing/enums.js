@@ -1,4 +1,4 @@
-const widgetsList = ['Articles', 'Gallery', 'Colors', 'Investments'];
+const widgetsList = ['Articles', 'Colors', 'Gallery', 'Investments'];
 
 export {
   widgetsList,
