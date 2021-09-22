@@ -8,14 +8,14 @@ const initialState = {
     'The Evolutionary Origins of Truth',
     'The Virus of Progress',
     'Speculation on God no.2',
-    'The True Motivations of Business',
+    'The True Motivation of Business',
     'Scientific Theories as Truth',
   ],
   articleLinks: [
     '/the-evolutionary-origins-of-truth',
     '/the-virus-of-progress',
     '/speculation-on-god-no2',
-    '/the-true-motivations-of-business',
+    '/the-true-motivation-of-business',
     '/scientific-theories-as-truth',
   ],
 

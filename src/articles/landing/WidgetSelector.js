@@ -49,7 +49,6 @@ const WidgetSelector = props => {
   } = props;
 
   const handleKeys = (e) => {
-    console.log(e.key);
     switch (e.key) {
 
     case 'j':

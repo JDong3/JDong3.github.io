@@ -46,7 +46,7 @@ ReactDOM.render(
               <Route path="/the-true-motivation-of-business">
                 <Articles.TheTrueMotivationOfBusiness/>
               </Route>
-              <Route path="/speculation-on-paul-vanderklays-god-number-2">
+              <Route path="/speculation-on-god-no2">
                 <Articles.SpeculationOnPaulVanderklaysGodNumber2/>
               </Route>
               <Route path="/scientific-theories-as-truth">

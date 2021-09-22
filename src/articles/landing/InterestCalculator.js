@@ -93,8 +93,6 @@ const InterestCalculator = props => {
     let principal = contributionAmount;
     let profit = 0;
 
-
-    console.log(total);
     let totalData = [];
     let principalData = [];
     let profitData = [];

@@ -5,6 +5,10 @@ import {
   makeStyles,
 } from '@material-ui/core';
 import clsx from 'clsx';
+import {
+  useState,
+  useEffect,
+} from 'react';
 
 const useStyles = makeStyles(() => (
   {
@@ -73,12 +77,12 @@ const Slider = props => {
 
 const ColorPicker = props => {
   const {
-    focused,
-    r,
-    g,
-    b,
   } = props;
   // r, g, b are ints in range 0 to 255
+
+  const [r, setR] = useState(120);
+  const [g, setG] = useState(180);
+  const [b, setB] = useState(200);
 
   const c = useStyles();
   const convert = (dec) => {
@@ -94,8 +98,33 @@ const ColorPicker = props => {
   const gHex = convert(g);
   const bHex = convert(b);
 
+  const handleKeys = (e) => {
+    const inc = 7;
+
+    if (e.key === 'q') {
+      setR(Math.max(0, r - inc));
+    } else if (e.key === 'e') {
+      setR(Math.min(255, r + inc));
+    } else if (e.key === 'a') {
+      setG(Math.max(0, g - inc));
+    } else if (e.key === 'd') {
+      setG(Math.min(255, g + inc));
+    } else if (e.key === 'z') {
+      setB(Math.max(0, b - inc));
+    } else if (e.key === 'c') {
+      setB(Math.min(255, b + inc));
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('keypress', handleKeys, true);
+    return () => {
+      document.removeEventListener('keypress', handleKeys, true);
+    };
+  });
+
   return (
-    <WidgetBase focused={focused} gap>
+    <WidgetBase gap>
       <Box component="div" display="flex" flexDirection="row">
         <Box component="div" className={c.left}>
           <Box component="div" className={c.sliderContainer}>

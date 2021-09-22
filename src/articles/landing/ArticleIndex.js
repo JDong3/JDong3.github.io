@@ -19,6 +19,7 @@ import {
   D,
   Enter,
 } from './Keys.js';
+import produce from 'immer';
 
 import {
   useState,
@@ -71,17 +72,34 @@ const ArticleIndex = props => {
     articleLinks,
     practicalArticleNames,
     practicalArticleLinks,
+    combinedArticleLinks,
+    forbidden,
   } = props;
 
-  const [group, setGroup] = useState(0);
   const [article, setArticle] = useState(0);
+  const totalArticles = articleNames.length + practicalArticleNames.length;
 
   const handleKeys = (e) => {
+
+    let res = article;
+
     if (e.key === 'w') {
-      console.log(e.key);
+      res = Math.max(0, article - 2);
     } else if (e.key === 'a') {
-      console.log(e.key);
+      res = Math.max(0, article - 1);
+    } else if (e.key === 's') {
+      res = Math.min(totalArticles - 1, article + 2);
+    } else if (e.key === 'd') {
+      res = Math.min(totalArticles - 1, article + 1);
     }
+    if (e.key === 'Enter') {
+      window.open(`#${combinedArticleLinks[article]}`, '_blank');
+    }
+
+    if (forbidden.indexOf(res) === -1) {
+      setArticle(res);
+    }
+
   };
 
   useEffect(() => {
@@ -103,9 +121,9 @@ const ArticleIndex = props => {
       </Box>
       <Box component="div" display="flex" flexDirection="row" flexWrap="wrap" className={c.articlesContainer}>
         {
-          practicalArticleNames.map((articleName, i) => (
-            <ArticleEntry key={i} href={practicalArticleLinks[i]}>
-              <b>{articleName}</b>
+          practicalArticleNames.filter(articleName => articleName !== '').map((articleName, i) => (
+            <ArticleEntry key={i} selected={i == article} href={practicalArticleLinks[i]}>
+              {articleName}
             </ArticleEntry>
           ))
         }
@@ -118,8 +136,8 @@ const ArticleIndex = props => {
       </Box>
       <Box component="div" display="flex" flexDirection="row" flexWrap="wrap" className={c.articlesContainer}>
         {
-          articleNames.map((articleName, i) => (
-            <ArticleEntry key={i} href={articleLinks[i]}>
+          articleNames.filter(articleName => articleName !== '').map((articleName, i) => (
+            <ArticleEntry selected={i + practicalArticleNames.length === article} key={i} href={articleLinks[i]}>
               {articleName}
             </ArticleEntry>
           ))
@@ -135,15 +153,21 @@ const ArticleEntry = props => {
   const {
     children,
     href,
+    selected,
   } = props;
 
   return (
     <Box component="div" className={c.thirty}>
       <Typography variant="body2" className={clsx(c.body)}>
-        <To href={href}>
+        {!selected && <To href={href}>
           {children}
           <External/>
-        </To>
+        </To>}
+
+        {selected && <To href={href}>
+          <b>{children}</b>
+          <External/>
+        </To>}
       </Typography>
     </Box>
   );
@@ -157,13 +181,44 @@ const External = props => {
   );
 };
 
-const mapStateToProps = (state) => (
-  {
-    articleNames: state.articleNames,
-    articleLinks: state.articleLinks,
-    practicalArticleNames: state.practicalArticleNames,
-    practicalArticleLinks: state.practicalArticleLinks,
+const mapStateToProps = (state) => {
+
+  let forbidden = [];
+  if (state.practicalArticleNames.length % 2 == 1) {
+    forbidden.push(state.practicalArticleNames.length );
   }
-);
+  if (state.articleNames.length % 2 == 1) {
+    forbidden.push(state.articleNames.length + state.practicalArticleNames.length + forbidden.length);
+  }
+
+
+
+  let newState = produce(state, draft => {
+    if (state.practicalArticleNames.length % 2 == 1) {
+      draft.practicalArticleNames.push('');
+      draft.practicalArticleLinks.push('');
+    }
+    if (state.articleNames.length % 2 == 1) {
+      draft.articleNames.push('');
+      draft.articleLinks.push('');
+    }
+
+  });
+
+  let combinedArticleLinks = [];
+  newState.practicalArticleLinks.forEach(link => combinedArticleLinks.push(link));
+  newState.articleLinks.forEach(link => combinedArticleLinks.push(link));
+
+  return (
+    {
+      articleNames: newState.articleNames,
+      articleLinks: newState.articleLinks,
+      practicalArticleNames: newState.practicalArticleNames,
+      practicalArticleLinks: newState.practicalArticleLinks,
+      combinedArticleLinks: combinedArticleLinks,
+      forbidden: forbidden,
+    }
+  );
+};
 
 export default connect(mapStateToProps)(ArticleIndex);

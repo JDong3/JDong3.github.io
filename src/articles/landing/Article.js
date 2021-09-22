@@ -15,6 +15,9 @@ import {
   useState,
   useEffect,
 } from 'react';
+import {
+  connect,
+} from 'react-redux';
 import Gallery from './Gallery.js';
 import ColorPicker from './ColorPicker.js';
 import InterestCalculator from './InterestCalculator.js';
@@ -23,13 +26,14 @@ import WidgetSelector from './WidgetSelector.js';
 import ArticleIndex from './ArticleIndex.js';
 
 
-const Article = () => {
+const Article = (props) => {
+
+  const {
+    focusedWidget,
+  } = props;
   const [tab, setTab] = useState(0);
   const [focus, setFocus] = useState(0);
   const [galleryIndex, setGalleryIndex] = useState(0);
-  const [r, setR] = useState(120);
-  const [g, setG] = useState(180);
-  const [b, setB] = useState(200);
   const [contributionAmount, setContributionAmount] = useState(100);
   const [contributionFrequency, setContributionFrequency] = useState(1);
   const [profitPerAn, setProfitPerAn] = useState(10.0);
@@ -39,17 +43,6 @@ const Article = () => {
   const maxWidgets = 4;
   const handleKeys = e => {
     return;
-    // j and k to move up and down, overrides everything
-    // active when tab selector is in focus
-    if (focus === 0) {
-      if (e.key === 'q') {
-        if (tab === 0) {
-          handleArticleClick();
-        } else {
-          handleFunStuffClick();
-        }
-      }
-    }
 
     // gallery is in focus
     if (focus === 1) {
@@ -61,22 +54,7 @@ const Article = () => {
     }
 
     // color picker is in focus
-    const inc = 7;
-    if (focus === 2) {
-      if (e.key === 'q') {
-        setR(Math.max(0, r - inc));
-      } else if (e.key === 'e') {
-        setR(Math.min(255, r + inc));
-      } else if (e.key === 'a') {
-        setG(Math.max(0, g - inc));
-      } else if (e.key === 'd') {
-        setG(Math.min(255, g + inc));
-      } else if (e.key === 'z') {
-        setB(Math.max(0, b - inc));
-      } else if (e.key === 'c') {
-        setB(Math.min(255, b + inc));
-      }
-    }
+    
 
     if (focus === 3) {
       if (e.key === 'q') {
@@ -120,7 +98,10 @@ const Article = () => {
       <ty.Title serif noGutter>Placeholder</ty.Title>
       <WidgetList/>
       <WidgetSelector/>
-      <ArticleIndex/>
+
+      {focusedWidget === 0 && <ArticleIndex/>}
+      {focusedWidget === 1 && <ColorPicker/>}
+
 
       {
         // tab === 0 &&
@@ -140,4 +121,4 @@ const mapStateToProps = (state) => (
   }
 );
 
-export default Article;
+export default connect(mapStateToProps)(Article);
