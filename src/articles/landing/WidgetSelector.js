@@ -13,6 +13,8 @@ import {
   widgetGoLeft,
   widgetGoRight,
 } from '../../redux/actions.js';
+import {J, K} from './Keys.js';
+
 const useStyles = makeStyles(() => (
   {
     thirty: {
@@ -73,7 +75,7 @@ const WidgetSelector = props => {
   return (
     <Box component="div" display="flex" flexDirection="row" className={c.selectorSpacing}>
       <Box component="div" style={{width: '23.33%'}} display="flex" flexDirection="row" justifyContent="left">
-        <Typography variant="body2" style={{opacity: '0.4'}}>J Left, K Right</Typography>
+        <Typography variant="body2" style={{opacity: '0.7'}}><J/> Go Left, <K/> Go Right</Typography>
       </Box>
       <Box component="div" style={{width: '10%'}} display="flex" flexDirection="row" justifyContent="right">
         <Typography variant="h3">

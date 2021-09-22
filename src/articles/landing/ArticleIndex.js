@@ -12,6 +12,18 @@ import {
   connect
 } from 'react-redux';
 import external from './assets/external.png';
+import {
+  W,
+  A,
+  S,
+  D,
+  Enter,
+} from './Keys.js';
+
+import {
+  useState,
+  useEffect,
+} from 'react';
 
 const useStyles = makeStyles(() => (
   {
@@ -61,13 +73,32 @@ const ArticleIndex = props => {
     practicalArticleLinks,
   } = props;
 
-  console.log(props);
+  const [group, setGroup] = useState(0);
+  const [article, setArticle] = useState(0);
+
+  const handleKeys = (e) => {
+    if (e.key === 'w') {
+      console.log(e.key);
+    } else if (e.key === 'a') {
+      console.log(e.key);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('keypress', handleKeys, true);
+    return () => {
+      document.removeEventListener('keypress', handleKeys, true);
+    };
+  });
 
   return (
     <WidgetBase>
-      <Box component="div" className={clsx(c.h4)}>
-        <Typography variant="h5" className={clsx(c.serif)}>
+      <Box component="div" className={clsx(c.h4)} display="flex">
+        <Typography variant="h5" style={{marginRight: '13px'}} className={clsx(c.serif)}>
           Practical Articles
+        </Typography>
+        <Typography variant="body2" style={{opacity: '0.7'}}>
+          <W rightGutter/><A rightGutter/><S rightGutter/><D/> navigation, <Enter/> Select
         </Typography>
       </Box>
       <Box component="div" display="flex" flexDirection="row" flexWrap="wrap" className={c.articlesContainer}>
