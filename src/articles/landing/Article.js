@@ -24,6 +24,12 @@ import InterestCalculator from './InterestCalculator.js';
 import WidgetList from './WidgetList.js';
 import WidgetSelector from './WidgetSelector.js';
 import ArticleIndex from './ArticleIndex.js';
+import {
+  HashRouter as Router,
+  Switch,
+  Route,
+} from 'react-router-dom';
+import * as Articles from '../index.js';
 
 
 const Article = (props) => {
@@ -92,24 +98,51 @@ const Article = (props) => {
   });
 
   return (
-    <Bass>
-      <ty.Title serif noGutter>Placeholder</ty.Title>
-      <WidgetList/>
-      <WidgetSelector/>
+    <div>
+      <Bass>
+        <ty.Title serif noGutter>Placeholder</ty.Title>
+        <WidgetList/>
+        <WidgetSelector/>
 
-      {focusedWidget === 0 && <ArticleIndex/>}
-      {focusedWidget === 1 && <ColorPicker/>}
+        {focusedWidget === 0 && <ArticleIndex/>}
+        {focusedWidget === 1 && <ColorPicker/>}
 
 
-      {
+        {
         // tab === 0 &&
         // <Box component="div">
         //   <Gallery focused={focus === 1} galleryIndex={galleryIndex}/>
         //   <ColorPicker r={r} g={g} b={b} focused={focus === 2}/>
         //   <InterestCalculator contributionAmount={contributionAmount} contributionFrequency={contributionFrequency} profitPerAn={profitPerAn} years={years} focused={focus === 3}/>
         // </Box>
-      }
-    </Bass>
+        }
+      </Bass>
+      <Router>
+        <Switch>
+          <Route path="/the-evolutionary-origins-of-truth">
+            <Articles.TheEvolutionaryOriginsOfTruth/>
+          </Route>
+          <Route path="/the-true-motivation-of-business">
+            <Articles.TheTrueMotivationOfBusiness/>
+          </Route>
+          <Route path="/speculation-on-god-no2">
+            <Articles.SpeculationOnPaulVanderklaysGodNumber2/>
+          </Route>
+          <Route path="/scientific-theories-as-truth">
+            <Articles.ScientificTheoriesAsTruth/>
+          </Route>
+          <Route path="/the-virus-of-progress">
+            <Articles.TheVirusOfProgress/>
+          </Route>
+          <Route path="/most-trees-are-blue">
+            <Articles.MostTreesAreBlue/>
+          </Route>
+          <Route path="/introductions">
+            <Articles.Introductions/>
+          </Route>
+        </Switch>
+      </Router>
+    </div>
   );
 };
 

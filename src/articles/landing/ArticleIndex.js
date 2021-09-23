@@ -9,6 +9,9 @@ import {
   To,
 } from '../../parts';
 import {
+  useHistory,
+} from 'react-router-dom';
+import {
   connect
 } from 'react-redux';
 import external from './assets/external.png';
@@ -70,6 +73,7 @@ const ArticleIndex = props => {
   const [group, setGroup] = useState(0);
   const [article, setArticle] = useState(0);
   const [loaded, setLoaded] = useState(0); // which article is loaded
+  const history = useHistory();
 
   const handleKeys = (e) => {
 
@@ -79,21 +83,21 @@ const ArticleIndex = props => {
     let changeGroups = false;
     switch (e.key) {
     case 'w':
-      changeGroups = (article - 2 < 0) && !(group - 1 < 0);
+      changeGroups = (article < 2) && (group > 0);
       break;
     case 'a':
-      changeGroups = (article - 1 < 0) && !(group - 1 < 0);
+      changeGroups = (article < 1) && (group > 0);
       break;
     case 's':
       changeGroups = (
-        (article + 2 > articleData[group].names.length - 1) &&
-        !(group + 1 > articleData.length - 1)
+        (article >= articleData[group].names.length - 2) &&
+        (group < articleData.length - 1)
       );
       break;
     case 'd':
       changeGroups = (
-        (article + 1 > articleData[group].names.length - 1) &&
-        !(group + 1 > articleData.legnth - 1)
+        (article >= articleData[group].names.length - 1) &&
+        (group < articleData.length - 1)
       );
       break;
     }
@@ -105,7 +109,7 @@ const ArticleIndex = props => {
       case 'w':
       case 'a':
         setGroup(group - 1);
-        setArticle(articleData[group].names.length - 1);
+        setArticle(articleData[group - 1].names.length - 1);
         break;
 
       case 's':
@@ -129,9 +133,8 @@ const ArticleIndex = props => {
 
     }
 
-
     if (e.key === 'Enter') {
-      window.open(`#${combinedArticleLinks[article]}`, '_blank');
+      history.push(`${articleData[group].links[article]}`);
     }
 
   };
@@ -145,7 +148,7 @@ const ArticleIndex = props => {
 
   return (
     <WidgetBase>
-      <Box component="div" className={clsx(c.h4)} display="flex">
+      <Box id="hi" component="div" className={clsx(c.h4)} display="flex">
         <Typography variant="h5" style={{marginRight: '13px'}} className={clsx(c.serif)}>
           Practical Articles
         </Typography>
@@ -156,7 +159,7 @@ const ArticleIndex = props => {
       <Box component="div" display="flex" flexDirection="row" flexWrap="wrap" className={c.articlesContainer}>
         {
           articleData[0].names.map((articleName, i) => (
-            <ArticleEntry key={i} selected={i == article && group === 0} href={articleData[0].links[i]}>
+            <ArticleEntry key={i} selected={i == article && group === 0} href={articleData[0].links[i]} id={articleName}>
               {articleName}
             </ArticleEntry>
           ))
@@ -171,7 +174,7 @@ const ArticleIndex = props => {
       <Box component="div" display="flex" flexDirection="row" flexWrap="wrap" className={c.articlesContainer}>
         {
           articleData[1].names.map((articleName, i) => (
-            <ArticleEntry selected={i === article && group === 1} key={i} href={articleData[1].links[i]}>
+            <ArticleEntry selected={i === article && group === 1} key={i} href={articleData[1].links[i]} id={articleName}>
               {articleName}
             </ArticleEntry>
           ))
@@ -193,7 +196,7 @@ const ArticleEntry = props => {
   } = props;
 
   return (
-    <Box component="div" className={c.thirty}>
+    <Box component="div" className={c.thirty} {...props}>
       <Typography variant="body2" className={clsx(c.body)}>
         {!selected && <To href={href}>
           {children}

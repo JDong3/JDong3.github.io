@@ -87,11 +87,11 @@ const Introductions = () => (
     <Hr type={2}/>
     <Text>
       <ul>
-        <li><To href="/the-evolutionary-origins-of-truth" link scroll><b>The Evolutionary Origins of Truth</b></To></li>
-        <li><To href="/the-virus-of-progress" link scroll><b>The Virus of Progress</b></To></li>
-        <li><To href="/speculation-on-paul-vanderklays-god-number-2" link scroll><b>Speculation On Paul Vanderklay&apos;s God Number 2</b></To></li>
-        <li><To href="/the-true-motivation-of-business" link scroll><b>The True Motivation of Business</b></To></li>
-        <li><To href="/scientific-theories-as-truth" link scroll><b>Scientific Theories as Truth</b></To></li>
+        <li><To href="/the-evolutionary-origins-of-truth" link><b>The Evolutionary Origins of Truth</b></To></li>
+        <li><To href="/the-virus-of-progress" link><b>The Virus of Progress</b></To></li>
+        <li><To href="/speculation-on-paul-vanderklays-god-number-2" link><b>Speculation On Paul Vanderklay&apos;s God Number 2</b></To></li>
+        <li><To href="/the-true-motivation-of-business" link><b>The True Motivation of Business</b></To></li>
+        <li><To href="/scientific-theories-as-truth" link><b>Scientific Theories as Truth</b></To></li>
       </ul>
     </Text>
 

@@ -14,7 +14,7 @@ const useStyles = makeStyles(() => (
       marginLeft: '5%',
     },
     minHeight: {
-      minHeight: '90vh',
+      // minHeight: '90vh',
     },
   }
 ));
