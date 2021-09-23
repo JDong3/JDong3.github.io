@@ -2,7 +2,7 @@ import {
   Text,
   Hr,
   Img,
-} from '../../colorful-text';
+} from '../../parts';
 import mtab from './assets/mtab.png';
 import greyMatch from './assets/grey-match.jpg';
 import redMatch from './assets/red-match.jpg';

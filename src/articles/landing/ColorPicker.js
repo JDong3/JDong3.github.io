@@ -1,5 +1,5 @@
 import WidgetBase from './WidgetBase.js';
-import {ty} from '../../colorful-text';
+import {ty} from '../../parts';
 import {
   Box,
   makeStyles,

@@ -9,7 +9,7 @@ import {
   // Img,
   To,
   TechCard,
-} from '../../colorful-text';
+} from '../../parts';
 import Bass from '../Bass.js';
 
 const Introductions = () => (

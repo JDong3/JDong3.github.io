@@ -5,7 +5,7 @@ import {
 } from '@material-ui/core';
 import {
   ty,
-} from '../../colorful-text';
+} from '../../parts';
 import clsx from 'clsx';
 import {connect} from 'react-redux';
 const useStyles = makeStyles(() => (

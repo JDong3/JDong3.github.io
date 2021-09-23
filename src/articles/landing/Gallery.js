@@ -6,7 +6,7 @@ import {
 } from '@material-ui/core';
 import {
   ty
-} from '../../colorful-text';
+} from '../../parts';
 import clsx from 'clsx';
 import WidgetBase from './WidgetBase.js';
 import {

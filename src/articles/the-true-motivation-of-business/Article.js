@@ -3,7 +3,7 @@ import {
   Text,
   Hr,
 
-} from '../../colorful-text';
+} from '../../parts';
 
 const TheTrueMotivationOfBusiness = () => (
   <Bass>

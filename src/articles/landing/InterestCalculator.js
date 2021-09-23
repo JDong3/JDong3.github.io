@@ -10,7 +10,7 @@ import {
 import WidgetBase from './WidgetBase.js';
 import {
   ty,
-} from '../../colorful-text';
+} from '../../parts';
 import {
   VictoryChart,
   VictoryLine,

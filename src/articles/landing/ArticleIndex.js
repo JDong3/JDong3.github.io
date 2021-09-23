@@ -7,7 +7,7 @@ import {
 import clsx from 'clsx';
 import {
   To,
-} from '../../colorful-text';
+} from '../../parts';
 import {
   connect
 } from 'react-redux';
@@ -51,10 +51,6 @@ const useStyles = makeStyles(() => (
       width: '50%',
     },
 
-    articlesContainer: {
-      // paddingBottom: '23px',
-    },
-
     smallGutter: {
       paddingBottom: '15px',
     },
@@ -76,18 +72,33 @@ const ArticleIndex = props => {
     forbidden,
   } = props;
 
+
+  const [group, setGroup] = useState(0);
   const [article, setArticle] = useState(0);
+  const [loaded, setLoaded] = useState(0); // which article is loaded
   const totalArticles = articleNames.length + practicalArticleNames.length;
+
+  const articlesSizes = [practicalArticleNames.length, articleNames.length];
+
+
 
   const handleKeys = (e) => {
 
     let res = article;
 
-    if (e.key === 'w') {
-      res = Math.max(0, article - 2);
+    if (e.key === 'w') {// go up a level if necessary
+      if (article - 2 < 0) {
+        setGroup(Math.max(0, group - 1));
+        res = practicalArticle.length - 1;
+      } else {
+        res = Math.max(0, article - 2);
+      }
     } else if (e.key === 'a') {
       res = Math.max(0, article - 1);
-    } else if (e.key === 's') {
+    } else if (e.key === 's') {// go down a level if necessary
+      if (article + 2 > 0) {
+        console.log('hi');
+      }
       res = Math.min(totalArticles - 1, article + 2);
     } else if (e.key === 'd') {
       res = Math.min(totalArticles - 1, article + 1);
@@ -144,6 +155,8 @@ const ArticleIndex = props => {
         }
       </Box>
       <div className={c.gutter}/>
+
+
     </WidgetBase>
   );
 };

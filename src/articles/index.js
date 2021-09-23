@@ -7,6 +7,16 @@ import TheVirusOfProgress from './the-virus-of-progress/Article.js';
 import TheTrueMotivationOfBusiness from './the-true-motivation-of-business/Article.js';
 import Landing from './landing/Article.js';
 
+
+const practicalArticles = [Introductions];
+const articles = [
+  TheEvolutionaryOriginsOfTruth,
+  TheVirusOfProgress,
+  SpeculationOnPaulVanderklaysGodNumber2,
+  TheTrueMotivationOfBusiness,
+  ScientificTheoriesAsTruth,
+];
+
 export {
   Introductions,
   MostTreesAreBlue,
@@ -16,4 +26,7 @@ export {
   TheVirusOfProgress,
   TheTrueMotivationOfBusiness,
   Landing,
+
+  practicalArticles,
+  articles,
 };

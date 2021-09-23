@@ -3,7 +3,7 @@ import {
   Toolbar,
   makeStyles,
 } from '@material-ui/core';
-import {Text} from './colorful-text';
+import {Text} from './parts';
 
 const useStyles = makeStyles(() => (
   {

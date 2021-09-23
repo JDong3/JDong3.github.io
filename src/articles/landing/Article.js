@@ -10,7 +10,7 @@ import {
 } from '@material-ui/core';
 import {
   ty
-} from '../../colorful-text';
+} from '../../parts';
 import {
   useState,
   useEffect,
@@ -54,7 +54,7 @@ const Article = (props) => {
     }
 
     // color picker is in focus
-    
+
 
     if (focus === 3) {
       if (e.key === 'q') {

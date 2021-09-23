@@ -2,7 +2,7 @@ import Bass from '../Bass.js';
 import {
   Text,
   Hr,
-} from '../../colorful-text';
+} from '../../parts';
 
 const Speculation = () => (
   <Bass>
