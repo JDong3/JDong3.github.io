@@ -64,51 +64,74 @@ const useStyles = makeStyles(() => (
 const ArticleIndex = props => {
   const c = useStyles();
   const {
-    articleNames,
-    articleLinks,
-    practicalArticleNames,
-    practicalArticleLinks,
-    combinedArticleLinks,
-    forbidden,
+    articleData
   } = props;
-
 
   const [group, setGroup] = useState(0);
   const [article, setArticle] = useState(0);
   const [loaded, setLoaded] = useState(0); // which article is loaded
-  const totalArticles = articleNames.length + practicalArticleNames.length;
-
-  const articlesSizes = [practicalArticleNames.length, articleNames.length];
-
-
 
   const handleKeys = (e) => {
 
-    let res = article;
+    let res;
 
-    if (e.key === 'w') {// go up a level if necessary
-      if (article - 2 < 0) {
-        setGroup(Math.max(0, group - 1));
-        res = practicalArticle.length - 1;
-      } else {
-        res = Math.max(0, article - 2);
-      }
-    } else if (e.key === 'a') {
-      res = Math.max(0, article - 1);
-    } else if (e.key === 's') {// go down a level if necessary
-      if (article + 2 > 0) {
-        console.log('hi');
-      }
-      res = Math.min(totalArticles - 1, article + 2);
-    } else if (e.key === 'd') {
-      res = Math.min(totalArticles - 1, article + 1);
+    // first check if we have to switch groups
+    let changeGroups = false;
+    switch (e.key) {
+    case 'w':
+      changeGroups = (article - 2 < 0) && !(group - 1 < 0);
+      break;
+    case 'a':
+      changeGroups = (article - 1 < 0) && !(group - 1 < 0);
+      break;
+    case 's':
+      changeGroups = (
+        (article + 2 > articleData[group].names.length - 1) &&
+        !(group + 1 > articleData.length - 1)
+      );
+      break;
+    case 'd':
+      changeGroups = (
+        (article + 1 > articleData[group].names.length - 1) &&
+        !(group + 1 > articleData.legnth - 1)
+      );
+      break;
     }
+
+    // if we have to change groups
+    if (changeGroups) {
+
+      switch (e.key) {
+      case 'w':
+      case 'a':
+        setGroup(group - 1);
+        setArticle(articleData[group].names.length - 1);
+        break;
+
+      case 's':
+      case 'd':
+        setGroup(group + 1);
+        setArticle(0);
+        break;
+      }
+
+    } else {
+
+      if (e.key === 'w') {
+        setArticle(Math.max(0, article - 2));
+      } else if (e.key === 'a') {
+        setArticle(Math.max(0, article - 1));
+      } else if (e.key === 's') {
+        setArticle(Math.min(articleData[group].names.length - 1, article + 2));
+      } else if (e.key === 'd') {
+        setArticle(Math.min(articleData[group].names.length - 1, article + 1));
+      }
+
+    }
+
+
     if (e.key === 'Enter') {
       window.open(`#${combinedArticleLinks[article]}`, '_blank');
-    }
-
-    if (forbidden.indexOf(res) === -1) {
-      setArticle(res);
     }
 
   };
@@ -132,8 +155,8 @@ const ArticleIndex = props => {
       </Box>
       <Box component="div" display="flex" flexDirection="row" flexWrap="wrap" className={c.articlesContainer}>
         {
-          practicalArticleNames.filter(articleName => articleName !== '').map((articleName, i) => (
-            <ArticleEntry key={i} selected={i == article} href={practicalArticleLinks[i]}>
+          articleData[0].names.map((articleName, i) => (
+            <ArticleEntry key={i} selected={i == article && group === 0} href={articleData[0].links[i]}>
               {articleName}
             </ArticleEntry>
           ))
@@ -147,8 +170,8 @@ const ArticleIndex = props => {
       </Box>
       <Box component="div" display="flex" flexDirection="row" flexWrap="wrap" className={c.articlesContainer}>
         {
-          articleNames.filter(articleName => articleName !== '').map((articleName, i) => (
-            <ArticleEntry selected={i + practicalArticleNames.length === article} key={i} href={articleLinks[i]}>
+          articleData[1].names.map((articleName, i) => (
+            <ArticleEntry selected={i === article && group === 1} key={i} href={articleData[1].links[i]}>
               {articleName}
             </ArticleEntry>
           ))
@@ -194,44 +217,10 @@ const External = props => {
   );
 };
 
-const mapStateToProps = (state) => {
-
-  let forbidden = [];
-  if (state.practicalArticleNames.length % 2 == 1) {
-    forbidden.push(state.practicalArticleNames.length );
+const mapStateToProps = (state) => (
+  {
+    articleData: state.articleData
   }
-  if (state.articleNames.length % 2 == 1) {
-    forbidden.push(state.articleNames.length + state.practicalArticleNames.length + forbidden.length);
-  }
-
-
-
-  let newState = produce(state, draft => {
-    if (state.practicalArticleNames.length % 2 == 1) {
-      draft.practicalArticleNames.push('');
-      draft.practicalArticleLinks.push('');
-    }
-    if (state.articleNames.length % 2 == 1) {
-      draft.articleNames.push('');
-      draft.articleLinks.push('');
-    }
-
-  });
-
-  let combinedArticleLinks = [];
-  newState.practicalArticleLinks.forEach(link => combinedArticleLinks.push(link));
-  newState.articleLinks.forEach(link => combinedArticleLinks.push(link));
-
-  return (
-    {
-      articleNames: newState.articleNames,
-      articleLinks: newState.articleLinks,
-      practicalArticleNames: newState.practicalArticleNames,
-      practicalArticleLinks: newState.practicalArticleLinks,
-      combinedArticleLinks: combinedArticleLinks,
-      forbidden: forbidden,
-    }
-  );
-};
+);
 
 export default connect(mapStateToProps)(ArticleIndex);

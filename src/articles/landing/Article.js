@@ -54,8 +54,6 @@ const Article = (props) => {
     }
 
     // color picker is in focus
-
-
     if (focus === 3) {
       if (e.key === 'q') {
         setContributionAmount(Math.max(contributionAmount - 100, 0));

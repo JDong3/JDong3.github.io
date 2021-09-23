@@ -4,26 +4,36 @@ const initialState = {
   focusedWidget: 0,
   totalWidgets: 4,
 
-  articleNames: [
-    'The Evolutionary Origins of Truth',
-    'The Virus of Progress',
-    'Speculation on God no.2',
-    'The True Motivation of Business',
-    'Scientific Theories as Truth',
-  ],
-  articleLinks: [
-    '/the-evolutionary-origins-of-truth',
-    '/the-virus-of-progress',
-    '/speculation-on-god-no2',
-    '/the-true-motivation-of-business',
-    '/scientific-theories-as-truth',
-  ],
 
-  practicalArticleNames: [
-    'Introductions'
-  ],
-  practicalArticleLinks: [
-    '/introductions'
+  articleData: [
+    {
+      category: 'Practical Articles',
+      names: [
+        'Introductions'
+      ],
+      links: [
+        '/introductions'
+      ]
+    },
+    
+    {
+      category: 'Impractical Articles (Philosophy)',
+      names: [
+        'The Evolutionary Origins of Truth',
+        'The Virus of Progress',
+        'Speculation on God no.2',
+        'The True Motivation of Business',
+        'Scientific Theories as Truth',
+      ],
+      links: [
+        '/the-evolutionary-origins-of-truth',
+        '/the-virus-of-progress',
+        '/speculation-on-god-no2',
+        '/the-true-motivation-of-business',
+        '/scientific-theories-as-truth',
+      ]
+    },
+
   ],
 };
 
