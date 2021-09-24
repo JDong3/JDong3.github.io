@@ -34,6 +34,23 @@ const useStyles = makeStyles(() => (
       marginLeft: '7px',
       marginTop: '0px',
     },
+
+    articleText: {
+      fontSize: '18.4px',
+      lineHeight: '1.4',
+    },
+
+    articleTextGutter: {
+      marginBottom: '12px',
+    },
+
+    articleSectionGutter: {
+      paddingBottom: '12px',
+    },
+    slightlySmaller: {
+      width: '98%',
+      marginLeft: '1%',
+    },
   }
 ));
 
@@ -74,8 +91,58 @@ const WidgetText = props => {
   );
 };
 
+const ArticleText = props => {
+  const {
+    children,
+    className,
+    gutter,
+    slightlySmaller
+  } = props;
+  const c = useStyles();
+
+  return (
+    <Typography {...props} display="block" align="justify" className={clsx(c.serif, c.articleText, slightlySmaller && c.slightlySmaller, gutter && c.articleTextGutter, className)}>
+      {children}
+
+    </Typography>
+  );
+};
+
+const ArticleSection = props => {
+  const c = useStyles();
+  const {
+    children,
+    className,
+    gutter,
+  } = props;
+  return (
+    <Typography {...props} variant="h4" className={clsx(c.serif, gutter && c.articleSectionGutter, className)}>
+      {children}
+    </Typography>
+  );
+};
+
+const SmallBodyText = props => {
+  const {
+    children,
+    className,
+    gutter,
+    serif,
+  } = props;
+  const c = useStyles();
+
+  return (
+    <Typography {...props} variant="body2" className={clsx(serif && c.serif, c.sansSerif, className, gutter && c.articleTextGutter)}>
+      {children}
+    </Typography>
+  );
+};
+
 export default {
   Title,
   WidgetTitle,
   WidgetText,
+  ArticleText,
+  ArticleSection,
+  SmallBodyText,
 };

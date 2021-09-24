@@ -7,6 +7,7 @@ import {
 import clsx from 'clsx';
 import {
   To,
+  ty,
 } from '../../parts';
 import {
   useHistory,

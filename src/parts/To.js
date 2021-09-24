@@ -4,6 +4,7 @@ import {
 import {
   Link,
 } from 'react-router-dom';
+import clsx from 'clsx';
 
 const useStyles = makeStyles(() => (
   {
@@ -20,7 +21,11 @@ const To = props => {
  * :param link: bool, use Link element
  */
 
-  const {href, children, link, scroll} = props;
+  const {
+    href,
+    children,
+    className,
+  } = props;
   const classes = useStyles();
   let scrollToTop;
 
@@ -28,14 +33,10 @@ const To = props => {
     scrollToTop = () => window.scrollTo(0, 0);
   }
 
-  if (link) {
-    return (
-      <Link to={href} className={classes.standard} onClick={scrollToTop} {...props}>{children}</Link>
-    );
-  }
-
   return (
-    <Link to={href} target='_blank' className={classes.standard} rel="noreferrer noopener" {...props}>{children}</Link>
+    <Link {...props} to={href} className={clsx(classes.standard, className)} >
+      {children}
+    </Link>
   );
 };
 
