@@ -29,7 +29,7 @@ const WidgetBase = (props) => {
     gap,
   } = props;
   return (
-    <Paper elevation={focused ? 1 : 1} className={clsx(gap && c.bottomGap, c.slightlySmaller)}>
+    <Paper elevation={3} className={clsx(gap && c.bottomGap, c.slightlySmaller)}>
       {children}
     </Paper>
   );

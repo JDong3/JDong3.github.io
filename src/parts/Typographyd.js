@@ -41,7 +41,7 @@ const useStyles = makeStyles(() => (
     },
 
     articleTextGutter: {
-      marginBottom: '12px',
+      marginBottom: '33px',
     },
 
     articleSectionGutter: {
@@ -55,7 +55,12 @@ const useStyles = makeStyles(() => (
 ));
 
 const Title = props => {
-  const {smaller, children, serif, noGutter} = props;
+  const {
+    smaller,
+    children,
+    serif,
+    noGutter,
+  } = props;
   const variant = smaller ? 'h2' : 'h1';
   const c = useStyles();
 
@@ -101,7 +106,7 @@ const ArticleText = props => {
   const c = useStyles();
 
   return (
-    <Typography {...props} display="block" align="justify" className={clsx(c.serif, c.articleText, slightlySmaller && c.slightlySmaller, gutter && c.articleTextGutter, className)}>
+    <Typography {...props} display="block" align="justify" className={clsx(c.serif, c.articleText, c.slightlySmaller, gutter && c.articleTextGutter, className)}>
       {children}
 
     </Typography>
@@ -114,9 +119,10 @@ const ArticleSection = props => {
     children,
     className,
     gutter,
+    slightlySmaller,
   } = props;
   return (
-    <Typography {...props} variant="h4" className={clsx(c.serif, gutter && c.articleSectionGutter, className)}>
+    <Typography {...props} variant="h4" className={clsx(c.serif, gutter && c.articleSectionGutter, c.slightlySmaller, className)}>
       {children}
     </Typography>
   );
