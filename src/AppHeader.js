@@ -8,7 +8,12 @@ import {
 import cat from './assets/octokat.png';
 import yt from './assets/yt.png';
 import disco from './assets/disco.png';
-import {Idea} from './parts';
+import {
+  Idea,
+} from './parts';
+import {
+  useEffect,
+} from 'react';
 
 const useStyles = makeStyles(() => (
   {
@@ -35,6 +40,7 @@ const useStyles = makeStyles(() => (
 
 function AppHeader() {
   const classes = useStyles();
+
   return (
     <Container maxWidth="md">
       <Toolbar disableGutters={true}>

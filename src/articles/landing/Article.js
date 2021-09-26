@@ -117,31 +117,34 @@ const Article = (props) => {
         // </Box>
         }
       </Bass>
-      <Router>
-        <Switch>
-          <Route path="/the-evolutionary-origins-of-truth">
-            <Articles.TheEvolutionaryOriginsOfTruth/>
-          </Route>
-          <Route path="/the-true-motivation-of-business">
-            <Articles.TheTrueMotivationOfBusiness/>
-          </Route>
-          <Route path="/speculation-on-god-no2">
-            <Articles.SpeculationOnPaulVanderklaysGodNumber2/>
-          </Route>
-          <Route path="/scientific-theories-as-truth">
-            <Articles.ScientificTheoriesAsTruth/>
-          </Route>
-          <Route path="/the-virus-of-progress">
-            <Articles.TheVirusOfProgress/>
-          </Route>
-          <Route path="/most-trees-are-blue">
-            <Articles.MostTreesAreBlue/>
-          </Route>
-          <Route path="/introductions">
-            <Articles.Introductions/>
-          </Route>
-        </Switch>
-      </Router>
+      {
+        focusedWidget === 0 &&
+        <Router>
+          <Switch>
+            <Route path="/the-evolutionary-origins-of-truth">
+              <Articles.TheEvolutionaryOriginsOfTruth/>
+            </Route>
+            <Route path="/the-true-motivation-of-business">
+              <Articles.TheTrueMotivationOfBusiness/>
+            </Route>
+            <Route path="/speculation-on-god-no2">
+              <Articles.SpeculationOnPaulVanderklaysGodNumber2/>
+            </Route>
+            <Route path="/scientific-theories-as-truth">
+              <Articles.ScientificTheoriesAsTruth/>
+            </Route>
+            <Route path="/the-virus-of-progress">
+              <Articles.TheVirusOfProgress/>
+            </Route>
+            <Route path="/most-trees-are-blue">
+              <Articles.MostTreesAreBlue/>
+            </Route>
+            <Route path="/introductions">
+              <Articles.Introductions/>
+            </Route>
+          </Switch>
+        </Router>
+      }
     </div>
   );
 };

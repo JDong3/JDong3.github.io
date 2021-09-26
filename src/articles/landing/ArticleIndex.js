@@ -201,12 +201,10 @@ const ArticleEntry = props => {
       <Typography variant="body2" className={clsx(c.body)}>
         {!selected && <To href={href}>
           {children}
-          <External/>
         </To>}
 
         {selected && <To href={href}>
           <b>{children}</b>
-          <External/>
         </To>}
       </Typography>
     </Box>
