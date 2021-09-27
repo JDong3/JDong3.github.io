@@ -3,6 +3,7 @@ import produce from 'immer';
 const initialState = {
   focusedWidget: 0,
   totalWidgets: 4,
+  // totalWidgets: 4,
 
 
   articleData: [
@@ -15,7 +16,7 @@ const initialState = {
         '/introductions'
       ]
     },
-    
+
     {
       category: 'Impractical Articles (Philosophy)',
       names: [

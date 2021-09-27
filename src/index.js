@@ -33,18 +33,18 @@ const theme = createMuiTheme({
 });
 
 ReactDOM.render(
-  <div style={{minHeight: '100vh'}}>
-    <Provider store={store}>
-      <ThemeProvider theme={theme}>
-        <React.StrictMode>
-          <Router>
-            <AppHeader/>
+  <Provider store={store}>
+    <ThemeProvider theme={theme}>
+      <React.StrictMode>
+        <Router>
+          <AppHeader/>
+          <div style={{minHeight: '68vh'}}>
             <Articles.Landing/>
-            <AppFooter/>
-          </Router>
-        </React.StrictMode>
-      </ThemeProvider>
-    </Provider>
-  </div>,
+          </div>
+          <AppFooter/>
+        </Router>
+      </React.StrictMode>
+    </ThemeProvider>
+  </Provider>,
   document.getElementById('root'),
 );

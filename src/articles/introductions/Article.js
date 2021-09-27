@@ -32,23 +32,18 @@ const Introductions = () => {
   return <Bass>
     <ty.Title smaller serif>Introductions</ty.Title>
     <ty.ArticleText gutter slightlySmaller>
-      Hi, I&apos;m Joseph, I&apos;m a programmer that specializes in front-end web development, design, and QA (user experience, automation testing, et cetera). On this website, you&apos;ll find a selection of articles that explain the way in which I approach life, design, and programming. You will also find some descriptions of my past work experience, and the technologies that I&apos;m most familiar with. And just so you know, if you plan on reading the articles, they can get a bit esoteric at times, (which is expected when discussing philosophy). But anyways, whatever you&apos;re looking for on this website, I hope you find it, and enjoy the reading.
-
-      <br/>
-      <br/>
-
-      Hi, I'm Joseph, I'm a computer programmer that specializes in front-end developement (React + Redux + Material-UI), and QA (automated testing, API testing). On this website
+      Hi, I'm Joseph, I'm a computer programmer that specializes in all things web, that is visual design, software design, devlopment, and architecture. Lately I've been working on designs based on a React, Express software stack, and Material-UI, pixel art visual style. On this website at the moment, you can find a couple of articles that I hope shed some light on my philosophy regarding how I believe you should approach design, some descriptions of my past work experience, and some other features of the website that are currently under development.
     </ty.ArticleText>
 
     <ty.Title smaller serif>Industry Experience</ty.Title>
     <Box>
-      <ty.ArticleSection>CI/CD Pipeline Developer at IBM</ty.ArticleSection>
+      <ty.ArticleSection>CI/CD Developer at IBM</ty.ArticleSection>
       <ty.SmallBodyText gutter className={c.slightlySmaller}>
         <b>May 2019 - August 2020</b>
       </ty.SmallBodyText>
     </Box>
     <ty.ArticleText gutter slightlySmaller>
-      During my time at IBM, I was part of the Customer Experience Analysis (CEA) team, which was one of the teams that worked on IBM&apos;s hybrid-cloud machine learning platform (CPD). The purpose of the CEA team was actually not very clear me for a long time, as I&apos;ve never heard of such a team before I joined one. But eventually I figured out that the purpose of our team was to use our influence to try and get the other teams to co-operate on isses that affected the quality of the platform overall, that none of them wanted to address individually. I basically just worked on software that generated reports that the management on our team used to make their cases.
+      During my time at IBM, I was part of the Customer Experience Analysis (CEA) team, which was one of the teams that worked on IBM's hybrid-cloud machine learning platform (CPD). The purpose of the CEA team was actually not very clear me for a long time, as I've never heard of such a team before I joined one. But eventually I figured out that the purpose of our team was to use our influence to try and get the other teams to co-operate on isses that affected the quality of the platform overall, that none of them wanted to address individually. I basically just worked on software, and the CI/CD pipeline that generated reports that the management on our team used to make their cases.
     </ty.ArticleText>
 
     <Box>
@@ -65,10 +60,24 @@ const Introductions = () => {
 
     <ty.Title smaller serif>Tech Stuff I Work With</ty.Title>
 
+    <Box display="flex" justifyContent="center">
+      <Box>
+
+      </Box>
+    </Box>
+    <Box marginBottom="15px" display="flex" justifyContent="center">
+      <Box>
+        <img height="150" src={js}/>
+        <img height="150" src={github}/>
+        <img height="150" src={react}/>
+        <img height="150" src={sql}/>
+      </Box>
+    </Box>
+
     <ty.ArticleSection gutter>Software Collaboration Tools (Git, GitHub, BitBucket)</ty.ArticleSection>
     <ty.ArticleText gutter title="Software Collaboration Tools" style={{borderRadius: '15px'}} src={github}>
 
-      Version Control Software or VCS is the base tool that allows programmers to effectively collaborate on code, examples of this would be Git, or SVN. Services like Github, or BitBucket are platorms that host VCS servers, and integrate many of the VCS features into a GUI that allows idiots like myself to use them more effectively. In my time, since I&apos;ve often had to collaborate on code with others, I&apos;ve become quite familiar with the standard VCS usage, (code reviews, pull requests, branching, merging, et cetera).
+      Version Control Software or VCS is the base tool that allows programmers to effectively collaborate on code, examples of this would be Git, or SVN. Services like Github, or BitBucket are platorms that host VCS servers, and integrate many of the VCS features into a GUI that allows idiots like myself to use them more effectively. In my time, since I've often had to collaborate on code with others, I've become quite familiar with the standard VCS usage, (code reviews, pull requests, branching, merging, et cetera).
 
     </ty.ArticleText>
 
@@ -88,7 +97,7 @@ const Introductions = () => {
 
     <ty.ArticleText gutter title="Various Web Frameworks" src={react}>
 
-      But since the web is already a platform emulator, and there really seems to be no going back, (which by the way to make my point more clear, look at ChromeOS and tell me that Google doesn&apos;t already think that the web should be used as the base platform of personal computing,) web frameworks are what makes the prospect of developing on the platform tolerable, as base JavaScript was not intended to be used to make these complicated web applications.
+      But since the web is already a platform emulator, and there really seems to be no going back, (which by the way to make my point more clear, look at ChromeOS and tell me that Google doesn't already think that the web should be used as the base platform of personal computing,) web frameworks are what makes the prospect of developing on the platform tolerable, as base JavaScript was not intended to be used to make these complicated web applications.
 
     </ty.ArticleText>
 

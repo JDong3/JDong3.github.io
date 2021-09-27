@@ -76,6 +76,13 @@ const ArticleIndex = props => {
   const [loaded, setLoaded] = useState(0); // which article is loaded
   const history = useHistory();
 
+  const handleClick = (whichGroup, whichArticle) => (
+    () => {
+      setGroup(whichGroup);
+      setArticle(whichArticle);
+    }
+  );
+
   const handleKeys = (e) => {
 
     let res;
@@ -160,7 +167,7 @@ const ArticleIndex = props => {
       <Box component="div" display="flex" flexDirection="row" flexWrap="wrap" className={c.articlesContainer}>
         {
           articleData[0].names.map((articleName, i) => (
-            <ArticleEntry key={i} selected={i == article && group === 0} href={articleData[0].links[i]} id={articleName}>
+            <ArticleEntry key={i} onClick={handleClick(0, i)} selected={i == article && group === 0} href={articleData[0].links[i]} id={articleName}>
               {articleName}
             </ArticleEntry>
           ))
@@ -175,7 +182,7 @@ const ArticleIndex = props => {
       <Box component="div" display="flex" flexDirection="row" flexWrap="wrap" className={c.articlesContainer}>
         {
           articleData[1].names.map((articleName, i) => (
-            <ArticleEntry selected={i === article && group === 1} key={i} href={articleData[1].links[i]} id={articleName}>
+            <ArticleEntry onClick={handleClick(1, i)} selected={i === article && group === 1} key={i} href={articleData[1].links[i]} id={articleName}>
               {articleName}
             </ArticleEntry>
           ))

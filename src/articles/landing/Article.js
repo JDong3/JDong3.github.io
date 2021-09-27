@@ -24,6 +24,7 @@ import InterestCalculator from './InterestCalculator.js';
 import WidgetList from './WidgetList.js';
 import WidgetSelector from './WidgetSelector.js';
 import ArticleIndex from './ArticleIndex.js';
+import WidgetBase from './WidgetBase.js';
 import {
   HashRouter as Router,
   Switch,
@@ -105,8 +106,14 @@ const Article = (props) => {
         <WidgetSelector/>
 
         {focusedWidget === 0 && <ArticleIndex/>}
-        {focusedWidget === 1 && <ColorPicker/>}
+        {focusedWidget !== 0 &&
+          <WidgetBase>
+            <ty.ArticleSection>
 
+                Still Under Development
+            </ty.ArticleSection>
+          </WidgetBase>
+        }
 
         {
         // tab === 0 &&
