@@ -25,6 +25,9 @@ module.exports = {
     '@typescript-eslint/no-non-null-assertion': 'off',
     'no-trailing-spaces': "error",
     'no-multiple-empty-lines': ["error", {"max": 1}],
-    "indent": ["error", 4]
+    "indent": ["error", 4],
+    "quotes": ["error", "single"],
+    "space-infix-ops": ["error"],
+    "semi": ["error"]
   },
 }
