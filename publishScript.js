@@ -7,3 +7,6 @@ ghpages.publish('dist', {
     branch: 'gh-pages',
     repo: 'git@github.com:JDong3/JDong3.github.io.git'
   }, function(){});
+
+
+  // trivial change for testing
