@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
 import './index.css'
 
 import './index.css';
@@ -9,8 +8,6 @@ import {Landing} from './articles';
 import AppFooter from './AppFooter.jsx';
 import {
     HashRouter as Router,
-    Switch,
-    Route,
 } from 'react-router-dom';
 import {Provider} from 'react-redux';
 import {createStore} from 'redux';
@@ -34,7 +31,6 @@ const theme = createMuiTheme({
         ].join(','),
     },
 });
-
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <Provider store={store}>

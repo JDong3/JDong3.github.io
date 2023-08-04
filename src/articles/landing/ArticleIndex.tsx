@@ -14,7 +14,7 @@ import {
 import {
     connect
 } from 'react-redux';
-import external from './assets/external.png';
+// import external from './assets/external.png';
 import {
     W,
     A,
@@ -74,9 +74,9 @@ const useStyles = makeStyles(() => (
     }
 ));
 
-interface ArticleIndexProps {
+// interface ArticleIndexProps {
 
-}
+// }
 
 /**
  * ArticleIndex is the component that "indexes" all the articles, it provides a
@@ -93,7 +93,7 @@ const ArticleIndex = props => {
 
     const [group, setGroup] = useState(0);
     const [article, setArticle] = useState(0);
-    const [loaded, setLoaded] = useState(0); // which article is loaded
+    // const [loaded, setLoaded] = useState(0); // which article is loaded
     const history = useHistory();
 
     const handleClick = (whichGroup, whichArticle) => (
@@ -104,8 +104,6 @@ const ArticleIndex = props => {
     );
 
     const handleKeys = (e : KeyboardEvent) => {
-
-        let res;
 
         // first check if we have to switch groups
         let changeGroups = false;
@@ -241,13 +239,13 @@ const ArticleEntry = props => {
     );
 };
 
-const External = props => {
-    const c = useStyles();
+// const External = props => {
+//     const c = useStyles();
 
-    return (
-        <img src={external} className={c.external}/>
-    );
-};
+//     return (
+//         <img src={external} className={c.external}/>
+//     );
+// };
 
 const mapStateToProps = (state) => (
     {

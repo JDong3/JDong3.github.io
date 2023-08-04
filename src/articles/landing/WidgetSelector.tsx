@@ -1,5 +1,4 @@
 import {
-    Paper,
     Box,
     Typography,
     makeStyles,
