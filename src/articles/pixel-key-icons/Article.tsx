@@ -15,7 +15,7 @@ const Article = () => {
         <ty.ArticleSection gutter>Description</ty.ArticleSection>
 
         <ty.ArticleText slightlySmaller>
-            test 123 <KeyIcon symbol='a'/>
+            test 123 <KeyIcon symbol='a' size='16px'/>
         </ty.ArticleText>
     </Bass>;
 };
