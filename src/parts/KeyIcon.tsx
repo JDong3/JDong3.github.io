@@ -33,10 +33,6 @@ import clsx from 'clsx';
 
 const useStyles = makeStyles(() => (
     {
-        icon: {
-            height: '1em',
-        },
-
         imgDisplay: {
             display: 'inline',
         },
@@ -138,7 +134,7 @@ const KeyIcon = ({symbol}: KeyIconProps) => {
         src = enterIcon;
         break;
     }
-    return <img src={src} className={clsx(c.icon, c.imgDisplay, c.rightGutter)}/>;
+    return <img src={src} className={clsx(c.imgDisplay, c.rightGutter)}/>;
 };
 
 export default KeyIcon;

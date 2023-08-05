@@ -80,6 +80,9 @@ const Landing = (props) => {
                 <Route path={articleData[0].links[0]}>
                     <Articles.Introductions/>
                 </Route>
+                <Route path={articleData[0].links[1]}>
+                    <Articles.PixelKeyIcons/>
+                </Route>
                 {/* <Route path={articleData[0].links[1]}>
               <Articles.YoloV4LiveStream/>
             </Route> */}

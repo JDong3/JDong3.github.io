@@ -36,8 +36,7 @@ const useStyles = makeStyles(() => (
         },
 
         articleText: {
-            fontSize: '18.4px',
-            lineHeight: '1.4',
+            lineHeight: 1.25
         },
 
         articleTextGutter: {
@@ -111,7 +110,7 @@ const ArticleText = props => {
     const c = useStyles();
 
     return (
-        <Typography {...props} display="block" align="justify" className={clsx(c.serif, c.articleText, slightlySmaller && c.slightlySmaller, gutter && c.articleTextGutter, forListIndent && c.forListIndent, className)}>
+        <Typography {...props} variant="body1" display="block" align="justify" className={clsx(c.sansSerif, c.articleText, slightlySmaller && c.slightlySmaller, gutter && c.articleTextGutter, forListIndent && c.forListIndent, className)}>
             {children}
 
         </Typography>
@@ -141,7 +140,7 @@ const ArticleSection = props => {
         slightlySmaller,
     } = props;
     return (
-        <Typography {...props} variant="h4" className={clsx(c.serif, gutter && c.articleSectionGutter, c.slightlySmaller, className)}>
+        <Typography {...props} variant="h3" className={clsx(c.serif, gutter && c.articleSectionGutter, c.slightlySmaller, className)}>
             {children}
         </Typography>
     );
@@ -156,11 +155,11 @@ const ArticleSubSection = props => {
         slightlySmaller,
     } = props;
     return (
-        <Typography {...props} variant="h5" className={clsx(c.serif, gutter && c.articleSectionGutter, c.slightlySmaller, className)}>
+        <Typography {...props} variant="h4" className={clsx(c.serif, gutter && c.articleSectionGutter, c.slightlySmaller, className)}>
             {children}
         </Typography>
     );
-}
+};
 
 const Section = props => {
     const c = useStyles();

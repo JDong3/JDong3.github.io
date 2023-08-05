@@ -10,10 +10,12 @@ const initialState = {
             category: 'Practical Articles',
             names: [
                 'Introduction',
+                'Pixel Key Icons'
                 // 'yolov4-live-stream',
             ],
             links: [
                 '/introduction',
+                '/pixel-key-icons'
                 // '/yolov4-live-stream',
             ]
         },
@@ -39,7 +41,7 @@ const initialState = {
     ],
 };
 
-const reducer = (state=initialState, action) => {
+const reducer = (state = initialState, action) => {
     let res;
 
     switch (action.type) {

@@ -1,23 +1,23 @@
 // Import ss from './assets/ss.png';
 
-import intelense from './assets/intelense.jpg'
-import ibm from './assets/ibm.svg'
-import caseware from './assets/caseware.png'
+import intelense from './assets/intelense.jpg';
+import ibm from './assets/ibm.svg';
+import caseware from './assets/caseware.png';
 
-import bitbucket from './assets/bitbucket.jpg'
+import bitbucket from './assets/bitbucket.jpg';
 import github from './assets/github.png';
-import git from './assets/git.svg'
-import slack from './assets/slack.png'
+import git from './assets/git.svg';
+import slack from './assets/slack.png';
 
 import js from './assets/js.png';
-import ts from './assets/ts.svg'
-import kotlin from './assets/kotlin.png'
-import java from './assets/java.png'
+import ts from './assets/ts.svg';
+import kotlin from './assets/kotlin.png';
+import java from './assets/java.png';
 
 import react from './assets/react.png';
-import android from './assets/android.png'
-import njs from './assets/node.jpg'
-import mysql from './assets/sql.png'
+import android from './assets/android.png';
+import njs from './assets/node.jpg';
+import mysql from './assets/sql.png';
 
 import {
     Box,
@@ -42,7 +42,6 @@ const useStyles = makeStyles(() => (
 ));
 
 const Introductions = () => {
-
     const c = useStyles();
 
     return <Bass>
@@ -53,7 +52,7 @@ const Introductions = () => {
 
         <ty.Title smaller serif>Industry Experience</ty.Title>
 
-        <Box className={c.centeredContent} style={{marginBottom: "15px"}}>
+        <Box className={c.centeredContent} style={{marginBottom: '15px'}}>
             <Box>
                 <img height="150" src={intelense}/>
                 <img height="150" src={caseware}/>
@@ -113,7 +112,7 @@ const Introductions = () => {
 
         <ty.Title smaller serif>Skills, Technology</ty.Title>
 
-        <Box style={{marginBottom: "15px"}} className={c.centeredContent}>
+        <Box style={{marginBottom: '15px'}} className={c.centeredContent}>
             <Box>
                 <img height="150" src={react}/>
                 <img height="150" src={android}/>

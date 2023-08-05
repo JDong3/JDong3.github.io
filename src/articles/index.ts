@@ -1,4 +1,5 @@
 import Introductions from './introductions/Article.jsx';
+import PixelKeyIcons from './pixel-key-icons/Article.tsx';
 import YoloV4LiveStream from './yolov4-live-stream/Article.jsx';
 
 import MostTreesAreBlue from './most-trees-are-blue/Article.jsx';
@@ -14,6 +15,7 @@ export {
     Landing,
 
     Introductions,
+    PixelKeyIcons,
     YoloV4LiveStream,
 
     MostTreesAreBlue,
