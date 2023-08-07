@@ -95,16 +95,33 @@ const useStyles = makeStyles(() => (
 
         rightGutter: {
             marginRight: '1px',
+        },
+
+        space16px: {
+            marginRight: '10px'
+        },
+
+        space32px: {
+            marginRight: '20px'
+        },
+
+        space64px: {
+            marginRight: '36px'
         }
     }
 ));
 
 interface KeyIconProps {
-    symbol: 'a' | 'b' | 'c' | 'd' | 'e' | 'f' | 'g' | 'h' | 'i' | 'j' | 'k' | 'l' | 'm' | 'n' | 'o' | 'p' | 'q' | 'r' | 's' | 't' | 'u' | 'v' | 'w' | 'x' | 'y' | 'z' | 'enter'
-    size: '16px' | '32px' | '64px'
+    symbol: 'a' | 'b' | 'c' | 'd' | 'e' | 'f' | 'g' | 'h' | 'i' | 'j' | 'k' | 'l' | 'm' | 'n' | 'o' | 'p' | 'q' | 'r' | 's' | 't' | 'u' | 'v' | 'w' | 'x' | 'y' | 'z' | 'enter' | string
+    size: '16px' | '32px' | '64px',
+    space?: boolean,
 }
 
-const KeyIcon = ({symbol, size}: KeyIconProps) => {
+const KeyIcon = ({
+    symbol,
+    size,
+    space,
+}: KeyIconProps) => {
     const c = useStyles();
     let src = a16pxIcon;
 
@@ -353,7 +370,13 @@ const KeyIcon = ({symbol, size}: KeyIconProps) => {
         src = enter64pxIcon;
         break;
     }
-    return <img src={src} className={clsx(c.imgDisplay, c.rightGutter)}/>;
+    return <img src={src} className={clsx(
+        c.imgDisplay,
+        !space && c.rightGutter,
+        space && size == '16px' && c.space16px,
+        space && size == '32px' && c.space32px,
+        space && size == '64px' && c.space64px,
+    )}/>;
 };
 
 export default KeyIcon;

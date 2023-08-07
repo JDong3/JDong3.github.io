@@ -12,15 +12,15 @@ import {
     widgetGoLeft,
     widgetGoRight,
 } from '../../redux/actions.ts';
-import {J, K} from './Keys.js';
+import KeyIcon from '../../parts/KeyIcon.tsx';
 import clsx from 'clsx';
 
 const useStyles = makeStyles(() => (
     {
         boxStyle: {
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "center",
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'center',
             flex: 1
         },
         thirty: {
@@ -40,8 +40,8 @@ const useStyles = makeStyles(() => (
 
         text: {
             fontFamily: 'serif',
-            marginLeft: "10px",
-            marginRight: "10px",
+            marginLeft: '10px',
+            marginRight: '10px',
         }
     }
 ));
@@ -81,7 +81,7 @@ const WidgetSelector = props => {
     return (
         <>
             <Box component="div" display="flex" flexDirection="row" justifyContent="left">
-                <Typography variant="body2" style={{opacity: '0.7'}}><J/> Go Left, <K/> Go Right</Typography>
+                <Typography variant="body2" style={{opacity: '0.7'}}><KeyIcon symbol='j' size='16px'/> Go Left, <KeyIcon symbol='k' size='16px'/> Go Right</Typography>
             </Box>
             <Box component="div" className={clsx(c.selectorSpacing, c.boxStyle)}>
                 <Typography variant="h3" onClick={widgetGoLeft}>

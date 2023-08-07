@@ -28,12 +28,14 @@ import {
     useState,
     useEffect,
 } from 'react';
+import KeyIconString from '../../parts/KeyIconString.js';
+import KeyIcon from '../../parts/KeyIcon.js';
 
 const useStyles = makeStyles(() => (
     {
         practicalArticlesLineStyle: {
-            display: "flex",
-            flexDirection: "row",
+            display: 'flex',
+            flexDirection: 'row',
         },
         external: {
             height: '1em',
@@ -67,9 +69,9 @@ const useStyles = makeStyles(() => (
         },
 
         articlesContainer: {
-            display: "flex",
-            flexDirection: "row",
-            flexWrap:"wrap",
+            display: 'flex',
+            flexDirection: 'row',
+            flexWrap:'wrap',
         }
     }
 ));
@@ -179,7 +181,7 @@ const ArticleIndex = props => {
           Practical Articles
                 </Typography>
                 <Typography variant="body2" style={{opacity: '0.7'}}>
-                    <W rightGutter/><A rightGutter/><S rightGutter/><D/> navigation, <Enter/> Select
+                    <KeyIconString content='wasd' size='16px'/> navigation, <KeyIcon symbol='enter' size='16px'/> Select
                 </Typography>
             </Box>
             <Box component="div" className={c.articlesContainer}>
