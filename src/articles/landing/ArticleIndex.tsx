@@ -15,13 +15,6 @@ import {
     connect
 } from 'react-redux';
 // import external from './assets/external.png';
-import {
-    W,
-    A,
-    S,
-    D,
-    Enter,
-} from './Keys.js';
 // import produce from 'immer';
 
 import {
