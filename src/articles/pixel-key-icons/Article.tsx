@@ -147,9 +147,11 @@ const Article = () => {
 
         </ty.ArticleText>
 
-        <ty.ArticleSection gutter>Multiple Problems With I</ty.ArticleSection>
+        <ty.ArticleSection gutter>Multiple Issues With I</ty.ArticleSection>
 
         <ty.ArticleText gutter slightlySmaller>
+
+            ie we need true symmetry in the character, but that will break symmetry of the character in the icon, we accept breaking symmetry of the character in the icon as the lesser evil<br/><br/>
 
             If you look at the design or almost all I characters, you will see two horizontal lines at the top and bottom of the character, and a pillar, straight down the center connecting the top and bottom. There is almost no getting away from this reality. Now there is always a problem with symmetry and even pixel resolutions in pixel-art, but there is a possible solution which may work sometimes, which is to double the thickness in the center.
         </ty.ArticleText>
