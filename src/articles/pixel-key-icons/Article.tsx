@@ -79,29 +79,25 @@ const Article = () => {
         <ty.ArticleSection gutter>Purpose</ty.ArticleSection>
 
         <ty.ArticleText slightlySmaller gutter>
-            The purpose of the pixel-key-icons project was to create a set of icons of keyboard keys, to be used in other designs, and projects, and other good purposes that seem fit.
+            The purpose of the pixel-key-icons project was to create a set of keyboard key icons.
         </ty.ArticleText>
 
         <ty.ArticleSection gutter>Constraints and Principles</ty.ArticleSection>
 
         <ty.ArticleText slightlySmaller>
-            Given that the icons are pixel art, there are natrually quite a few constraints to our design. The following image of the A key icon, serves as a base-case that has all the default values for our icon designs in general.
+            Given that the icons are pixel art, there are natrually quite a few constraints to our design. The following image of the A key icon serves as a base-case that has all the default specifications for our icon designs in general.
         </ty.ArticleText>
 
         <Box component="div" className={clsx(c.center)}>
             <Box><img className={clsx(c.illustrationsLarge)} src={illustration1}></img></Box>
         </Box>
 
-        <ty.ArticleText gutter slightlySmaller>
-            The design starts with a blank canvas of 16x16 pixels, with a border drawn around the canvas giving the icon the shape of a keyboard key, and then a reasonably sized, and centered character, filling up a good portion of the icon. So in the end, due to the limitations, and math, a character of 6x8 pixels, with margins going clockwise from the top of 2px, 4px, 3px, 4px, and borders going clockwise from the top of 1px, 1px, 2px, 1px, ends up being the default starting point of our icon designs. And later on as the design was worked out, it will turn out that the borders of all the icons, and the height and vertical centering of the all characters would remain constant. But the width of the characters, and so its horizontal centering, would differ, with the character's width going from 5 pixels to 7 pixels, and the margins on either side of the characters going from 4 pixels to 5 pixels.
-        </ty.ArticleText>
-
         <ty.ArticleSection gutter>
             The Character Icons
         </ty.ArticleSection>
 
         <ty.ArticleText gutter slightlySmaller>
-            These are all of the character icons, in their 64px size, from A to Z.
+            These are all of the character icons in 64px.
 
             <br/>
             <br/>
@@ -111,11 +107,11 @@ const Article = () => {
         </ty.ArticleText>
 
         <ty.ArticleSection gutter>
-            The EF Dilemma
+            The EF Design Dilemma
         </ty.ArticleSection>
 
         <ty.ArticleText slightlySmaller>
-            In the start, the design of the characters, A, B, C, and D went without incident, and the first challenge arose in the characters E, and F. Which is that the center horizontal line of the E, and F cannot be placed exactly centrally, equal distance from the top and bottom of the character. But instead, it must be placed either closer to the top or closer to the bottom, by 1px, because the height of the character is 8px, which is an even number, and this is just a limitation of pixel art.
+            The first challenge arose in the characters E, and F. Because it turns out that the center horizontal line of the E, and F cannot be placed exactly centrally, equal distance from the top and bottom of the character. But instead, it must be placed either closer to the top, or closer to the bottom by 1 pixel, just a natural limitation of pixel art.
         </ty.ArticleText>
 
         <Box component="div" className={clsx(c.center)}>
@@ -124,16 +120,8 @@ const Article = () => {
         </Box>
 
         <ty.ArticleText slightlySmaller gutter>
-            And so it is, as with all things with limits, there must be a compromise in order to complete the work. So it was like this. if we wanted to place the central horizontal line of the E exactly in the center, It would be possible, we would have to double the resolution of our icon set to 32x32 pixels, upscale everythings exactly by 2 times, and then move the central line of the E down by 1 pixel. But in my opinion, this was not part of the plan, this was a drastic measure, and also not in the spirit of the challenge, which was to have a base resolution of 16x16 pixels.
 
-            <br/><br/>
-
-            So this is what we do, we accept that the central line of the E cannot truly be central, and we remind ourselves, who said that the central line must be central, so long as the E is perceived as an E, isn't it good enough? So the solution to the problem is simple, we just have to draw two Es, one with the central line closer to the top, and one with the central line closer to the bottom, and then, using our judgement, simply decide which is better. And so seen above, there is the E with the central horizontal line closer to the top, and the E with the central horizontal line closer to the bottom. And according to my judgement, the E with the central line closer to the top looks more natrual, so that was selected for the final design.
-
-            <br/>
-            <br/>
-
-            And so, the same method of judgement was used for all characters which had some sort of central horizontal line, those characters were A, B, E, F, G, H, R, S. Of those, B, E, F, H, R, S, prefer a central horizontal line closer to the top. And A, and G prefer a central horizontal line closer to the bottom.
+            So this is what we do, once we accept that the central line of the E cannot truly be central, we just have to draw two Es, one with the central line closer to the top, and one with the central line closer to the bottom, and then using our judgement we just pick one. And so seen above, there is the E with the central horizontal line closer to the top, and the E with the central horizontal line closer to the bottom. And according to my judgement, the E with the central line closer to the top looks more natrual, so we just go with it. And so, we did the same for all characters which had some sort of central horizontal line, those characters were A, B, E, F, G, H, R, S. Of those, B, E, F, H, R, S, prefer a central horizontal line closer to the top. And A, and G prefer a central horizontal line closer to the bottom.
 
             <br/>
             <br/>
@@ -147,13 +135,10 @@ const Article = () => {
 
         </ty.ArticleText>
 
-        <ty.ArticleSection gutter>Multiple Issues With I</ty.ArticleSection>
+        <ty.ArticleSection gutter>Multiple Design Issues With I</ty.ArticleSection>
 
         <ty.ArticleText gutter slightlySmaller>
-
-            ie we need true symmetry in the character, but that will break symmetry of the character in the icon, we accept breaking symmetry of the character in the icon as the lesser evil<br/><br/>
-
-            If you look at the design or almost all I characters, you will see two horizontal lines at the top and bottom of the character, and a pillar, straight down the center connecting the top and bottom. There is almost no getting away from this reality. Now there is always a problem with symmetry and even pixel resolutions in pixel-art, but there is a possible solution which may work sometimes, which is to double the thickness in the center.
+            If you look at the character "I", you will see that it's horizontally symmetrical, for there are two horizontal lines at the top and bottom of the character, and a pillar going straight down the center. So unless you are willing to create a very stylized "I" that needs no symmetry, it's just there. Now normally if you wish to draw a symmetrical object in pixel art, you simply make an object of an odd width, because having a 1 pixel line of symmetry, and symmetrical pixels on either side of it, you get a width of 2x+1, being odd. However, it is also possible to have a 2 pixel wide line of symmetry giving you an even width item (2x+2), both options are shown below.
         </ty.ArticleText>
 
         <Box component="div" className={clsx(c.center)}>
@@ -164,18 +149,19 @@ const Article = () => {
 
         <ty.ArticleText gutter slightlySmaller>
 
-            Now here we come to a crossroads, because if I must say so, for the character I in isolation, it seems that to double the thickness of the central pillar seems to be the better choice, as it simply looks good, and it maintains the overall central symmetry, however in the full context, if we decide to go with this solution, it does have some knock-on effects. So say that I has a double thickness central pillar, then should other characters with a central pillar also have it be double thickness. This would affect J, T, Y, but then with the double thick central pillars, those characters begin to stand out, and the overall character set starts to look half regular, and half bold. And what about M and W, do those characters need a double thick central pillar, and if central pillars are double thick, then do side pillars like on E, F, L also need to be double thick? So in my judgement, it seemed that the double thickness solution so solving the symmetry issue of I was not good.
+            So here we come to a crossroads, because in this case, it seems like the 2 pixel wide line of symmetry is just the more elegant solution. It looks good, it keeps the rule of characters being 6 pixels wide, and it keeps the character centered in the icon overall. Meanwhile the 1 pixel wide line of symmetry solution makes the character not 6 pixels wide, and forces it to be offset 1 pixel to the left or right, breaking the symmetry of the character placement within the icon overall.
 
             <br/>
             <br/>
 
-            The issue with the symmetry of I first arose because the width of all characters up to this point was even, however, if it were allowed that characters could have odd widths, then it would also solve the issue. However, if a character had an odd width, then it would not be possible to center the character in the middle of the icon. So it was decided, mostly arbitrarily, that for characters that needed central vertial symmetry, that they would have an odd width, and the character would be offset 1 pixel to the right, instead of the left, just to maintain consistency accross all icons.
+            So at first, I did try to go along with the 2 pixel line of symmetry solution, because it was just so simple and elegant. However, it soon turned out that the elegance of the I, was about to make the overall design of the icon set quite a bit more complicated. Because when setting out to design a set of icons, there needs to be a certain amount of consistency between the icons, otherwise they just don't belong in the same set. So for example, if the I had a central vertical pillar, and it was 2 pixels wide, then surely other characters with central vertical pillars should also have it be 2 pixels wide. But then, if all characters with central vertical pillars have a 2 pixel wide pillar, then characters without them would look "regular" compared to them, and the characters with the pillars look bold in contrast, so then we have a character set being half regular, and half bold. So basically there is a whole array of knock-on effects that arise from using the 2 pixel pillar. So in the end it was just the lesser of two headaches to accept breaking the symmetry of the character placement within the icon, and allowing the creation of odd width characters. This turned out to also help with characters like M, Y, and V.
+
         </ty.ArticleText>
 
         <ty.ArticleSection gutter>Notable Characters</ty.ArticleSection>
 
         <ty.ArticleText slightlySmaller gutter>
-            Shoutout to the characters G, K, N, V, X, their design stands above the other characters.
+            Shoutout to the characters G, K, N, V, and X, their design stands above the other characters.
 
             <br/><br/>
 
@@ -183,7 +169,7 @@ const Article = () => {
 
             <br/><br/>
 
-             I'm not that satisfied with M, Q, R, they were quite tricky, and I don't think that they are at full potential.
+             I'm not that satisfied with M, Q, and R, they were quite tricky, and I don't think that they are at full potential.
 
             <br/><br/>
             <KeyIconString content="mqr" size="64px"/>
