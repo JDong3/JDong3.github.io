@@ -1,6 +1,5 @@
 import Bass from '../Bass.jsx';
 import {
-    To,
     ty
 } from '../../parts/index.ts';
 

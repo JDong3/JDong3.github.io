@@ -2,17 +2,7 @@
  * to easily string together words using individual Key Icons
  */
 
-import clsx from 'clsx';
-import { makeStyles } from '@material-ui/core';
 import KeyIcon from './KeyIcon';
-
-const useStyles = makeStyles(() => (
-    {
-        iconSpacing: {
-            marginRight: '1px'
-        }
-    }
-));
 
 interface KeyIconChainProps {
     content: string
