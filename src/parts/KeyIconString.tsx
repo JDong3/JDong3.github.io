@@ -24,7 +24,7 @@ const KeyIconString = ({content: charChain, size}: KeyIconChainProps) => {
     }
 
     return <>
-        {[icons]}
+        {icons}
     </>;
 };
 

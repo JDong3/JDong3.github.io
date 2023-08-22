@@ -10,7 +10,6 @@ const widgetGoRight = () => (
     }
 );
 
-
 export {
     widgetGoLeft,
     widgetGoRight

@@ -171,7 +171,7 @@ const ArticleIndex = props => {
         <WidgetBase>
             <Box id="hi" component="div" className={clsx(c.h4, c.practicalArticlesLineStyle)}>
                 <Typography variant="h5" style={{marginRight: '13px'}} className={clsx(c.serif)}>
-          Practical Articles
+          Projects
                 </Typography>
                 <Typography variant="body2" style={{opacity: '0.7'}}>
                     <KeyIconString content='wasd' size='16px'/> navigation, <KeyIcon symbol='enter' size='16px'/> Select

@@ -7,15 +7,17 @@ const initialState = {
 
     articleData: [
         {
-            category: 'Practical Articles',
+            category: 'Projects',
             names: [
                 'Introduction',
-                'Pixel Key Icons'
+                'Pixel Key Icons',
+                'Random Image',
                 // 'yolov4-live-stream',
             ],
             links: [
                 '/introduction',
-                '/pixel-key-icons'
+                '/pixel-key-icons',
+                '/random-image'
                 // '/yolov4-live-stream',
             ]
         },

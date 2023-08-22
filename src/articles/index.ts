@@ -1,5 +1,6 @@
 import Introductions from './introductions/Article.jsx';
 import PixelKeyIcons from './pixel-key-icons/Article.tsx';
+import RandomImage from './randim/Article.tsx';
 import YoloV4LiveStream from './yolov4-live-stream/Article.jsx';
 
 import MostTreesAreBlue from './most-trees-are-blue/Article.jsx';
@@ -16,6 +17,7 @@ export {
 
     Introductions,
     PixelKeyIcons,
+    RandomImage,
     YoloV4LiveStream,
 
     MostTreesAreBlue,

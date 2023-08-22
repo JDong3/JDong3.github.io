@@ -83,6 +83,9 @@ const Landing = (props) => {
                 <Route path={articleData[0].links[1]}>
                     <Articles.PixelKeyIcons/>
                 </Route>
+                <Route path={articleData[0].links[2]}>
+                    <Articles.RandomImage/>
+                </Route>
                 {/* <Route path={articleData[0].links[1]}>
               <Articles.YoloV4LiveStream/>
             </Route> */}
