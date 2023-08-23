@@ -1,10 +1,9 @@
 import Bass from '../Bass.jsx';
 import {
     ty,
-} from '../../parts/index.ts';
+} from '../../parts';
 
-
-const Article = () => {
+const YoloV4LiveStream = () => {
     return (
         <Bass>
             <ty.Title serif smaller>
@@ -32,4 +31,4 @@ const Article = () => {
     );
 };
 
-export default Article;
+export default YoloV4LiveStream;

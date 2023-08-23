@@ -1,9 +1,9 @@
 import Bass from '../Bass.jsx';
 import {
     ty,
-} from '../../parts/index.ts';
+} from '../../parts';
 
-const Speculation = () => (
+const GodNo2 = () => (
     <Bass>
         <ty.Title smaller serif>
       Speculation on God No.2
@@ -43,4 +43,4 @@ const Speculation = () => (
     </Bass>
 );
 
-export default Speculation;
+export default GodNo2;

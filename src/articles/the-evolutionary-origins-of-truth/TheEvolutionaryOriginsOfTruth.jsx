@@ -1,11 +1,9 @@
 import Bass from '../Bass.jsx';
 import {
-    Text,
-    Hr,
     ty,
-} from '../../parts/index.ts';
+} from '../../parts';
 
-const Article = () => (
+const TheEvolutionaryOriginsOfTruth = () => (
     <Bass>
 
         <ty.Title smaller serif>
@@ -112,4 +110,4 @@ const Article = () => (
     </Bass>
 );
 
-export default Article;
+export default TheEvolutionaryOriginsOfTruth;

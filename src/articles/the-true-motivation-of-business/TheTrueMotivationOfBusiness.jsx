@@ -1,9 +1,7 @@
 import Bass from '../Bass.jsx';
 import {
-    Text,
-    Hr,
     ty,
-} from '../../parts/index.ts';
+} from '../../parts';
 
 const TheTrueMotivationOfBusiness = () => (
     <Bass>
