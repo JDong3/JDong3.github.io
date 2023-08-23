@@ -1,9 +1,9 @@
 import Bass from '../Bass.jsx';
 import {
     ty,
-} from '../../parts';
+} from '../../parts/index.js';
 
-const Speculation = () => (
+const ScientificTheoriesAsTruth = () => (
     <Bass>
 
         <ty.Title smaller serif>
@@ -154,4 +154,4 @@ const Speculation = () => (
     </Bass>
 );
 
-export default Speculation;
+export default ScientificTheoriesAsTruth;

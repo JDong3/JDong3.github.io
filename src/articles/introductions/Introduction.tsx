@@ -14,7 +14,7 @@ import {
 } from '@material-ui/core';
 import {
     ty,
-} from '../../parts';
+} from '../../parts/index.js';
 import Bass from '../Bass.jsx';
 
 const useStyles = makeStyles(() => (

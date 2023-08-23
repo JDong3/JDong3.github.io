@@ -1,10 +1,10 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import './index.css'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
 
 import './index.css';
 import AppHeader from './AppHeader.jsx';
-import {Landing} from './articles';
+import Landing from './articles/landing/Landing.jsx';
 import AppFooter from './AppFooter.jsx';
 import {
     HashRouter as Router,
@@ -46,4 +46,4 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
             </React.StrictMode>
         </ThemeProvider>
     </Provider>,
-)
+);

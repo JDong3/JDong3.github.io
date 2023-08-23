@@ -27,7 +27,14 @@ import {
     Switch,
     Route,
 } from 'react-router-dom';
-import * as Articles from '../index.ts';
+import Introduction from '../introductions/Introduction.tsx';
+import PixelKeyIcons from '../pixel-key-icons/PixelKeyIcons.tsx';
+import Randim from '../randim/Randim.tsx';
+import TheEvolutionaryOriginsOfTruth from '../the-evolutionary-origins-of-truth/TheEvolutionaryOriginsOfTruth.tsx';
+import TheVirusOfProgress from '../the-virus-of-progress/TheVirusOfProgress.tsx';
+import GodNo2 from '../speculation-on-paul-vanderklays-god-number-2/GodNo2.tsx';
+import TheTrueMotivationOfBusiness from '../the-true-motivation-of-business/TheTrueMotivationOfBusiness.tsx';
+import ScientificTheoriesAsTruth from '../scientific-theories-as-truth/ScientificTheoriesAsTruth.tsx';
 
 /**
  * this is the landing page, it consists of a card to navigate between
@@ -75,35 +82,35 @@ const Landing = (props) => {
             <Switch>
 
                 <Route exact path="/">
-                    <Articles.Introductions/>
+                    <Introduction/>
                 </Route>
                 <Route path={articleData[0].links[0]}>
-                    <Articles.Introductions/>
+                    <Introduction/>
                 </Route>
                 <Route path={articleData[0].links[1]}>
-                    <Articles.PixelKeyIcons/>
+                    <PixelKeyIcons/>
                 </Route>
                 <Route path={articleData[0].links[2]}>
-                    <Articles.RandomImage/>
+                    <Randim/>
                 </Route>
                 {/* <Route path={articleData[0].links[1]}>
               <Articles.YoloV4LiveStream/>
             </Route> */}
 
                 <Route path={articleData[1].links[0]}>
-                    <Articles.TheEvolutionaryOriginsOfTruth/>
+                    <TheEvolutionaryOriginsOfTruth/>
                 </Route>
                 <Route path={articleData[1].links[1]}>
-                    <Articles.TheVirusOfProgress/>
+                    <TheVirusOfProgress/>
                 </Route>
                 <Route path={articleData[1].links[2]}>
-                    <Articles.SpeculationOnPaulVanderklaysGodNumber2/>
+                    <GodNo2/>
                 </Route>
                 <Route path={articleData[1].links[3]}>
-                    <Articles.TheTrueMotivationOfBusiness/>
+                    <TheTrueMotivationOfBusiness/>
                 </Route>
                 <Route path={articleData[1].links[4]}>
-                    <Articles.ScientificTheoriesAsTruth/>
+                    <ScientificTheoriesAsTruth/>
                 </Route>
                 {/* <Route path={articleData[1].links[5]}>
               <Articles.MostTreesAreBlue/>

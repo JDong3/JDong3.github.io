@@ -35,7 +35,7 @@ const useStyles = makeStyles(() => (
     }
 ));
 
-const Article = () => {
+const PixelKeyIcons = () => {
 
     const c = useStyles();
 
@@ -176,4 +176,4 @@ const Article = () => {
     </Bass>;
 };
 
-export default Article;
+export default PixelKeyIcons;

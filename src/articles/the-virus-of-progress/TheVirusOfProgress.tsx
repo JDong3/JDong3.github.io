@@ -1,7 +1,7 @@
 import Bass from '../Bass.jsx';
 import {
     ty,
-} from '../../parts';
+} from '../../parts/index.js';
 
 const TheVirusOfProgress = () => (
     <Bass>
