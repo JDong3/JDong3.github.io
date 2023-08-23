@@ -19,7 +19,7 @@ const useStyles = makeStyles(() => (
         },
 
         illustrationsLarge: {
-            height: '512px',
+            height: '300px',
         },
 
         illustrationsComparison: {
@@ -29,7 +29,7 @@ const useStyles = makeStyles(() => (
     }
 ));
 
-const Speculation = () => {
+const Randim = () => {
     const c = useStyles();
     return <Bass>
 
@@ -77,6 +77,8 @@ const Speculation = () => {
 
         <ty.ArticleText gutter>
             A 'random greyscale' image, like random, but the image can only contain grey pixels, with native resolution 1920x1080, using the seed 'asdf', and output to 'randomgreyscale.bmp'.
+            <br/>
+            <code>python randim.py --type randomgreyscale --width 1920 --height 1080 --seed asdf --output randomgreyscale.bmp</code>
         </ty.ArticleText>
 
         <Box component="div" className={clsx(c.center)}>
@@ -87,4 +89,4 @@ const Speculation = () => {
 
 };
 
-export default Speculation;
+export default Randim;
