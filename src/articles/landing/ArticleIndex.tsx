@@ -5,9 +5,7 @@ import {
     Typography,
 } from '@material-ui/core';
 import clsx from 'clsx';
-import {
-    To,
-} from '../../parts/index.js';
+import To from '../../parts/To.js';
 import {
     useHistory,
 } from 'react-router-dom';

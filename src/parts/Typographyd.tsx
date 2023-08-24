@@ -191,7 +191,7 @@ const SmallBodyText = props => {
     );
 };
 
-export default {
+export {
     Title,
     WidgetTitle,
     WidgetText,

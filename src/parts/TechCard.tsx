@@ -10,7 +10,7 @@ import {
 } from '@material-ui/core';
 
 import Text from './Text.jsx';
-import Img from './Img.jsx';
+import Img from './Img.js';
 const HEIGHT = 200;
 
 const useStyles = makeStyles(() => (

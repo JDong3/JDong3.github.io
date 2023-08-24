@@ -1,15 +1,16 @@
 import Bass from '../Bass.jsx';
 import {
-    ty,
-} from '../../parts';
+    Title,
+    ArticleText,
+} from '../../parts/Typographyd.jsx';
 
 const GodNo2 = () => (
     <Bass>
-        <ty.Title smaller serif>
+        <Title smaller serif>
       Speculation on God No.2
-        </ty.Title>
+        </Title>
 
-        <ty.ArticleText slightlySmaller>
+        <ArticleText slightlySmaller>
       Paul VanderKlay is a Youtuber and a minister of a Christian Reformed church in Sacramento, California. Out of the goodness of his heart, he has dedicated many hours of his life to explaining concepts about God, and Christianity to the general public, and he has since amassed a sizable following (18.7 thousand followers as of June 25th, 2021) considering the fact that many people nowadays are not very interested in hearing people talk at length about God. In his lectures, he often refers to God as a multifaceted thing-being-force, noting that there are at least two salient conceptions of God, God number 1, and God number 2. God number 1, which is the common folk conception of God among Christians and Atheists alike, is God as superman, infinite speed, infinite strength, infinite intellect. This is the type of God that we commonly debate about, and is even the default concept of God in this course. But the interesting thing is that when we really pay attention, and press people on their true meaning of God, this is not necessarily the type of God that we find in their hearts, while on the outside they will repeat the common notion of God number 1, on the inside, we find that the type of God that they experience is a some sort of personal God, a feeling, an emotion, a &quot;transcendental vision of goodness&quot;.
 
             <br/><br/>
@@ -39,7 +40,7 @@ const GodNo2 = () => (
             <br/><br/>
 
       Put your trust in God, for God is good, for if you put your faith in the light, it will lead you salvation, and the worship of false idols will destroy you. If you put your trust in the transcendental vision of goodness, assuming that it is the ultimate transcendental vision of goodness, then by definition, you will have lived the most virtuous life, and the life that was full of the most goodness, and that is your salvation. And the worship of a false idol, which is the belief in a faulty transcendental vision of goodness, will lead you astray, and make you live unvirtuously, all the while still believing that you are virtuous, and this will destroy your soul.
-        </ty.ArticleText>
+        </ArticleText>
     </Bass>
 );
 

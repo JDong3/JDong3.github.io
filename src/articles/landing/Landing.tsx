@@ -6,9 +6,6 @@ import {
 } from './InvestmentEnums.js';
 import Bass from '../Bass.jsx';
 import {
-    ty
-} from '../../parts/index.ts';
-import {
     useState,
     useEffect,
 } from 'react';
@@ -27,6 +24,12 @@ import {
     Switch,
     Route,
 } from 'react-router-dom';
+import {
+    Title,
+    ArticleSection,
+    ArticleText,
+} from '../../parts/Typographyd.tsx';
+
 import Introduction from '../introductions/Introduction.tsx';
 import PixelKeyIcons from '../pixel-key-icons/PixelKeyIcons.tsx';
 import Randim from '../randim/Randim.tsx';
@@ -62,16 +65,16 @@ const Landing = (props) => {
     return (
         <div>
             <Bass>
-                <ty.Title serif noGutter>Main Page</ty.Title>
+                <Title serif noGutter>Main Page</Title>
                 <WidgetList/>
                 <WidgetSelector/>
 
                 {focusedWidget === 0 && <ArticleIndex/>}
                 {focusedWidget !== 0 &&
           <WidgetBase>
-              <ty.ArticleSection>
+              <ArticleSection>
                 Development Halted
-              </ty.ArticleSection>
+              </ArticleSection>
           </WidgetBase>
                 }
 

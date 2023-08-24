@@ -1,27 +1,29 @@
 import Bass from '../Bass.jsx';
 import {
-    ty,
-} from '../../parts/index.js';
+    Title,
+    ArticleSection,
+    ArticleText
+} from '../../parts/Typographyd.jsx';
 
 const TheVirusOfProgress = () => (
     <Bass>
-        <ty.Title smaller serif>
+        <Title smaller serif>
     The Virus of Progress
-        </ty.Title>
+        </Title>
 
-        <ty.ArticleSection gutter>
+        <ArticleSection gutter>
         Liberality, Happiness, and Goodness
-        </ty.ArticleSection>
+        </ArticleSection>
 
-        <ty.ArticleText gutter slightlySmaller>
+        <ArticleText gutter slightlySmaller>
         Is liberality a means to achieve goodness, or is it a goodness in itself? If liberality were goodness in itself, then we should expect a liberal society to be a good society, but if it were only a means, then we should know that even though liberality is often conducive to goodness, sometimes it also produces badness. If happiness were goodness, and liberality just a means, then what is happy supersedes what is free, so if we could not be both happy and free, then we would rather be happy and not free. So if we found our state to be in a condition of disrepair and unhealth, and that this condition were caused by the liberality of the people, then we should for the sake of what is the ultimate good, curtail the liberality, and re-establish happiness in our state.
-        </ty.ArticleText>
+        </ArticleText>
 
-        <ty.ArticleSection gutter>
+        <ArticleSection gutter>
         The Cause of the Bullshitization of our Society
-        </ty.ArticleSection>
+        </ArticleSection>
 
-        <ty.ArticleText gutter slightlySmaller>
+        <ArticleText gutter slightlySmaller>
             According to Graeber, there is currently an increasing amount of "bullshitization" in our society, which is a process by which we've been creating fundamentally non-productive jobs (aka bullshit jobs). And that this bullshitization is driven by the forces of increasing efficiency, and a state-wide work cult [Graeber, 178].
 
             <br/>
@@ -50,24 +52,24 @@ const TheVirusOfProgress = () => (
             <br/>
 
             But due to our state religion, which does not tolerate living without work and suffering, when our efficiency increases, we are caught in a dilemma whereby we do not all have to work to live, but we will also not allow anyone to live who does not work. But since we also cannot allow too many people to die from poverty in our state, we've created for ourselves a public-private welfare-capital-nanny-state-complex whereby we invent imaginary jobs, for people to do imaginary work, so that we can pay them imaginary money.
-        </ty.ArticleText>
+        </ArticleText>
 
-        <ty.ArticleSection gutter>
+        <ArticleSection gutter>
             The Judgement of our Current State of Affairs
-        </ty.ArticleSection>
+        </ArticleSection>
 
-        <ty.ArticleText gutter slightlySmaller>
+        <ArticleText gutter slightlySmaller>
         Now I do not know what is good or bad, as whatever I feel is good I call good, and the same for what is bad, and often times my feelings come into conflict with the feelings and knowledge of other people. But I do know that many people in our state think that liberty is what is good, so if that were the case then if we find that our state is free, then it should surely be good.
 
             <br/>
             <br/>
 
-        Our state, along with its current bullshitization, seems to be free at least in theory, as we've already theorized that our current predicament is a result of progress and our state religion. But what I've failed to mention, (since it is taken for granted in our state,) is that progress does not work without liberty, as when the citizens try to summon progress into an illiberal state, they are swiftly neutralized by the authorities who view progress as destabilizing, so since progress has gotten so out of hand in our state, that is a sign that our state had a general policy of liberality. And regards to our state religion, a religion is really just the distilled-transcendental-vision-of-the-highest-good in a culture, so it's really due to our own circumstances and experiences, and though no coercion of outside forces, that we've come to believe that work leads to salvation. So if both progress, and our religion, are the results of the voluntary actions of the people in our state, then it seems to me that the resulting state of affairs would be liberal.
+        Our state, along with its current bullshitization, seems to be free at least in theory, as we've already theorized that our current predicament is a result of progress and our state religion. But what I've failed to mention, (since it is taken for granted in our state,) is that progress does not work without liberty, as when the citizens try to summon progress into an illiberal state, they are swiftly neutralized by the authorities who view progress as destabilizing, so since progress has gotten so out of hand in our state, that is a sign that our state had a general policy of liberali And regards to our state religion, a religion is really just the distilled-transcendental-vision-of-the-highest-good in a culture, so it's really due to our own circumstances and experiences, and though no coercion of outside forces, that we've come to believe that work leads to salvation. So if both progress, and our religion, are the results of the voluntary actions of the people in our state, then it seems to me that the resulting state of affairs would be liberal.
 
             <br/>
             <br/>
 
-        But there seems to be something fundamentally unliberal about the bullshitization of our society. For those who who hold bullshit jobs, know that their jobs are bullshit, and knowing that their jobs are bullshit, they also know that their work has no true purpose. But by faith, also believing that those who don't work deserve to die, they must also wonder if those who pretend to work, also deserve to die. And if instead they refuse to face their condition, and choose to delude themselves, believing that their work is somehow useful, should we be so surprised when we find that there are suicidals, and delusionals abound in our state? (Mental health crisis anyone?) And at the same time, people who hold bullshit jobs have their liberty restricted, as those that hate the fact that they do real work, having held a bullshit job for so long, also cannot leave, having developed few marketable skills in their employment.
+        But there seems to be something fundamentally unliberal about the bullshitization of our socie For those who who hold bullshit jobs, know that their jobs are bullshit, and knowing that their jobs are bullshit, they also know that their work has no true purpose. But by faith, also believing that those who don't work deserve to die, they must also wonder if those who pretend to work, also deserve to die. And if instead they refuse to face their condition, and choose to delude themselves, believing that their work is somehow useful, should we be so surprised when we find that there are suicidals, and delusionals abound in our state? (Mental health crisis anyone?) And at the same time, people who hold bullshit jobs have their liberty restricted, as those that hate the fact that they do real work, having held a bullshit job for so long, also cannot leave, having developed few marketable skills in their employment.
 
             <br/>
             <br/>
@@ -77,7 +79,7 @@ const TheVirusOfProgress = () => (
             <br/>
             <br/>
 
-        But what if what we wanted were not a liberal society, but something else. Now since I am a moral relativist, I don't truly think that there is any such a thing as absolute good, so it's hard to take myself seriously when I try to talk about the morality of a society. But while I don't think there is morality, sometimes I feel that there is actually good and bad, but even though feeling is not knowing, as feeling is emotional, and knowing is intellectual, I often feel that feeling is more real than thinking and knowing, and what I feel but do not know is that, what the ultimate good is, is happiness, which is actualizing one's potential.
+        But what if what we wanted were not a liberal society, but something else. Now since I am a moral relativist, I don't truly think that there is any such a thing as absolute good, so it's hard to take myself seriously when I try to talk about the morality of a socie But while I don't think there is morality, sometimes I feel that there is actually good and bad, but even though feeling is not knowing, as feeling is emotional, and knowing is intellectual, I often feel that feeling is more real than thinking and knowing, and what I feel but do not know is that, what the ultimate good is, is happiness, which is actualizing one's potential.
 
             <br/>
             <br/>
@@ -88,15 +90,15 @@ const TheVirusOfProgress = () => (
             <br/>
 
         If our state had wealth in abundance, and all of the citizens engaged in a life of idleness and luxury, what good would that state be? That would not be a good state, but a bad one, for in that kind of state, there is the largest amount of wasted human potential. And for the same reason, our bullshitized society is also bad, because we people are not born to stagnate, and rot, for if we do that, then we cannot actualize our potential, and so we cannot be happy. And just because it is the "state of nature", or the "state of freedom" that results in our bullshitized society, that does not mean that we should give in to it. We must live, and die, and struggle, so that one day we may attain the ultimate goodness, that is only human.
-        </ty.ArticleText>
+        </ArticleText>
 
-        <ty.ArticleSection gutter>
+        <ArticleSection gutter>
       Works Cited
-        </ty.ArticleSection>
+        </ArticleSection>
 
-        <ty.ArticleText gutter slightlySmaller>
+        <ArticleText gutter slightlySmaller>
       "Bullshit Jobs", by David Graeber
-        </ty.ArticleText>
+        </ArticleText>
 
     </Bass>
 );

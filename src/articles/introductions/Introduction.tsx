@@ -13,8 +13,11 @@ import {
     makeStyles,
 } from '@material-ui/core';
 import {
-    ty,
-} from '../../parts/index.js';
+    Title,
+    ArticleText,
+    ArticleSection,
+    SmallBodyText
+} from '../../parts/Typographyd.jsx';
 import Bass from '../Bass.jsx';
 
 const useStyles = makeStyles(() => (
@@ -34,12 +37,12 @@ const Introduction = () => {
     const c = useStyles();
 
     return <Bass>
-        <ty.Title smaller serif>About</ty.Title>
-        <ty.ArticleText gutter slightlySmaller>
+        <Title smaller serif>About</Title>
+        <ArticleText gutter slightlySmaller>
             Hi, I'm Joseph, I'm a computer programmer specializing in all things web, whether visual design, software architecture, front-end, or back-end, all of it. This website is designed using the Material UI component framework in conjuction with the Front-end framework React. In general, this website is a reflection of my design philosophy, but if you want specifics, the rest of this article will go into some of my past work experience, and some of the technologies that I have worked with.
-        </ty.ArticleText>
+        </ArticleText>
 
-        <ty.Title smaller serif>Industry Experience</ty.Title>
+        <Title smaller serif>Industry Experience</Title>
 
         <Box className={c.centeredContent} style={{marginBottom: '15px'}}>
             <Box>
@@ -50,56 +53,56 @@ const Introduction = () => {
         </Box>
 
         <Box>
-            <ty.ArticleSection>Full-stack Developer @ Intelense Inc.</ty.ArticleSection>
-            <ty.SmallBodyText gutter slightlySmaller>
+            <ArticleSection>Full-stack Developer @ Intelense Inc.</ArticleSection>
+            <SmallBodyText gutter slightlySmaller>
                 <b>Oct 2021 - Present | Bexa Sure Touch Exam | EMR Solutions Project</b>
-            </ty.SmallBodyText>
+            </SmallBodyText>
 
-            <ty.ArticleText gutter forListIndent>
+            <ArticleText gutter forListIndent>
                 <li>Ported an existing breast cancer examination app to Android Kotlin and Android React Native in order to give a modern look and feel to the old app.</li>
                 <li>Integrated the app with the exam device through a Bluetooth connection in order to display the live data feed as 3D graphics for the examiner to visualize the pressure array.</li>
 
-            </ty.ArticleText>
+            </ArticleText>
 
-            <ty.ArticleText gutter forListIndent>
+            <ArticleText gutter forListIndent>
                 <li>Developing an Electronic Medical Records (EMR) solution with a Svelte front-end and Express back-end, to allow on demand records access, and querying from across different hospitals and institutions in Ontario.</li>
                 <li>
                 Designed and implemented a QR code based patient check-in and ID system, as well as a patient's dashboard for patients to view their own relevant medical records.</li>
-            </ty.ArticleText>
+            </ArticleText>
         </Box>
         <Box>
-            <ty.ArticleSection>Test Developer @ IBM</ty.ArticleSection>
-            <ty.SmallBodyText gutter slightlySmaller >
+            <ArticleSection>Test Developer @ IBM</ArticleSection>
+            <SmallBodyText gutter slightlySmaller >
                 <b>May 2019 - August 2020 | Stress Testing Suite | Test Reporting Dashboard</b>
-            </ty.SmallBodyText>
-            <ty.ArticleText gutter forListIndent>
+            </SmallBodyText>
+            <ArticleText gutter forListIndent>
                 <li>Developed a stress testing suite based on the Postman framework and Python scripting, in order to simulate multiple users working on the platform.</li>
                 <li>
                 In order to analyze the resource usage of the various components of the platform, to find the weak links, and discover possible pathways for platform failure.</li>
 
-            </ty.ArticleText>
-            <ty.ArticleText gutter forListIndent>
+            </ArticleText>
+            <ArticleText gutter forListIndent>
                 <li>Developed a React App to automatically collect and display test results for the different components of the platform.</li>
                 <li>
                     In order to visualize and keep record of the reliability of each component by their release versions, to help teams diagnose regression bugs, and help triage during the release cycle.
                 </li>
 
-            </ty.ArticleText>
+            </ArticleText>
         </Box>
 
         <Box>
-            <ty.ArticleSection>Test Developer @ Caseware Intl.</ty.ArticleSection>
-            <ty.SmallBodyText gutter className={c.slightlySmaller}>
+            <ArticleSection>Test Developer @ Caseware Intl.</ArticleSection>
+            <SmallBodyText gutter className={c.slightlySmaller}>
                 <b>January 2018 - August 2018 | Smart Engagement</b>
-            </ty.SmallBodyText>
+            </SmallBodyText>
 
-            <ty.ArticleText gutter forListIndent>
+            <ArticleText gutter forListIndent>
                 <li>Maintained and developed a suite of over 400 automated test cases based on Selenium WebDriver technology, in order to automatically test the most common user workflows on the platform.</li>
                 <li>In order to increase the efficiency of our testers, and drastically shorten the length of regression testing during the release cycle.</li>
-            </ty.ArticleText>
+            </ArticleText>
         </Box>
 
-        <ty.Title smaller serif>Skills, Technology</ty.Title>
+        <Title smaller serif>Skills, Technology</Title>
 
         <Box style={{marginBottom: '15px'}} className={c.centeredContent}>
             <Box>
@@ -119,13 +122,13 @@ const Introduction = () => {
             </Box>
         </Box> */}
 
-        <ty.ArticleSection gutter>
+        <ArticleSection gutter>
             Software Collaboration Tooling
-        </ty.ArticleSection>
-        <ty.ArticleText gutter forListIndent>
+        </ArticleSection>
+        <ArticleText gutter forListIndent>
             <li>Git, Github, BitBucket</li>
             <li>Jira, GitHub Issues, Trello, Asana, Slack</li>
-        </ty.ArticleText>
+        </ArticleText>
 
         {/* <Box style={{marginBottom: "15px"}} className={c.centeredContent}>
             <Box>
@@ -137,15 +140,15 @@ const Introduction = () => {
             </Box>
         </Box> */}
 
-        <ty.ArticleSection gutter>
+        <ArticleSection gutter>
             Languages
-        </ty.ArticleSection>
+        </ArticleSection>
 
-        <ty.ArticleText gutter forListIndent>
+        <ArticleText gutter forListIndent>
             <li>Typescript, Javascript, Python, Kotlin, Java</li>
             <li>HTML, CSS, Markdown, Latex, RMarkdown, SQL</li>
             <li>English, Mandarin</li>
-        </ty.ArticleText>
+        </ArticleText>
 
         {/* <Box style={{marginBottom: "15px"}} className={c.centeredContent}>
             <Box>
@@ -156,15 +159,15 @@ const Introduction = () => {
             </Box>
         </Box> */}
 
-        <ty.ArticleSection gutter>
+        <ArticleSection gutter>
             Frameworks
-        </ty.ArticleSection>
+        </ArticleSection>
 
-        <ty.ArticleText gutter forListIndent>
+        <ArticleText gutter forListIndent>
             <li>React, Svelte, Android, React Native</li>
             <li>NodeJS, Express, Flask, Jasmine, Selenium</li>
             <li>SQL, AWS</li>
-        </ty.ArticleText>
+        </ArticleText>
     </Bass>;
 };
 
