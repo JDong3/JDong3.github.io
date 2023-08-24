@@ -3,6 +3,7 @@ import {
     makeStyles,
 } from '@material-ui/core';
 import clsx from 'clsx';
+import { ReactNode } from 'react';
 
 const useStyles = makeStyles(() => (
     {
@@ -21,13 +22,16 @@ const useStyles = makeStyles(() => (
     }
 ));
 
-const WidgetBase = (props) => {
+interface WidgetBaseProps {
+    children: ReactNode,
+    focused?: boolean,
+    gap?: boolean,
+
+}
+
+const WidgetBase = ({children, focused, gap}: WidgetBaseProps) => {
     const c = useStyles();
-    const {
-        children,
-        focused,
-        gap,
-    } = props;
+
     return (
         <Paper elevation={3} className={clsx(gap && c.bottomGap, c.slightlySmaller)}>
             {children}

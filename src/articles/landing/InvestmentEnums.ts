@@ -20,8 +20,6 @@ const inDays = {
     eternity: Number.MAX_VALUE,
 };
 
-
-
 export {
     timeUnits,
     inDays,

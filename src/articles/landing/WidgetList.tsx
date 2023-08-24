@@ -5,12 +5,13 @@ import {
 } from '@material-ui/core';
 import clsx from 'clsx';
 import {connect} from 'react-redux';
+import { State } from '../../redux/reducer';
 const useStyles = makeStyles(() => (
     {
         boxStyle: {
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "right"
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'right'
         },
 
         slightlySmaller: {
@@ -32,13 +33,16 @@ const useStyles = makeStyles(() => (
     }
 ));
 
-const Tabs = props => {
+interface TabsProps {
+    selected: number
+}
 
-    const {selected} = props;
+const Tabs = ({selected}: TabsProps) => {
+
     const c = useStyles();
 
     const eq = (n, i) => {
-        const res = n%4 === i;
+        const res = n % 4 === i;
         return res;
     };
 
@@ -60,7 +64,7 @@ const Tabs = props => {
     );
 };
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state: State) => {
     return {
         selected: state.focusedWidget,
     };

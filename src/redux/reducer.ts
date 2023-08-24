@@ -1,9 +1,21 @@
 import {produce} from 'immer';
+import { Action } from 'redux';
+
+export interface ArticleDatum {
+    category: string,
+    names: Array<string>,
+    links: Array<string>
+}
+
+export interface State {
+    focusedWidget: number,
+    totalWidgets: number,
+    articleData: Array<ArticleDatum>
+}
 
 const initialState = {
     focusedWidget: 0,
     totalWidgets: 4,
-    // totalWidgets: 4,
 
     articleData: [
         {
@@ -43,8 +55,8 @@ const initialState = {
     ],
 };
 
-const reducer = (state = initialState, action) => {
-    let res;
+const reducer = (state: State = initialState, action: Action) => {
+    let res = initialState;
 
     switch (action.type) {
     case 'widget/goLeft':

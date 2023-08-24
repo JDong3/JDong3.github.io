@@ -38,6 +38,12 @@ import TheVirusOfProgress from '../the-virus-of-progress/TheVirusOfProgress.tsx'
 import GodNo2 from '../speculation-on-paul-vanderklays-god-number-2/GodNo2.tsx';
 import TheTrueMotivationOfBusiness from '../the-true-motivation-of-business/TheTrueMotivationOfBusiness.tsx';
 import ScientificTheoriesAsTruth from '../scientific-theories-as-truth/ScientificTheoriesAsTruth.tsx';
+import { ArticleDatum, State } from '../../redux/reducer.ts';
+
+interface LandingProps {
+    focusedWidget: number,
+    articleData: Array<ArticleDatum>
+}
 
 /**
  * this is the landing page, it consists of a card to navigate between
@@ -45,12 +51,8 @@ import ScientificTheoriesAsTruth from '../scientific-theories-as-truth/Scientifi
  * @param {*} props
  * @returns
  */
-const Landing = (props) => {
+const Landing = ({focusedWidget, articleData}: LandingProps) => {
 
-    const {
-        focusedWidget,
-        articleData,
-    } = props;
     const [tab, setTab] = useState(0);
     const [focus, setFocus] = useState(0);
     const [galleryIndex, setGalleryIndex] = useState(0);
@@ -125,7 +127,7 @@ const Landing = (props) => {
     );
 };
 
-const mapStateToProps = (state) => (
+const mapStateToProps = (state: State) => (
     {
         focusedWidget: state.focusedWidget,
         articleData: state.articleData,

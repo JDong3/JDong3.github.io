@@ -14,6 +14,8 @@ import {
 } from '../../redux/actions.ts';
 import KeyIcon from '../../parts/KeyIcon.tsx';
 import clsx from 'clsx';
+import { State } from '../../redux/reducer.ts';
+import { Dispatch } from 'redux';
 
 const useStyles = makeStyles(() => (
     {
@@ -46,16 +48,16 @@ const useStyles = makeStyles(() => (
     }
 ));
 
-const WidgetSelector = props => {
+interface WidgetSelectorProps {
+    selected: number,
+    widgetGoLeft: () => void,
+    widgetGoRight: () => void,
+}
+
+const WidgetSelector = ({selected, widgetGoLeft, widgetGoRight}: WidgetSelectorProps) => {
     const c = useStyles();
 
-    const {
-        selected,
-        widgetGoLeft,
-        widgetGoRight,
-    } = props;
-
-    const handleKeys = (e) => {
+    const handleKeys = (e: KeyboardEvent) => {
         switch (e.key) {
 
         case 'j':
@@ -99,13 +101,13 @@ const WidgetSelector = props => {
     );
 };
 
-const mapStateToProps = (state) => (
+const mapStateToProps = (state: State) => (
     {
         selected: state.focusedWidget,
     }
 );
 
-const mapDispatchToProps = (dispatch) => (
+const mapDispatchToProps = (dispatch: Dispatch) => (
     {
         widgetGoLeft: () => dispatch(widgetGoLeft()),
         widgetGoRight: () => dispatch(widgetGoRight()),

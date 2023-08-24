@@ -18,9 +18,11 @@ import {
 import {
     useState,
     useEffect,
+    ReactNode,
 } from 'react';
 import KeyIconString from '../../parts/KeyIconString.js';
 import KeyIcon from '../../parts/KeyIcon.js';
+import { ArticleDatum, State } from '../../redux/reducer.js';
 
 const useStyles = makeStyles(() => (
     {
@@ -67,29 +69,24 @@ const useStyles = makeStyles(() => (
     }
 ));
 
-// interface ArticleIndexProps {
-
-// }
+interface ArticleIndexProps {
+    articleData: Array<ArticleDatum>
+}
 
 /**
  * ArticleIndex is the component that "indexes" all the articles, it provides a
  * card that displays the articles, and allows for navigation between the
  * articles
- * @param {*} props
- * @returns
  */
-const ArticleIndex = props => {
+const ArticleIndex = ({articleData}: ArticleIndexProps) => {
     const c = useStyles();
-    const {
-        articleData
-    } = props;
 
     const [group, setGroup] = useState(0);
     const [article, setArticle] = useState(0);
     // const [loaded, setLoaded] = useState(0); // which article is loaded
     const history = useHistory();
 
-    const handleClick = (whichGroup, whichArticle) => (
+    const handleClick = (whichGroup: number, whichArticle: number) => (
         () => {
             setGroup(whichGroup);
             setArticle(whichArticle);
@@ -205,18 +202,21 @@ const ArticleIndex = props => {
     );
 };
 
-const ArticleEntry = props => {
+interface ArticleEntryProps {
+    children: ReactNode,
+    href: string,
+    selected?: boolean,
+    onClick: () => void,
+    id: string,
+}
+
+const ArticleEntry = ({children, href, selected, onClick, id}: ArticleEntryProps) => {
     const c = useStyles();
-    const {
-        children,
-        href,
-        selected,
-    } = props;
 
     return (
-        <Box component="div" className={c.thirty} {...props}>
+        <Box component="div" className={c.thirty}>
             <Typography variant="body2" className={clsx(c.body)}>
-                <li>
+                <li onClick={onClick} id={id}>
                     {!selected && <To href={href}>
                         {children}
                     </To>}
@@ -240,7 +240,7 @@ const ArticleEntry = props => {
 //     );
 // };
 
-const mapStateToProps = (state) => (
+const mapStateToProps = (state: State) => (
     {
         articleData: state.articleData
     }
