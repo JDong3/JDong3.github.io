@@ -2,6 +2,7 @@ import {
     Container,
     makeStyles,
 } from '@material-ui/core';
+import { ReactNode } from 'react';
 
 const useStyles = makeStyles(() => (
     {
@@ -19,12 +20,19 @@ const useStyles = makeStyles(() => (
     }
 ));
 
-const Bass = props => {
+interface BassProps {
+    children: ReactNode
+}
+
+/**
+ * base container for articles i think
+ */
+const Bass = ({children}: BassProps) => {
     const classes = useStyles();
     return (
         <Container maxWidth="md" className={`${classes.spacingFromTop} ${classes.minHeight}`}>
             <Container className={classes.slightlySmaller}>
-                {props.children}
+                {children}
             </Container>
         </Container>
     );

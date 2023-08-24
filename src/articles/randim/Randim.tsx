@@ -66,7 +66,7 @@ const Randim = () => {
         </ArticleText>
 
         <Box component="div" className={clsx(c.center)}>
-            <Box><img className={clsx(c.illustrationsLarge)} src={black}></img></Box>
+            <Box><img className={clsx(c.illustrationsLarge)} src={black as string}></img></Box>
         </Box>
 
         <ArticleText gutter>
@@ -76,7 +76,7 @@ const Randim = () => {
         </ArticleText>
 
         <Box component="div" className={clsx(c.center)}>
-            <Box><img className={clsx(c.illustrationsLarge)} src={random}></img></Box>
+            <Box><img className={clsx(c.illustrationsLarge)} src={random as string}></img></Box>
         </Box>
 
         <ArticleText gutter>
@@ -86,7 +86,7 @@ const Randim = () => {
         </ArticleText>
 
         <Box component="div" className={clsx(c.center)}>
-            <Box><img className={clsx(c.illustrationsLarge)} src={randomgreyscale}></img></Box>
+            <Box><img className={clsx(c.illustrationsLarge)} src={randomgreyscale as string}></img></Box>
         </Box>
 
     </Bass>;
