@@ -22,26 +22,30 @@ const useStyles = makeStyles(() => (
     }
 ));
 
+interface HrProps {
+    type: 1 | 2 | 3
+}
+
 /**
  * Custom horizontal rule that inherits color
  */
-const Hr = props => {
+const Hr = ({type}: HrProps) => {
     /**
      * :param props.type: int, 1 or 2, 1 is full length, 2 is right truncated by 15px
      */
 
     const classes = useStyles();
-    let type = '';
-    if (props.type === 2) {
-        type = classes.type2;
-    } else if (props.type === 3) {
-        type = classes.type3;
+    let classname = '';
+    if (type === 2) {
+        classname = classes.type2;
+    } else if (type === 3) {
+        classname = classes.type3;
     } else {
-        type = classes.type1;
+        classname = classes.type1;
     }
 
     return (
-        <Text><hr className={type}/></Text>
+        <Text><hr className={classname}/></Text>
     );
 };
 
