@@ -1,4 +1,4 @@
-import {Typography, makeStyles} from '@material-ui/core';
+import {Typography, TypographyProps, makeStyles} from '@material-ui/core';
 import clsx from 'clsx';
 
 const useStyles = makeStyles(() => (
@@ -22,7 +22,11 @@ const useStyles = makeStyles(() => (
     }
 ));
 
-const Text = props => {
+export interface TextProps extends TypographyProps {
+    serif: boolean,
+}
+
+const Text = (props: TextProps) => {
 /**
  * :param props.variant: variant parameter for typography
  * :param props.id:
@@ -31,7 +35,7 @@ const Text = props => {
     const classes = useStyles();
 
     let theme = classes.text;
-    if (!variant || variant === 'body') {
+    if (!variant || variant === 'body1') {
         theme = clsx(theme, classes.largerText);
     }
 
@@ -42,7 +46,7 @@ const Text = props => {
     }
 
     return (
-        <Typography onClick={onClick} className={`${theme} ${className}`} variant={variant || 'body'} id={id || undefined}>{props.children}</Typography>
+        <Typography onClick={onClick} className={`${theme} ${className}`} variant={variant || 'body1'} id={id || undefined}>{props.children}</Typography>
     );
 };
 

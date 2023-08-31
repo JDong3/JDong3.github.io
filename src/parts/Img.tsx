@@ -48,14 +48,15 @@ const useStyles = makeStyles(() => (
     }
 ));
 
-const Img = props => {
-    /**
-     * :param props.src: Image, how src works for image tags in jsx
-     * :param props.caption: String, caption text for the image
-     * :param type: full
-     */
+export interface ImgProps extends React.HTMLProps<HTMLImageElement>{
+    width: string,
+    caption: string,
+    type: 'full' | 'right',
+    rounded: boolean
+}
 
-    let {src, caption, type, width, rounded} = props;
+const Img = ({src, caption, type, width, rounded}: ImgProps) => {
+
     const classes = useStyles();
     const full = () => (
         <div>

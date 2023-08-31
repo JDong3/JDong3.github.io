@@ -1,13 +1,13 @@
 import {
     makeStyles,
     Typography,
+    TypographyProps,
 } from '@material-ui/core';
 import {Link} from 'react-router-dom';
 
 const useStyles = makeStyles(() => (
     {
         ideaStuff: {
-            // Color: '#e88e8e',
             color: 'black',
             textDecoration: 'underline',
             fontFamily: 'seif',
@@ -15,24 +15,20 @@ const useStyles = makeStyles(() => (
     }
 ));
 
-const Idea = props => {
-/**
- * :param props.text: the text for the idea
- * :param props.to: link to where
- *
- */
+export interface IdeaProps extends TypographyProps {
+    to: string
+}
 
-    const classes = useStyles();
-    const {to} = props;
+const Idea = ({to, variant, children}: IdeaProps) => {
+
+    const c = useStyles();
 
     return (
-        <Link to={to}><Typography
-            variant={props.variant || 'body'}
-            className={classes.ideaStuff}>
-
-            {props.children}
-
-        </Typography></Link>
+        <Link to={to}>
+            <Typography variant={variant} className={c.ideaStuff}>
+                {children}
+            </Typography>
+        </Link>
     );
     // {hovered && hoveredStuff()}
 };

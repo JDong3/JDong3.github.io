@@ -2,7 +2,7 @@ import {
     makeStyles,
 } from '@material-ui/core';
 import {
-    Link,
+    Link, LinkProps,
 } from 'react-router-dom';
 import clsx from 'clsx';
 
@@ -15,7 +15,7 @@ const useStyles = makeStyles(() => (
     }
 ));
 
-const To = props => {
+const To = (props: LinkProps) => {
 /**
  * :param props.href:
  * :param link: bool, use Link element
