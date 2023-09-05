@@ -23,7 +23,7 @@ const useStyles = makeStyles(() => (
 ));
 
 export interface TextProps extends TypographyProps {
-    serif: boolean,
+    serif?: boolean,
 }
 
 const Text = (props: TextProps) => {

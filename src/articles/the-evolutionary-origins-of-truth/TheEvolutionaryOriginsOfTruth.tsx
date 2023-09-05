@@ -8,11 +8,11 @@ import {
 const TheEvolutionaryOriginsOfTruth = () => (
     <Bass>
 
-        <Title smaller serif>
+        <Title smaller>
             The Evolutionary Origins of Truth
         </Title>
 
-        <ArticleSection slightlySmaller>
+        <ArticleSection>
             Why I Believe in Free Will and Determinism
         </ArticleSection>
 

@@ -43,7 +43,7 @@ const PixelKeyIcons = () => {
 
     return <Bass>
 
-        <Title smaller serif>
+        <Title smaller>
             Pixel Key Icons
         </Title>
 

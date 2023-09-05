@@ -37,7 +37,7 @@ const Randim = () => {
     const c = useStyles();
     return <Bass>
 
-        <Title smaller serif>
+        <Title smaller>
             Random Image
         </Title>
 

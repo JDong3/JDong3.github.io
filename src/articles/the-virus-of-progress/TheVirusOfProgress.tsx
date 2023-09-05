@@ -7,7 +7,7 @@ import {
 
 const TheVirusOfProgress = () => (
     <Bass>
-        <Title smaller serif>
+        <Title smaller>
     The Virus of Progress
         </Title>
 

@@ -5,7 +5,7 @@ import './index.css';
 import './index.css';
 import AppHeader from './AppHeader.jsx';
 import Landing from './articles/landing/Landing.jsx';
-import AppFooter from './AppFooter.jsx';
+import AppFooter from './AppFooter.js';
 import {
     HashRouter as Router,
 } from 'react-router-dom';

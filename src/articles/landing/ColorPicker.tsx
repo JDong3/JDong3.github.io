@@ -1,57 +1,57 @@
-import WidgetBase from './WidgetBase.jsx';
-import {
-    Box,
-    makeStyles,
-} from '@material-ui/core';
-import clsx from 'clsx';
-import {
-    useState,
-    useEffect,
-} from 'react';
+// import WidgetBase from './WidgetBase.jsx';
+// import {
+// Box,
+// makeStyles,
+// } from '@material-ui/core';
+// import clsx from 'clsx';
+// import {
+//     useState,
+//     useEffect,
+// } from 'react';
 
-const useStyles = makeStyles(() => (
-    {
-        swatch: {
-            width: '20px',
-            height: '20px',
-            // borderRadius: '50%',
-            display: 'inline-block',
-        },
+// const useStyles = makeStyles(() => (
+//     {
+//         swatch: {
+//             width: '20px',
+//             height: '20px',
+//             // borderRadius: '50%',
+//             display: 'inline-block',
+//         },
 
-        bigSwatch: {
-            width: '100px',
-            height: '100px',
-        },
+//         bigSwatch: {
+//             width: '100px',
+//             height: '100px',
+//         },
 
-        bigSwatchMargin: {
-            marginBottom: '-15px',
-        },
+//         bigSwatchMargin: {
+//             marginBottom: '-15px',
+//         },
 
-        left: {
-            width: '40%',
-            // background: 'lightgrey',
-        },
+//         left: {
+//             width: '40%',
+//             // background: 'lightgrey',
+//         },
 
-        right: {
-            width: '60%',
-            // background: 'pink',
-        },
+//         right: {
+//             width: '60%',
+//             // background: 'pink',
+//         },
 
-        slider: {
-            marginRight: '13px',
-            width: '169px',
-            '&:hover': {
+//         slider: {
+//             marginRight: '13px',
+//             width: '169px',
+//             '&:hover': {
 
-            }
-        },
+//             }
+//         },
 
-        sliderContainer: {
-            marginTop: '44px',
-            marginLeft: '54px',
-            marginBottom: '44px',
-        },
-    }
-));
+//         sliderContainer: {
+//             marginTop: '44px',
+//             marginLeft: '54px',
+//             marginBottom: '44px',
+//         },
+//     }
+// ));
 
 // const Swatch = props => {
 //     const c = useStyles();
@@ -74,7 +74,7 @@ const useStyles = makeStyles(() => (
 //     );
 // };
 
-const ColorPicker = props => {
+const ColorPicker = () => {
     // const {
     // } = props;
     // // r, g, b are ints in range 0 to 255

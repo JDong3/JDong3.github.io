@@ -4,7 +4,6 @@
 import {
     makeStyles,
     Typography,
-    Box,
     TypographyProps,
 } from '@material-ui/core';
 import clsx from 'clsx';

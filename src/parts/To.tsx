@@ -15,26 +15,21 @@ const useStyles = makeStyles(() => (
     }
 ));
 
-const To = (props: LinkProps) => {
+const To = ({to, children, className, ...rest}: LinkProps) => {
 /**
  * :param props.href:
  * :param link: bool, use Link element
  */
 
-    const {
-        href,
-        children,
-        className,
-    } = props;
     const classes = useStyles();
-    let scrollToTop;
+    // let scrollToTop;
 
-    if (scroll) {
-        scrollToTop = () => window.scrollTo(0, 0);
-    }
+    // if (scroll) {
+    //     scrollToTop = () => window.scrollTo(0, 0);
+    // }
 
     return (
-        <Link {...props} to={href} className={clsx(classes.standard, className)} >
+        <Link {...rest} to={to} className={clsx(classes.standard, className)} >
             {children}
         </Link>
     );

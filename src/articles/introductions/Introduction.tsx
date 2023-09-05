@@ -37,12 +37,12 @@ const Introduction = () => {
     const c = useStyles();
 
     return <Bass>
-        <Title smaller serif>About</Title>
+        <Title smaller>About</Title>
         <ArticleText>
             Hi, I'm Joseph, I'm a computer programmer specializing in all things web, whether visual design, software architecture, front-end, or back-end, all of it. This website is designed using the Material UI component framework in conjuction with the Front-end framework React. In general, this website is a reflection of my design philosophy, but if you want specifics, the rest of this article will go into some of my past work experience, and some of the technologies that I have worked with.
         </ArticleText>
 
-        <Title smaller serif>Industry Experience</Title>
+        <Title smaller>Industry Experience</Title>
 
         <Box className={c.centeredContent} style={{marginBottom: '15px'}}>
             <Box>
@@ -54,7 +54,7 @@ const Introduction = () => {
 
         <Box>
             <ArticleSection kind='noGutter'>Full-stack Developer @ Intelense Inc.</ArticleSection>
-            <SmallBodyText gutter slightlySmaller>
+            <SmallBodyText>
                 <b>Oct 2021 - Present | Bexa Sure Touch Exam | EMR Solutions Project</b>
             </SmallBodyText>
 
@@ -72,7 +72,7 @@ const Introduction = () => {
         </Box>
         <Box>
             <ArticleSection kind='noGutter'>Test Developer @ IBM</ArticleSection>
-            <SmallBodyText gutter slightlySmaller >
+            <SmallBodyText>
                 <b>May 2019 - August 2020 | Stress Testing Suite | Test Reporting Dashboard</b>
             </SmallBodyText>
             <ArticleText kind='forListIndent'>
@@ -92,7 +92,7 @@ const Introduction = () => {
 
         <Box>
             <ArticleSection kind='noGutter'>Test Developer @ Caseware Intl.</ArticleSection>
-            <SmallBodyText gutter className={c.slightlySmaller}>
+            <SmallBodyText>
                 <b>January 2018 - August 2018 | Smart Engagement</b>
             </SmallBodyText>
 
@@ -102,7 +102,7 @@ const Introduction = () => {
             </ArticleText>
         </Box>
 
-        <Title smaller serif>Skills, Technology</Title>
+        <Title smaller>Skills, Technology</Title>
 
         <Box style={{marginBottom: '15px'}} className={c.centeredContent}>
             <Box>

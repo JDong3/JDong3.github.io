@@ -21,7 +21,7 @@ const useStyles = makeStyles(() => (
 ));
 
 interface BassProps {
-    children: ReactNode
+    children: NonNullable<ReactNode>
 }
 
 /**

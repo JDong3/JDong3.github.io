@@ -4,51 +4,49 @@
  * PROFIT over time
  */
 
-import {
-    inDays,
-} from './InvestmentEnums.js';
-import WidgetBase from './WidgetBase.jsx';
-import {
-    VictoryChart,
-    VictoryLine,
-    VictoryTheme,
-} from 'victory';
+// import {
+//     inDays,
+// } from './InvestmentEnums.js';
+// import WidgetBase from './WidgetBase.jsx';
+// import {
+//     VictoryChart,
+//     VictoryLine,
+//     VictoryTheme,
+// } from 'victory';
 
-import clsx from 'clsx';
+// import clsx from 'clsx';
 
-import {
-    Box,
-    makeStyles,
-    Typography,
-} from '@material-ui/core';
+// import {
+//     makeStyles,
+// } from '@material-ui/core';
 
-const useStyles = makeStyles(() => (
-    {
-        quoteText: {
-            fontFamily: 'serif',
-            width: '80%',
-        },
+// const useStyles = makeStyles(() => (
+//     {
+//         quoteText: {
+//             fontFamily: 'serif',
+//             width: '80%',
+//         },
 
-        quoteTopSectionMargin: {
-            marginTop: '23px',
-        },
+//         quoteTopSectionMargin: {
+//             marginTop: '23px',
+//         },
 
-        quoteAuthor: {
-            marginRight: '25px',
-        },
+//         quoteAuthor: {
+//             marginRight: '25px',
+//         },
 
-        slightlySmaller: {
-            width: '90%',
-            marginLeft: '5%',
-        },
+//         slightlySmaller: {
+//             width: '90%',
+//             marginLeft: '5%',
+//         },
 
-        investingText: {
-            paddingTop: '27px',
-            paddingBottom: '40px',
-        },
-    }
-));
-const InterestCalculator = props => {
+//         investingText: {
+//             paddingTop: '27px',
+//             paddingBottom: '40px',
+//         },
+//     }
+// ));
+const InterestCalculator = () => {
     /**
    * config props
    * props.contributionAmount, number, amount contributed in a certain period

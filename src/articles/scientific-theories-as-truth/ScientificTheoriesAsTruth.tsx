@@ -8,7 +8,7 @@ import {
 const ScientificTheoriesAsTruth = () => (
     <Bass>
 
-        <Title smaller serif>
+        <Title smaller>
             Scientific Theories as Truth
         </Title>
 

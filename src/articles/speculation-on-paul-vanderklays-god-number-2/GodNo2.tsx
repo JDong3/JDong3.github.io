@@ -6,7 +6,7 @@ import {
 
 const GodNo2 = () => (
     <Bass>
-        <Title smaller serif>
+        <Title smaller>
       Speculation on God No.2
         </Title>
 

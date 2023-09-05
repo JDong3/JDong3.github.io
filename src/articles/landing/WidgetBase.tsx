@@ -31,6 +31,7 @@ interface WidgetBaseProps {
 
 const WidgetBase = ({children, focused, gap}: WidgetBaseProps) => {
     const c = useStyles();
+    focused;
 
     return (
         <Paper elevation={3} className={clsx(gap && c.bottomGap, c.slightlySmaller)}>

@@ -9,9 +9,6 @@ import cat from './assets/octokat.png';
 import yt from './assets/yt.png';
 import disco from './assets/disco.png';
 import Idea from './parts/Idea';
-import {
-    useEffect,
-} from 'react';
 
 const useStyles = makeStyles(() => (
     {

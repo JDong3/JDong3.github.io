@@ -41,7 +41,7 @@ const Tabs = ({selected}: TabsProps) => {
 
     const c = useStyles();
 
-    const eq = (n, i) => {
+    const eq = (n: number, i: number) => {
         const res = n % 4 === i;
         return res;
     };

@@ -8,7 +8,7 @@ import {
 const TheTrueMotivationOfBusiness = () => (
     <Bass>
 
-        <Title smaller serif>
+        <Title smaller>
         The True Motivation of Business
         </Title>
 

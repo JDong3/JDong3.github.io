@@ -1,20 +1,20 @@
 /**
  * this is the landing page, there will be fun stuff, and articles
  */
-import {
-    inDays,
-} from './InvestmentEnums.js';
+// import {
+//     inDays,
+// } from './InvestmentEnums.js';
 import Bass from '../Bass.jsx';
-import {
-    useState,
-    useEffect,
-} from 'react';
+// import {
+//     useState,
+//     useEffect,
+// } from 'react';
 import {
     connect,
 } from 'react-redux';
-import Gallery from './Gallery.jsx';
-import ColorPicker from './ColorPicker.jsx';
-import InterestCalculator from './InterestCalculator.jsx';
+// import Gallery from './Gallery.jsx';
+// import ColorPicker from './ColorPicker.jsx';
+// import InterestCalculator from './InterestCalculator.jsx';
 import WidgetList from './WidgetList.jsx';
 import WidgetSelector from './WidgetSelector.tsx';
 import ArticleIndex from './ArticleIndex.tsx';
@@ -27,7 +27,6 @@ import {
 import {
     Title,
     ArticleSection,
-    ArticleText,
 } from '../../parts/Typographyd.tsx';
 
 import Introduction from '../introductions/Introduction.tsx';
@@ -53,13 +52,14 @@ interface LandingProps {
  */
 const Landing = ({focusedWidget, articleData}: LandingProps) => {
 
-    const [tab, setTab] = useState(0);
-    const [focus, setFocus] = useState(0);
-    const [galleryIndex, setGalleryIndex] = useState(0);
-    const [contributionAmount, setContributionAmount] = useState(100);
-    const [contributionFrequency, setContributionFrequency] = useState(1);
-    const [profitPerAn, setProfitPerAn] = useState(10.0);
-    const [years, setYears] = useState(1);
+    // variables for functionality in the future????
+    // const [tab, setTab] = useState(0);
+    // const [focus, setFocus] = useState(0);
+    // const [galleryIndex, setGalleryIndex] = useState(0);
+    // const [contributionAmount, setContributionAmount] = useState(100);
+    // const [contributionFrequency, setContributionFrequency] = useState(1);
+    // const [profitPerAn, setProfitPerAn] = useState(10.0);
+    // const [years, setYears] = useState(1);
 
     console.log(articleData);
 
@@ -67,7 +67,7 @@ const Landing = ({focusedWidget, articleData}: LandingProps) => {
     return (
         <div>
             <Bass>
-                <Title serif noGutter>Main Page</Title>
+                <Title noGutter>Main Page</Title>
                 <WidgetList/>
                 <WidgetSelector/>
 
