@@ -12,19 +12,19 @@ const TheEvolutionaryOriginsOfTruth = () => (
             The Evolutionary Origins of Truth
         </Title>
 
-        <ArticleSection gutter slightlySmaller>
+        <ArticleSection slightlySmaller>
             Why I Believe in Free Will and Determinism
         </ArticleSection>
 
-        <ArticleText gutter slightlySmaller>
+        <ArticleText>
             As we live and walk around in our world, we perceive different things through our senses, and so over time, we come to form certain conclusions about the things that we see. Through my own experiences, I have come to the belief that I have a free will, and that the universe is deterministic.
         </ArticleText>
 
-        <ArticleSection gutter>
+        <ArticleSection>
             The Contradiction of Free Will and Determinism
         </ArticleSection>
 
-        <ArticleText gutter slightlySmaller>
+        <ArticleText>
             However, for us who hold these beliefs, there is an obvious contradiction that is staring us in the face, for if deterministic means that the materials in the universe are governed by the laws of physics, then we people, who are made of materials, must also be governed by the same laws, and if we are governed by the laws of physics, then how can we be governed by our own free wills?
 
             <br/>
@@ -33,11 +33,11 @@ const TheEvolutionaryOriginsOfTruth = () => (
             But this is the mystery, for if it&apos;s contradiction for us to hold these beliefs, then why do we all behave as if we do hold these beliefs? Because if you order a burrito at a Mexican restaurant, the burritoista will ask you "black or refried beans", implying that there&apos;s a choice. And whenever you get into your car, (just by your actions alone,) you are implicitly believing that whatever physics made your car run yesterday, will continue to make your car run today.
         </ArticleText>
 
-        <ArticleSection gutter>
+        <ArticleSection>
       Our Flawed Metaphysics of Truth
         </ArticleSection>
 
-        <ArticleText gutter slightlySmaller>
+        <ArticleText>
       So the reason why I believe that what we believe is a contradiction (I&apos;m claiming that how people behave, and not what they say indicates what they truly they believe, btw), is really not the fault of what we believe, but instead is just the result of us having a flawed metaphysics of truth, as in our modern culture we seem to only be salient about one aspect of truth (the binary and absolute), and not the other. But I posit that truth is actually multifaceted, and that there are actually two different kinds of truth formal, and darwinion.
 
             <br/>
@@ -52,11 +52,11 @@ const TheEvolutionaryOriginsOfTruth = () => (
 
         </ArticleText>
 
-        <ArticleSection gutter>
+        <ArticleSection>
       How Ideas Evolve Over Time
         </ArticleSection>
 
-        <ArticleText gutter slightlySmaller>
+        <ArticleText>
       Now what I'm calling darwinion truth, I believe is really just an extension of pragmatic truth, so I believe that we can motivate darwinion truth by simply adopting the pragmatic attitude, which is to grant an idea or belief to be true, and to judge it by seeing what its practical effects are [James, Lecture VI Pragmatism's Conception of Truth]. And in the case for darwinion truth, the practical effect that matters to us is its contribution to (darwinion) fitness.
 
             <br/>
@@ -66,11 +66,11 @@ const TheEvolutionaryOriginsOfTruth = () => (
 
         </ArticleText>
 
-        <ArticleSection gutter>
+        <ArticleSection>
       The Legitimacy of Darwinion Truth
         </ArticleSection>
 
-        <ArticleText gutter slightlySmaller>
+        <ArticleText>
       But of course, just because an idea is evolutionary successful, it does not mean that we should call it truth. But the reason why I see it as truth is because truth itself is just a category, and since it is held in high esteem, it must have some sort of function that distinguishes itself from other categories, and I posit that that function is its ability to produce desirable results when applied. For example, lets take a formalized truth like "smoking causes lung cancer", why do we say that this statement is true? Well you might say that its true because the result comes from statistical theory, but why don't we first take a step back, because to me, it seems like that statement derives its legitimacy from the fact that when applied, it produces desired results, in the sense that if we convince the public of the opposite, and encourage smoking, then we would have an absolute disaster of a heath crisis on our hands.
 
             <br/>
@@ -84,11 +84,11 @@ const TheEvolutionaryOriginsOfTruth = () => (
       Now this is were we come to the view of truth that I advocate for, which is more or less a re-framed version of the pragmatic truth, which is that ideas that produce good results are true, and what evolution is, is that system which selects for these true ideas over time. And so these so called darwinion truths, which are the ideas that have persisted over the long run, are basically the truest ideas. So from this point of view, the logical system itself is simply one of these darwinion truths, and not the real source of it all.
         </ArticleText>
 
-        <ArticleSection gutter>
+        <ArticleSection>
       Darwinion Truth and Free Will and Determinism
         </ArticleSection>
 
-        <ArticleText gutter slightlySmaller>
+        <ArticleText>
       But now onto the topic of free will and determinism, what I posit is that both the belief in free will, and the belief in determinism, are darwinion truths, and that the belief in free will, being a more ancient one, is thus truer than our belief in determinism. And also since these beliefs are so ingrained into our culture and language, and that our culture is also prestigious (although the prestige of our culture is currently waning), these things point to the belief in free will and determinism being darwinion.
 
             <br/>
@@ -102,11 +102,11 @@ const TheEvolutionaryOriginsOfTruth = () => (
       And since these beliefs have both stood the test of time, and proven to be beneficial for us, we ought to call them truth, as these things are the fundamental purpose of truth, and that since these ideas are more fundamental than logic itself, logic telling us that that they are a contradiction is not a reason for us to abandon them.
         </ArticleText>
 
-        <ArticleSection gutter>
+        <ArticleSection>
       Works Cited
         </ArticleSection>
 
-        <ArticleText slightlySmaller>
+        <ArticleText>
       "Pragmatism: A New Name for Some Old Ways of Thinking", by William James
         </ArticleText>
     </Bass>

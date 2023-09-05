@@ -47,9 +47,9 @@ const PixelKeyIcons = () => {
             Pixel Key Icons
         </Title>
 
-        <ArticleSection gutter>Description</ArticleSection>
+        <ArticleSection>Description</ArticleSection>
 
-        <ArticleText slightlySmaller gutter>
+        <ArticleText>
             Pixel art keyboard key icons, available in 16px (small), 32px (medium), and 64px (large) sizes. Currently has the 26 characters in English, and the enter key.
             <br/>
             <b>Project Link: </b>
@@ -77,15 +77,15 @@ const PixelKeyIcons = () => {
 
         </ArticleText>
 
-        <ArticleSection gutter>Purpose</ArticleSection>
+        <ArticleSection>Purpose</ArticleSection>
 
-        <ArticleText slightlySmaller gutter>
+        <ArticleText>
             The purpose of the pixel-key-icons project was to create a set of keyboard key icons.
         </ArticleText>
 
-        <ArticleSection gutter>Constraints and Principles</ArticleSection>
+        <ArticleSection>Constraints and Principles</ArticleSection>
 
-        <ArticleText slightlySmaller>
+        <ArticleText>
             Given that the icons are pixel art, there are natrually quite a few constraints to our design. The following image of the A key icon serves as a base-case that has all the default specifications for our icon designs in general.
         </ArticleText>
 
@@ -93,11 +93,11 @@ const PixelKeyIcons = () => {
             <Box><img className={clsx(c.illustrationsLarge)} src={illustration1}></img></Box>
         </Box>
 
-        <ArticleSection gutter>
+        <ArticleSection>
             The Character Icons
         </ArticleSection>
 
-        <ArticleText gutter slightlySmaller>
+        <ArticleText>
             These are all of the character icons in 64px.
 
             <br/>
@@ -107,11 +107,11 @@ const PixelKeyIcons = () => {
 
         </ArticleText>
 
-        <ArticleSection gutter>
+        <ArticleSection>
             The EF Design Dilemma
         </ArticleSection>
 
-        <ArticleText slightlySmaller>
+        <ArticleText>
             The first challenge arose in the characters E, and F. Because it turns out that the center horizontal line of the E, and F cannot be placed exactly centrally, equal distance from the top and bottom of the character. But instead, it must be placed either closer to the top, or closer to the bottom by 1 pixel, just a natural limitation of pixel art.
         </ArticleText>
 
@@ -120,7 +120,7 @@ const PixelKeyIcons = () => {
             <img src={illustration3} className={clsx(c.illustrationsComparison)}/>
         </Box>
 
-        <ArticleText slightlySmaller gutter>
+        <ArticleText>
 
             So this is what we do, once we accept that the central line of the E cannot truly be central, we just have to draw two Es, one with the central line closer to the top, and one with the central line closer to the bottom, and then using our judgement we just pick one. And so seen above, there is the E with the central horizontal line closer to the top, and the E with the central horizontal line closer to the bottom. And according to my judgement, the E with the central line closer to the top looks more natrual, so we just go with it. And so, we did the same for all characters which had some sort of central horizontal line, those characters were A, B, E, F, G, H, R, S. Of those, B, E, F, H, R, S, prefer a central horizontal line closer to the top. And A, and G prefer a central horizontal line closer to the bottom.
 
@@ -136,9 +136,9 @@ const PixelKeyIcons = () => {
 
         </ArticleText>
 
-        <ArticleSection gutter>Multiple Design Issues With I</ArticleSection>
+        <ArticleSection>Multiple Design Issues With I</ArticleSection>
 
-        <ArticleText gutter slightlySmaller>
+        <ArticleText>
             If you look at the character "I", you will see that it's horizontally symmetrical, for there are two horizontal lines at the top and bottom of the character, and a pillar going straight down the center. So unless you are willing to create a very stylized "I" that needs no symmetry, it's just there. Now normally if you wish to draw a symmetrical object in pixel art, you simply make an object of an odd width, because having a 1 pixel line of symmetry, and symmetrical pixels on either side of it, you get a width of 2x+1, being odd. However, it is also possible to have a 2 pixel wide line of symmetry giving you an even width item (2x+2), both options are shown below.
         </ArticleText>
 
@@ -148,7 +148,7 @@ const PixelKeyIcons = () => {
             <img src={illustration5} className={clsx(c.illustrationsComparison)}/>
         </Box>
 
-        <ArticleText gutter slightlySmaller>
+        <ArticleText>
 
             So here we come to a crossroads, because in this case, it seems like the 2 pixel wide line of symmetry is just the more elegant solution. It looks good, it keeps the rule of characters being 6 pixels wide, and it keeps the character centered in the icon overall. Meanwhile the 1 pixel wide line of symmetry solution makes the character not 6 pixels wide, and forces it to be offset 1 pixel to the left or right, breaking the symmetry of the character placement within the icon overall.
 
@@ -159,9 +159,9 @@ const PixelKeyIcons = () => {
 
         </ArticleText>
 
-        <ArticleSection gutter>Notable Characters</ArticleSection>
+        <ArticleSection>Notable Characters</ArticleSection>
 
-        <ArticleText slightlySmaller gutter>
+        <ArticleText>
             Shoutout to the characters G, K, N, V, and X, their design stands above the other characters.
 
             <br/><br/>

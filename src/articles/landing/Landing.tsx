@@ -74,7 +74,7 @@ const Landing = ({focusedWidget, articleData}: LandingProps) => {
                 {focusedWidget === 0 && <ArticleIndex/>}
                 {focusedWidget !== 0 &&
           <WidgetBase>
-              <ArticleSection>
+              <ArticleSection kind='noGutter'>
                 Development Halted
               </ArticleSection>
           </WidgetBase>

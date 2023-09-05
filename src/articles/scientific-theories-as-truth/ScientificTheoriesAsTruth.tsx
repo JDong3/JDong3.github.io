@@ -12,11 +12,11 @@ const ScientificTheoriesAsTruth = () => (
             Scientific Theories as Truth
         </Title>
 
-        <ArticleSection gutter>
+        <ArticleSection>
             Motivation
         </ArticleSection>
 
-        <ArticleText gutter slightlySmaller>
+        <ArticleText>
 
             There’s no single thing that we can call truth, but instead, truth is more of a collection of separate but related things. In fact, this is actually case for most things. For example, lets take a look at a computer. A computer is a common office, and household electronic device that’s used for work, and recreation. But, it’s also a collection of memory, computation units, hard disk, etc. We don’t say that one of these definitions of a computer is wrong and the other is right, because that just doesn’t make sense in this context. Instead we can interpret these definitions as encapsulating different aspects of the computer, one of them being the components of the computer, and the other being the uses of a computer.
 
@@ -27,11 +27,11 @@ const ScientificTheoriesAsTruth = () => (
 
         </ArticleText>
 
-        <ArticleSection gutter>
+        <ArticleSection>
             The Reality vs Perception
         </ArticleSection>
 
-        <ArticleText gutter slightlySmaller>
+        <ArticleText>
             Do we “know” what reality “is”? Well actually no, because if we’re both looking at a tree, in most circumstances its pretty safe to say that we both see a tree. But we don’t actually see the same thing. Because we have we have different eyes, and minds, so is seems reasonable to think that both the raw data going into our sensors, and the interpretation of that data, would be different. So there is no reason to believe that we should see the same image of the tree, or feel the same emotions by looking at the tree.
 
             <br/>
@@ -45,11 +45,11 @@ const ScientificTheoriesAsTruth = () => (
             What we normally think of as reality is actually not the real thing, but our perception. So in a sense our notions and beliefs are not based in some absolute reality, but they are necessarily based in our perception which is influenced by ourselves and our culture. (record here)
         </ArticleText>
 
-        <ArticleSection gutter>
+        <ArticleSection>
             The Map Territory Relationship
         </ArticleSection>
 
-        <ArticleText gutter slightlySmaller>
+        <ArticleText>
             The map is not the territory, just by virtue of its size its much smaller than the territory, so you can’t expect all of details of the territory to be contained in the map. And If there were a map that contained all of the details of the territory, it would necessarily just be the territory itself.
 
             <br/>
@@ -64,11 +64,11 @@ const ScientificTheoriesAsTruth = () => (
 
         </ArticleText>
 
-        <ArticleSection gutter>
+        <ArticleSection>
             Old and New Scientific Theories
         </ArticleSection>
 
-        <ArticleText gutter slightlySmaller>
+        <ArticleText>
             I want to examinine two different “scientific theories” for why things fall. According to the Greeks, the world is made of four elements, earth, air, fire, and water. Now each of these elements have a natural place, like earth is beneath us, and air is above us. However upon being disturbed, these elements wish to return to their natural places, so if you throw a rock upwards, it falls back down because the rock is made of earth, and the earth wishes to return to its natural place.
 
             <br/>
@@ -102,11 +102,11 @@ const ScientificTheoriesAsTruth = () => (
             Now this isn’t to say that we shouldn’t use Newton’s theories because they contain magical notions, because our scientific theories will always contain magical notions. As the old magical notions are replaced with more fundamental parts, the structure of those more fundamental parts become the new magical notions, so its magical notions all the way down. But it doesn’t matter because they work, which is exactly what we need from our scientific theories.
         </ArticleText>
 
-        <ArticleSection gutter>
+        <ArticleSection>
             On the Nature of Logic
         </ArticleSection>
 
-        <ArticleText gutter slightlySmaller>
+        <ArticleText>
             Our pride of modern scientific thinking is that our theories don’t rely on any magical notions, but instead on logic, and reason alone. But what is logic?
 
             <br/>
@@ -140,11 +140,11 @@ const ScientificTheoriesAsTruth = () => (
             I want to reiterate that saying logic is magical is not me telling you to not use logic, because we are not concerned about whether logic is magical or not, only that it works.
         </ArticleText>
 
-        <ArticleSection gutter>
+        <ArticleSection>
             Conclusions?
         </ArticleSection>
 
-        <ArticleText gutter slightlySmaller>
+        <ArticleText>
             Its a truism that all roads lead to Darwinism. Our idea of usefulness is related to the things that we wan’t. And at least in theory, the things that we desire, should be related to things that increase our chances of survival. And scientific theories seem to be things that increase our chances of getting the things that we want. For example, if we want to launch a satellite into orbit, we need to have good scientific theories on the behaviour of rockets, orbital trajectories, composite materials, etc.
 
             <br/>

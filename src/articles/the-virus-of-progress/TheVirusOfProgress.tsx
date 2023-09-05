@@ -11,19 +11,19 @@ const TheVirusOfProgress = () => (
     The Virus of Progress
         </Title>
 
-        <ArticleSection gutter>
+        <ArticleSection>
         Liberality, Happiness, and Goodness
         </ArticleSection>
 
-        <ArticleText gutter slightlySmaller>
+        <ArticleText>
         Is liberality a means to achieve goodness, or is it a goodness in itself? If liberality were goodness in itself, then we should expect a liberal society to be a good society, but if it were only a means, then we should know that even though liberality is often conducive to goodness, sometimes it also produces badness. If happiness were goodness, and liberality just a means, then what is happy supersedes what is free, so if we could not be both happy and free, then we would rather be happy and not free. So if we found our state to be in a condition of disrepair and unhealth, and that this condition were caused by the liberality of the people, then we should for the sake of what is the ultimate good, curtail the liberality, and re-establish happiness in our state.
         </ArticleText>
 
-        <ArticleSection gutter>
+        <ArticleSection>
         The Cause of the Bullshitization of our Society
         </ArticleSection>
 
-        <ArticleText gutter slightlySmaller>
+        <ArticleText>
             According to Graeber, there is currently an increasing amount of "bullshitization" in our society, which is a process by which we've been creating fundamentally non-productive jobs (aka bullshit jobs). And that this bullshitization is driven by the forces of increasing efficiency, and a state-wide work cult [Graeber, 178].
 
             <br/>
@@ -54,11 +54,11 @@ const TheVirusOfProgress = () => (
             But due to our state religion, which does not tolerate living without work and suffering, when our efficiency increases, we are caught in a dilemma whereby we do not all have to work to live, but we will also not allow anyone to live who does not work. But since we also cannot allow too many people to die from poverty in our state, we've created for ourselves a public-private welfare-capital-nanny-state-complex whereby we invent imaginary jobs, for people to do imaginary work, so that we can pay them imaginary money.
         </ArticleText>
 
-        <ArticleSection gutter>
+        <ArticleSection>
             The Judgement of our Current State of Affairs
         </ArticleSection>
 
-        <ArticleText gutter slightlySmaller>
+        <ArticleText>
         Now I do not know what is good or bad, as whatever I feel is good I call good, and the same for what is bad, and often times my feelings come into conflict with the feelings and knowledge of other people. But I do know that many people in our state think that liberty is what is good, so if that were the case then if we find that our state is free, then it should surely be good.
 
             <br/>
@@ -92,11 +92,11 @@ const TheVirusOfProgress = () => (
         If our state had wealth in abundance, and all of the citizens engaged in a life of idleness and luxury, what good would that state be? That would not be a good state, but a bad one, for in that kind of state, there is the largest amount of wasted human potential. And for the same reason, our bullshitized society is also bad, because we people are not born to stagnate, and rot, for if we do that, then we cannot actualize our potential, and so we cannot be happy. And just because it is the "state of nature", or the "state of freedom" that results in our bullshitized society, that does not mean that we should give in to it. We must live, and die, and struggle, so that one day we may attain the ultimate goodness, that is only human.
         </ArticleText>
 
-        <ArticleSection gutter>
+        <ArticleSection>
       Works Cited
         </ArticleSection>
 
-        <ArticleText gutter slightlySmaller>
+        <ArticleText>
       "Bullshit Jobs", by David Graeber
         </ArticleText>
 

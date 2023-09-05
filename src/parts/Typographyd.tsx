@@ -5,6 +5,7 @@ import {
     makeStyles,
     Typography,
     Box,
+    TypographyProps,
 } from '@material-ui/core';
 import clsx from 'clsx';
 
@@ -57,148 +58,90 @@ const useStyles = makeStyles(() => (
     }
 ));
 
-const Title = props => {
-    const {
-        smaller,
-        children,
-        serif,
-        noGutter,
-    } = props;
+export interface ArticleComponentProps extends TypographyProps {
+    noGutter?: boolean
+}
+
+export interface TitleProps extends ArticleComponentProps {
+    smaller?: boolean,
+}
+
+export interface ArticleTextProps extends TypographyProps {
+    kind?: 'default' | 'forListIndent'
+}
+
+export interface ArticleSectionProps extends TypographyProps {
+    kind?: 'default' | 'noGutter'
+}
+
+export const Title = ({smaller, children, noGutter}: TitleProps) => {
+
     const variant = smaller ? 'h2' : 'h1';
     const c = useStyles();
 
-    const theme = clsx(serif && c.serif, !serif && c.sansSerif, !noGutter && c.titleGutter);
     return (
-        <Typography variant={variant} className={theme}>
+        <Typography
+            variant={variant}
+            className={clsx(c.serif, !noGutter && c.titleGutter)}
+        >
             {children}<hr className={c.titleDivider}/>
         </Typography>
     );
 };
 
-const WidgetTitle = props => {
-    const {children, spacing} = props;
+export const ArticleText = ({kind = 'default', children, ...rest}: ArticleTextProps) => {
+
     const c = useStyles();
-    const theme = clsx(c.serif, spacing && c.widgetSpacing);
 
     return (
-        <Typography variant="h4" className={c.serif}>
-            <Box component={span} className={clsx(spacing && c.widgetSpacing)}>
-                {children}
-            </Box>
-        </Typography>
-    );
-};
-
-const WidgetText = props => {
-    const {children, className} = props;
-    const c = useStyles();
-    return (
-        <Typography {...props} variant="h5" className={clsx(c.serif, className)}>
+        <Typography
+            {...rest}
+            variant="body1"
+            display="block"
+            align="justify"
+            className={clsx(
+                c.sansSerif,
+                c.articleText,
+                kind == 'default' && c.slightlySmaller,
+                (kind == 'default' || kind == 'forListIndent') && c.articleTextGutter,
+                kind == 'forListIndent' && c.forListIndent
+            )}
+        >
             {children}
         </Typography>
     );
 };
 
-const ArticleText = props => {
-    const {
-        children,
-        className,
-        gutter,
-        slightlySmaller,
-        forListIndent,
-    } = props;
+export const ArticleSection = ({kind = 'default', children, ...rest}: ArticleSectionProps) => {
     const c = useStyles();
-
     return (
-        <Typography {...props} variant="body1" display="block" align="justify" className={clsx(c.sansSerif, c.articleText, slightlySmaller && c.slightlySmaller, gutter && c.articleTextGutter, forListIndent && c.forListIndent, className)}>
-            {children}
-
-        </Typography>
-    );
-};
-
-const Text = props => {
-    const {
-        children,
-        className,
-    } = props;
-    const c = useStyles();
-
-    return (
-        <Typography {...props} display="block" align="justify" className={clsx(c.serif, c.articleText, c.slightlySmaller, c.articleTextGutter, className)}>
+        <Typography
+            {...rest}
+            variant="h3"
+            className={clsx(
+                c.serif,
+                kind == 'default' && c.articleSectionGutter,
+                c.slightlySmaller,
+            )}>
             {children}
         </Typography>
     );
 };
 
-const ArticleSection = props => {
-    const c = useStyles();
-    const {
-        children,
-        className,
-        gutter,
-        slightlySmaller,
-    } = props;
-    return (
-        <Typography {...props} variant="h3" className={clsx(c.serif, gutter && c.articleSectionGutter, c.slightlySmaller, className)}>
-            {children}
-        </Typography>
-    );
-};
+export const SmallBodyText = ({children, ...rest}: TypographyProps) => {
 
-const ArticleSubSection = props => {
-    const c = useStyles();
-    const {
-        children,
-        className,
-        gutter,
-        slightlySmaller,
-    } = props;
-    return (
-        <Typography {...props} variant="h4" className={clsx(c.serif, gutter && c.articleSectionGutter, c.slightlySmaller, className)}>
-            {children}
-        </Typography>
-    );
-};
-
-const Section = props => {
-    const c = useStyles();
-    const {
-        children,
-        className,
-    } = props;
-    return (
-        <Typography {...props} variant="h4" className={clsx(c.serif, c.articleSectionGutter, c.slightlySmaller, className)}>
-            {children}
-        </Typography>
-    );
-};
-
-const SmallBodyText = props => {
-    const {
-        children,
-        className,
-        gutter,
-        serif,
-        slightlySmaller,
-    } = props;
     const c = useStyles();
 
     return (
-        <Typography {...props} variant="body2" className={clsx(serif && c.serif, c.sansSerif, className, gutter && c.articleTextGutter, slightlySmaller && c.slightlySmaller)}>
+        <Typography
+            {...rest}
+            variant="body2"
+            className={clsx(
+                c.sansSerif,
+                c.articleTextGutter,
+                c.slightlySmaller
+            )}>
             {children}
         </Typography>
     );
-};
-
-export {
-    Title,
-    WidgetTitle,
-    WidgetText,
-    ArticleText,
-    Section,
-    Text,
-    ArticleSection,
-    ArticleSubSection,
-    SmallBodyText,
 };

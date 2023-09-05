@@ -10,7 +10,7 @@ const GodNo2 = () => (
       Speculation on God No.2
         </Title>
 
-        <ArticleText slightlySmaller>
+        <ArticleText>
       Paul VanderKlay is a Youtuber and a minister of a Christian Reformed church in Sacramento, California. Out of the goodness of his heart, he has dedicated many hours of his life to explaining concepts about God, and Christianity to the general public, and he has since amassed a sizable following (18.7 thousand followers as of June 25th, 2021) considering the fact that many people nowadays are not very interested in hearing people talk at length about God. In his lectures, he often refers to God as a multifaceted thing-being-force, noting that there are at least two salient conceptions of God, God number 1, and God number 2. God number 1, which is the common folk conception of God among Christians and Atheists alike, is God as superman, infinite speed, infinite strength, infinite intellect. This is the type of God that we commonly debate about, and is even the default concept of God in this course. But the interesting thing is that when we really pay attention, and press people on their true meaning of God, this is not necessarily the type of God that we find in their hearts, while on the outside they will repeat the common notion of God number 1, on the inside, we find that the type of God that they experience is a some sort of personal God, a feeling, an emotion, a &quot;transcendental vision of goodness&quot;.
 
             <br/><br/>

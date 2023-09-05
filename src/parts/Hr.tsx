@@ -45,7 +45,7 @@ const Hr = ({type}: HrProps) => {
     }
 
     return (
-        <Text><hr className={classname}/></Text>
+        <Text serif={false}><hr className={classname}/></Text>
     );
 };
 

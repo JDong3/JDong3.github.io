@@ -41,11 +41,11 @@ const Randim = () => {
             Random Image
         </Title>
 
-        <ArticleSection gutter>
+        <ArticleSection>
             Description
         </ArticleSection>
 
-        <ArticleText gutter slightlySmaller>
+        <ArticleText>
 
             Random Image (randim) is a python3 based command line tool that allows the user to generate RNG based images with a few options for configuration.
 
@@ -55,11 +55,11 @@ const Randim = () => {
 
         </ArticleText>
 
-        <ArticleSection gutter>
+        <ArticleSection>
             Examples
         </ArticleSection>
 
-        <ArticleText gutter slightlySmaller>
+        <ArticleText>
             A black image with 400x800 pixels resolution (native resolution), using the seed 'asdf', output to 'black.bmp'.
             <br/>
             <code>python randim.py --type black --width 400 --height 800 --seed asdf --output black.bmp</code>
@@ -69,7 +69,7 @@ const Randim = () => {
             <Box><img className={clsx(c.illustrationsLarge)} src={black as string}></img></Box>
         </Box>
 
-        <ArticleText gutter>
+        <ArticleText>
             A 'random' image, where each pixel has an RGB value chosen pseudo randomly, with a 654x456 pixel native resolution, using the seed 'asdf', output to 'random.bmp'.
             <br/>
             <code>python randim.py --type random --width 654 --height 456 --seed asdf --output random.bmp</code>
@@ -79,7 +79,7 @@ const Randim = () => {
             <Box><img className={clsx(c.illustrationsLarge)} src={random as string}></img></Box>
         </Box>
 
-        <ArticleText gutter>
+        <ArticleText>
             A 'random greyscale' image, like random, but the image can only contain grey pixels, with native resolution 1920x1080, using the seed 'asdf', and output to 'randomgreyscale.bmp'.
             <br/>
             <code>python randim.py --type randomgreyscale --width 1920 --height 1080 --seed asdf --output randomgreyscale.bmp</code>
