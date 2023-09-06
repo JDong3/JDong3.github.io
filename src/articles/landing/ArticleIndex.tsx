@@ -217,12 +217,12 @@ const ArticleEntry = ({children, href, selected, onClick, id}: ArticleEntryProps
     return (
         <Box component="div" className={c.thirty}>
             <Typography variant="body2" className={clsx(c.body)}>
-                <li onClick={onClick} id={id}>
-                    {!selected && <To to={href}>
+                <li id={id}>
+                    {!selected && <To onClick={onClick} to={href}>
                         {children}
                     </To>}
 
-                    {selected && <To to={href}>
+                    {selected && <To onClick={onClick} to={href}>
                         <b>{children}</b>
                     </To>}
 

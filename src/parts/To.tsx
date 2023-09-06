@@ -10,16 +10,15 @@ const useStyles = makeStyles(() => (
     {
         standard: {
             color: 'inherit',
-            textDecoration: 'underline',
+            // textDecoration: 'underline',
         },
     }
 ));
 
-const To = ({to, children, className, ...rest}: LinkProps) => {
 /**
- * :param props.href:
- * :param link: bool, use Link element
+ * a custom Link element
  */
+const To = ({to, children, onClick, ...rest}: LinkProps) => {
 
     const classes = useStyles();
     // let scrollToTop;
@@ -29,7 +28,7 @@ const To = ({to, children, className, ...rest}: LinkProps) => {
     // }
 
     return (
-        <Link {...rest} to={to} className={clsx(classes.standard, className)} >
+        <Link {...rest} onClick={onClick} to={to} className={clsx(classes.standard)}>
             {children}
         </Link>
     );
