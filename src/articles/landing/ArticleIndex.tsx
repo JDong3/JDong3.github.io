@@ -94,6 +94,7 @@ const ArticleIndex = ({articleData}: ArticleIndexProps) => {
     );
 
     const handleKeys = (e : KeyboardEvent) => {
+        e.preventDefault();
 
         // first check if we have to switch groups
         let changeGroups = false;

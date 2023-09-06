@@ -58,6 +58,8 @@ const WidgetSelector = ({selected, widgetGoLeft, widgetGoRight}: WidgetSelectorP
     const c = useStyles();
 
     const handleKeys = (e: KeyboardEvent) => {
+        e.preventDefault();
+
         switch (e.key) {
 
         case 'j':
